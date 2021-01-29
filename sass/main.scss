@@ -201,11 +201,6 @@ section .form-background .orange-lava-button input {
   transition: transform 80ms ease-in;
 }
 
-section .form-background .input-box p a {
-  color: #f5a851;
-  text-decoration: none;
-  font-weight: 400;
-}
 
 // hover
 section .form-background .orange-lava-button input:hover {
@@ -214,6 +209,12 @@ section .form-background .orange-lava-button input:hover {
 
 section .orange-lava-button:active {
   transform: scale(0.96);
+}
+
+section .form-background .input-box p a {
+  color: #f5a851;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 section .content-background .form-background .orange-lava-button input:focus {
@@ -258,8 +259,18 @@ section .content-background .form-background .input-box p {
   justify-content: center;
   align-items: center;
   margin: 0 5px;
-  color: #f5a851;
+  color: white;
   text-decoration: none;
-  border: 1px solid #f5a851;
+  // border: 1px solid #f5a851;
   border-radius: 50%;
+  background: #444;
 }
+
+.social-container a:hover{
+  background: #dd8928;
+}
+
+.social-container a:active{
+  transform: scale(0.96);
+}
+
