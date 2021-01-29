@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+// html {
+//   overflow-x: hidden;
+// }
+
+// Sass Variables font size
+// $saira-h1: 5vw;
+// $saira-h2: 4vw;
+// $saira-h3: 1.5vw;
+// $saira-h4: 1vw;
+// $saira-h5: 1vw;
+// $saira-p: 1vw;
+// $saira-small: 1vw;
+
+//Saira-Extra-Condensed
+// H1 Bold 64pt 700
+// H2 Semibold 48pt 600
+// H3 Regular 36pt 400
+// H4 Light 21pt 300
+// H5 Medium 12pt 500
+// P Regular 12pt 300
+// SMALL Regular 12pt 100
+
+// Sass Variables font size
+// $lato-h1: 5vw;
+// $lato-h2: 4vw;
+// $lato-h3: 1.5vw;
+// $lato-h4: 1vw;
+// $lato-h5: 1vw;
+// $lato-p: 1vw;
+// $lato-small: 1vw;
+
+//Lato
+// H1 Extrabold 64pt 900
+// H2 Bold 48pt 700
+// H4 Regular 21pt 400
+// P Regular 16pt 400
+// SMALL Regular 12pt 100
+
+section {
+  position: relative;
+  font-family: "Lato", sans-serif;
+  background: #191b1d;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+h2 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 48px;
+  margin: 0;
+}
+
+// Form stying
+p {
+  font-size: 16pt;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+section .image-background {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+// gradient background
+section .image-background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(242, 135, 13);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(242, 135, 13, 1) 0%,
+    rgba(245, 168, 81, 1) 35%,
+    rgba(193, 37, 37, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(242, 135, 13, 1) 0%,
+    rgba(245, 168, 81, 1) 35%,
+    rgba(193, 37, 37, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(242, 135, 13, 1) 0%,
+    rgba(245, 168, 81, 1) 35%,
+    rgba(193, 37, 37, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2870d",endColorstr="#c12525",GradientType=1);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+section .image-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// center form to the window
+section .content-background {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+section .content-background .form-background {
+  width: 50%;
+}
+
+// login text
+section .content-background .form-background h2 {
+  color: #f5a851;
+  font-weight: 600;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-flex;
+  letter-spacing: 1px;
+}
+
+// form spacing
+section .content-background .form-background .input-background {
+  margin-bottom: 20px;
+}
+
+// form names
+section .content-background .form-background .input-background span {
+  display: inline-flex;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+// remember
+section .content-background .form-background .remember {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+// form text
+section .content-background .form-background .input-background input {
+  width: 100%;
+  padding: 12px 20px;
+  border-style: none;
+  outline: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+// orange button
+section .form-background .orange-lava-button input {
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  border-style: none;
+  padding: 12px 20px;
+  outline: none;
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+  background: #f5a851;
+  transition: transform 80ms ease-in;
+}
+
+section .form-background .input-box p a {
+  color: #f5a851;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+// hover
+section .form-background .orange-lava-button input:hover {
+  background: #dd8928;
+}
+
+section .orange-lava-button:active {
+  transform: scale(0.96);
+}
+
+section .content-background .form-background .orange-lava-button input:focus {
+  outline: focus;
+}
+
+section .content-background .form-background .input-box p {
+  display: inline-flex;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+// social media
+.social-media-title {
+  color: #f5a851;
+  font-weight: 400;
+  font-size: 14pt;
+}
+
+.social-container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  h3{
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+  }
+}
+
+.social-container a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  color: #f5a851;
+  text-decoration: none;
+  border: 1px solid #f5a851;
+  border-radius: 50%;
+}
