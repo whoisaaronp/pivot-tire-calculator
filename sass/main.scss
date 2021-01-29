@@ -177,11 +177,18 @@ section .content-background .form-background .input-background input {
   width: 100%;
   padding: 12px 20px;
   border-style: none;
+  border-radius: 8px;
   outline: none;
   font-size: 21px;
   font-weight: 400;
   color: #777;
   letter-spacing: 1px;
+}
+
+// checkbox
+section .content-background .form-background .remember .check-box
+{
+  margin-right: 10px;
 }
 
 // orange button
@@ -191,6 +198,7 @@ section .form-background .orange-lava-button input {
   width: 100%;
   border-style: none;
   padding: 12px 20px;
+  border-radius: 8px;
   outline: none;
   font-size: 21px;
   font-weight: 400;
@@ -212,6 +220,7 @@ section .orange-lava-button:active {
 
 section .form-background .input-box p a {
   color: #f5a851;
+  margin-left: 10px;
   text-decoration: none;
   font-weight: 400;
 }
