@@ -201,12 +201,6 @@ section .form-background .orange-lava-button input {
   transition: transform 80ms ease-in;
 }
 
-section .form-background .input-box p a {
-  color: #f5a851;
-  text-decoration: none;
-  font-weight: 400;
-}
-
 // hover
 section .form-background .orange-lava-button input:hover {
   background: #dd8928;
@@ -214,6 +208,12 @@ section .form-background .orange-lava-button input:hover {
 
 section .orange-lava-button:active {
   transform: scale(0.96);
+}
+
+section .form-background .input-box p a {
+  color: #f5a851;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 section .content-background .form-background .orange-lava-button input:focus {
@@ -242,12 +242,11 @@ section .content-background .form-background .input-box p {
   justify-content: center;
   text-align: center;
   margin-top: 50px;
-  h3{
+  h3 {
     color: white;
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-weight: 400;
-
   }
 }
 
@@ -258,8 +257,75 @@ section .content-background .form-background .input-box p {
   justify-content: center;
   align-items: center;
   margin: 0 5px;
-  color: #f5a851;
+  color: white;
   text-decoration: none;
-  border: 1px solid #f5a851;
   border-radius: 50%;
+  background: #444;
+}
+
+.social-container a:hover {
+  background: #dd8928;
+}
+
+.social-container a:active {
+  transform: scale(0.96);
+}
+
+// MEDIA QUERIES ***********
+//****************************
+// If the browser window is 768px or smaller, the background image would do this
+
+@media only screen and (max-width: 768px) {
+  section .image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section .content-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  section .content-background .form-background
+  {
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px;
+  }
+  section .content-background .form-background .input-background span
+  {
+    font-weight: 400;
+    color: #2B2C31;
+  }
+
+  section .content-background .form-background .input-background input{
+    color: #2B2C31;
+    background: #FFE7CD;
+  }
+
+  section .content-background .form-background .remember {
+    color: #2B2C31;
+    font-size: 14px;
+  }
+
+  section .content-background .form-background .input-box p
+  {
+    color:#2B2C31;
+    font-size: 14px;
+    font-weight: 300;
+    a{
+      font-weight: 700;
+    }
+  }
+  
+  .social-container h3
+  {
+    color: #2b2b2b;
+  }
 }
