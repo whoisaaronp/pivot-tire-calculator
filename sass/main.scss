@@ -53,10 +53,26 @@
 // P Regular 16pt 400
 // SMALL Regular 12pt 100
 
+body {
+  background: #191b1d;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header h1 {
+  color: white;
+}
+
 section {
   position: relative;
-  font-family: "Lato", sans-serif;
-  background: #191b1d;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -186,8 +202,7 @@ section .content-background .form-background .input-background input {
 }
 
 // checkbox
-section .content-background .form-background .remember .check-box
-{
+section .content-background .form-background .remember .check-box {
   margin-right: 10px;
 }
 
@@ -280,6 +295,54 @@ section .content-background .form-background .input-box p {
   transform: scale(0.96);
 }
 
+// welcome
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -20px 0 50px;
+}
+
+.white-box {
+  width: 45%;
+  height: 50%;
+  border-radius: 5px;
+  background: white;
+  box-shadow: #777;
+  padding: 20px;
+}
+
+.continue-button input{
+  cursor: pointer;
+  width: 311px;
+  height: 56px;
+  border-radius: 4px;
+  border-style: none;
+  background: #F5A851;
+  color: white; 
+  font-size: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50px;
+  outline: none;
+  text-decoration: none;
+  transition: transform 80ms ease-in;
+
+}
+
+// hover
+.welcome-container .continue-button input:hover {
+  background: #dd8928;
+}
+
+.welcome-container .continue-button:active {
+  transform: scale(0.96);
+}
+
+
 // MEDIA QUERIES ***********
 //****************************
 // If the browser window is 768px or smaller, the background image would do this
@@ -300,41 +363,48 @@ section .content-background .form-background .input-box p {
     height: 100%;
     z-index: 1;
   }
-  section .content-background .form-background
-  {
+  section .content-background .form-background {
     width: 100%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin: 50px;
   }
-  section .content-background .form-background .input-background span
-  {
+  section .content-background .form-background .input-background span {
     font-weight: 400;
-    color: #2B2C31;
+    color: #2b2c31;
   }
 
-  section .content-background .form-background .input-background input{
-    color: #2B2C31;
-    background: #FFE7CD;
+  section .content-background .form-background .input-background input {
+    color: #2b2c31;
+    background: #ffe7cd;
   }
 
   section .content-background .form-background .remember {
-    color: #2B2C31;
+    color: #2b2c31;
     font-size: 14px;
   }
 
-  section .content-background .form-background .input-box p
-  {
-    color:#2B2C31;
+  section .content-background .form-background .input-box p {
+    color: #2b2c31;
     font-size: 14px;
     font-weight: 300;
-    a{
+    a {
       font-weight: 700;
     }
   }
-  
-  .social-container h3
-  {
+
+  .social-container h3 {
     color: #2b2b2b;
+  }
+
+  // welcome
+
+  .white-box {
+    width: 85%;
+    height: 65%;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+    outline: none;
   }
 }
