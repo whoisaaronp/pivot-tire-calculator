@@ -327,6 +327,24 @@ p {
   line-height: $saira-message-line-height;
 }
 
+// equipment container
+.equipment-suggestions-content {
+  width: 93%;
+  height: 50%;
+  border-radius: 5px;
+  background: white;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.equipment-suggestions-content p {
+  display: block;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h4;
+  font-weight: 400;
+  line-height: $saira-message-line-height;
+}
+
 .continue-button input {
   cursor: pointer;
   width: 311px;
@@ -353,14 +371,12 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-  .pressure-suggestion-content .suggestion-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-
+.pressure-suggestion-content .suggestion-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 // desktop menu with setup
 .nav-links {
@@ -509,6 +525,23 @@ p {
     margin-bottom: 40px;
   }
 
+  // equipment container
+  .equipment-suggestions-content {
+    width: 85%;
+    height: 50%;
+    border-radius: 5px;
+    background: white;
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .equipment-suggestions-content p {
+    display: block;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h4;
+    font-weight: 400;
+    line-height: $saira-message-line-height;
+  }
   // hamburger
 
   .hamburger {
