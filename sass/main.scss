@@ -21,12 +21,13 @@
 
 // Sass Variables font size
 // $saira-h1: 5vw;
-// $saira-h2: 4vw;
-// $saira-h3: 1.5vw;
-// $saira-h4: 1vw;
+$saira-h2: 2.441rem;
+$saira-h3: 3rem;
+$saira-h4: 2rem;
 // $saira-h5: 1vw;
 // $saira-p: 1vw;
 // $saira-small: 1vw;
+$saira-message-line-height: 3.4375rem;
 
 //Saira-Extra-Condensed
 // H1 Bold 64pt 700
@@ -40,10 +41,10 @@
 // Sass Variables font size
 // $lato-h1: 5vw;
 // $lato-h2: 4vw;
-// $lato-h3: 1.5vw;
-// $lato-h4: 1vw;
+$lato-h3: 1rem;
+$lato-h4: 1.50rem;
 // $lato-h5: 1vw;
-// $lato-p: 1vw;
+$lato-p: 1rem;
 // $lato-small: 1vw;
 
 //Lato
@@ -53,10 +54,26 @@
 // P Regular 16pt 400
 // SMALL Regular 12pt 100
 
+body {
+  background: #191b1d;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header h1 {
+  color: white;
+}
+
 section {
   position: relative;
-  font-family: "Lato", sans-serif;
-  background: #191b1d;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -64,13 +81,13 @@ section {
 
 h2 {
   font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 48px;
+  font-size: $saira-h2;
   margin: 0;
 }
 
 // Form stying
 p {
-  font-size: 16pt;
+  font-size: $lato-p;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.5px;
@@ -115,7 +132,7 @@ section .image-background:before {
   mix-blend-mode: screen;
 }
 
-section .image-background img {
+.sign-in-form .image-background img {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +142,7 @@ section .image-background img {
 }
 
 // center form to the window
-section .content-background {
+.sign-in-form .content-background {
   display: flex;
   width: 50%;
   height: 100%;
@@ -133,15 +150,15 @@ section .content-background {
   align-items: center;
 }
 
-section .content-background .form-background {
+.sign-in-form .content-background .form-background {
   width: 50%;
 }
 
 // login text
-section .content-background .form-background h2 {
+.sign-in-form .content-background .form-background h2 {
   color: #f5a851;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: $saira-h2;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: inline-flex;
@@ -149,50 +166,57 @@ section .content-background .form-background h2 {
 }
 
 // form spacing
-section .content-background .form-background .input-background {
+.sign-in-form .content-background .form-background .input-background {
   margin-bottom: 20px;
 }
 
 // form names
-section .content-background .form-background .input-background span {
+.sign-in-form .content-background .form-background .input-background span {
   display: inline-flex;
-  font-size: 16px;
-  color: white;
-  margin-bottom: 5px;
+  font-size: $lato-p;
   font-weight: 300;
+  margin-bottom: 5px;
   letter-spacing: 1px;
+  color: white;
 }
 
 // remember
-section .content-background .form-background .remember {
+.sign-in-form .content-background .form-background .remember {
   color: white;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: $lato-p;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
 // form text
-section .content-background .form-background .input-background input {
+.sign-in-form .content-background .form-background .input-background input {
   width: 100%;
   padding: 12px 20px;
   border-style: none;
+  border-radius: 8px;
   outline: none;
-  font-size: 21px;
+  font-size: $lato-p;
   font-weight: 400;
   color: #777;
   letter-spacing: 1px;
 }
 
+// checkbox
+.sign-in-form .content-background .form-background .remember .check-box {
+  margin-right: 10px;
+}
+
 // orange button
-section .form-background .orange-lava-button input {
+.sign-in-form .form-background .orange-lava-button input {
   cursor: pointer;
   outline: none;
   width: 100%;
   border-style: none;
   padding: 12px 20px;
+  border-radius: 8px;
   outline: none;
-  font-size: 21px;
+  font-size: $lato-h4;
   font-weight: 400;
   text-align: center;
   letter-spacing: 1px;
@@ -202,27 +226,28 @@ section .form-background .orange-lava-button input {
 }
 
 // hover
-section .form-background .orange-lava-button input:hover {
+.sign-in-form .form-background .orange-lava-button input:hover {
   background: #dd8928;
 }
 
-section .orange-lava-button:active {
+.sign-in-form .orange-lava-button:active {
   transform: scale(0.96);
 }
 
-section .form-background .input-box p a {
+.sign-in-form .form-background .input-box p a {
   color: #f5a851;
+  margin-left: 10px;
   text-decoration: none;
   font-weight: 400;
 }
 
-section .content-background .form-background .orange-lava-button input:focus {
+.sign-in-form .content-background .form-background .orange-lava-button input:focus {
   outline: focus;
 }
 
-section .content-background .form-background .input-box p {
+.sign-in-form .content-background .form-background .input-box p {
   display: inline-flex;
-  font-size: 16px;
+  font-size: $lato-p;
   color: white;
   margin-bottom: 5px;
   font-weight: 300;
@@ -233,7 +258,7 @@ section .content-background .form-background .input-box p {
 .social-media-title {
   color: #f5a851;
   font-weight: 400;
-  font-size: 14pt;
+  font-size: $lato-p;
 }
 
 .social-container {
@@ -271,19 +296,143 @@ section .content-background .form-background .input-box p {
   transform: scale(0.96);
 }
 
+// welcome
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -20px 0 50px;
+  z-index: -1;
+}
+
+.white-box {
+  width: 45%;
+  height: 50%;
+  border-radius: 5px;
+  background: white;
+  padding: 40px;
+}
+
+.white-box h3
+{
+  display: block;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h4;
+  font-weight: 400;
+  line-height: $saira-message-line-height;
+}
+
+.continue-button input{
+  cursor: pointer;
+  width: 311px;
+  height: 56px;
+  border-radius: 4px;
+  border-style: none;
+  background: #F5A851;
+  color: white;  
+  font-size: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 50px;
+  outline: none;
+  text-decoration: none;
+  transition: transform 80ms ease-in;
+
+}
+
+// desktop menu with setup
+.nav-links
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* smooth hover animation */
+.nav-links li a {
+  padding:10px 20px;
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+
+/* animation action */
+
+.nav-links li a:hover {
+  padding:10px 20px;
+  background: #f5a851;
+  color: white;
+}
+
+/* hide the burger menu */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.line1 {
+  width: 50px;
+  height: 3px;
+  margin: 7px;
+  background-color: #f5a851;
+}
+
+
+
+// hover
+.welcome-container .continue-button input:hover {
+  background: #dd8928;
+}
+
+.welcome-container .continue-button:active {
+  transform: scale(0.96);
+}
+
+
+// MEDIA QUERIES ***********
+//****************************
+// If the browser window is 1024 or smaller, the background image would do this
+
+
+@media only screen and (max-width: 1024){
+  
+  .white-box h3
+  {
+    display: block;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h4;
+    font-weight: 400;
+    line-height: $saira-message-line-height;
+  }
+}
+
 // MEDIA QUERIES ***********
 //****************************
 // If the browser window is 768px or smaller, the background image would do this
 
+
 @media only screen and (max-width: 768px) {
-  section .image-background {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .sign-in-form .image-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  section .content-background {
+  .sign-in-form .content-background {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,41 +440,117 @@ section .content-background .form-background .input-box p {
     height: 100%;
     z-index: 1;
   }
-  section .content-background .form-background
-  {
+  .sign-in-form .content-background .form-background {
     width: 100%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin: 50px;
   }
-  section .content-background .form-background .input-background span
-  {
+  .sign-in-form .content-background .form-background .input-background span {
     font-weight: 400;
-    color: #2B2C31;
+    color: #2b2c31;
   }
 
-  section .content-background .form-background .input-background input{
-    color: #2B2C31;
-    background: #FFE7CD;
+  .sign-in-form .content-background .form-background .input-background input {
+    color: #2b2c31;
+    background: #ffe7cd;
   }
 
-  section .content-background .form-background .remember {
-    color: #2B2C31;
-    font-size: 14px;
+  .sign-in-form .content-background .form-background .remember {
+    color: #2b2c31;
+    font-size: $lato-p;
   }
 
-  section .content-background .form-background .input-box p
-  {
-    color:#2B2C31;
-    font-size: 14px;
+  .sign-in-form .content-background .form-background .input-box p {
+    color: #2b2c31;
+    font-size: $lato-p;
     font-weight: 300;
-    a{
+    a {
       font-weight: 700;
     }
   }
-  
-  .social-container h3
-  {
+
+  .social-container h3 {
     color: #2b2b2b;
+  }
+
+  // welcome
+
+  .pressure-suggestion-container
+  {
+    
+  }
+
+  .white-box {
+    width: 85%;
+    height: 65%;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+    outline: none;
+  }
+
+  // hamburger
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: auto;
+    position: absolute;
+    width: 70%;
+    top: 0vh;
+    right: 0px;
+    height: 100vh;
+    background-color: #f5a851;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-links li a {
+    color: black;
+    font-size: $lato-h4;
+    font-weight: 400;
+  }
+  
+  .nav-links li {
+    opacity: 0;
+  }
+
+
+}
+
+
+
+.nav-active {
+  -o-transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -o-transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -o-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0px);
   }
 }
