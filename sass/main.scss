@@ -42,7 +42,7 @@ $saira-message-line-height: 3.4375rem;
 // $lato-h1: 5vw;
 // $lato-h2: 4vw;
 $lato-h3: 1rem;
-$lato-h4: 1.50rem;
+$lato-h4: 1.5rem;
 // $lato-h5: 1vw;
 $lato-p: 1rem;
 // $lato-small: 1vw;
@@ -72,7 +72,7 @@ header h1 {
   color: white;
 }
 
-section {
+.sign-in-form {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -94,14 +94,14 @@ p {
   margin: 20px 0 30px;
 }
 
-section .image-background {
+.sign-in-form .image-background {
   position: relative;
   width: 50%;
   height: 100%;
 }
 
 // gradient background
-section .image-background:before {
+.sign-in-form .image-background:before {
   content: "";
   position: absolute;
   top: 0;
@@ -241,7 +241,11 @@ section .image-background:before {
   font-weight: 400;
 }
 
-.sign-in-form .content-background .form-background .orange-lava-button input:focus {
+.sign-in-form
+  .content-background
+  .form-background
+  .orange-lava-button
+  input:focus {
   outline: focus;
 }
 
@@ -315,8 +319,7 @@ section .image-background:before {
   padding: 40px;
 }
 
-.white-box h3
-{
+.white-box h3 {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-h4;
@@ -324,14 +327,14 @@ section .image-background:before {
   line-height: $saira-message-line-height;
 }
 
-.continue-button input{
+.continue-button input {
   cursor: pointer;
   width: 311px;
   height: 56px;
   border-radius: 4px;
   border-style: none;
-  background: #F5A851;
-  color: white;  
+  background: #f5a851;
+  color: white;
   font-size: 21px;
   font-weight: 400;
   text-decoration: none;
@@ -340,12 +343,27 @@ section .image-background:before {
   outline: none;
   text-decoration: none;
   transition: transform 80ms ease-in;
-
 }
 
+// pressure suggestion desktop, tablet
+// pressure suggestion
+.pressure-suggestion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+  .pressure-suggestion-content .suggestion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+
+
 // desktop menu with setup
-.nav-links
-{
+.nav-links {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -353,7 +371,7 @@ section .image-background:before {
 
 /* smooth hover animation */
 .nav-links li a {
-  padding:10px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   list-style: none;
   text-transform: uppercase;
@@ -364,7 +382,7 @@ section .image-background:before {
 /* animation action */
 
 .nav-links li a:hover {
-  padding:10px 20px;
+  padding: 10px 20px;
   background: #f5a851;
   color: white;
 }
@@ -384,8 +402,6 @@ section .image-background:before {
   background-color: #f5a851;
 }
 
-
-
 // hover
 .welcome-container .continue-button input:hover {
   background: #dd8928;
@@ -395,16 +411,12 @@ section .image-background:before {
   transform: scale(0.96);
 }
 
-
 // MEDIA QUERIES ***********
 //****************************
 // If the browser window is 1024 or smaller, the background image would do this
 
-
-@media only screen and (max-width: 1024){
-  
-  .white-box h3
-  {
+@media only screen and (max-width: 1024) {
+  .white-box h3 {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: $saira-h4;
@@ -417,9 +429,7 @@ section .image-background:before {
 //****************************
 // If the browser window is 768px or smaller, the background image would do this
 
-
 @media only screen and (max-width: 768px) {
-
   html,
   body {
     overflow-x: hidden;
@@ -474,11 +484,18 @@ section .image-background:before {
     color: #2b2b2b;
   }
 
-  // welcome
+  // pressure suggestion
+  .pressure-suggestion-content .suggestion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  .pressure-suggestion-container
-  {
-    
+  .pressure-suggestion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .white-box {
@@ -488,6 +505,8 @@ section .image-background:before {
     background: white;
     padding: 20px;
     outline: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   // hamburger
@@ -518,15 +537,11 @@ section .image-background:before {
     font-size: $lato-h4;
     font-weight: 400;
   }
-  
+
   .nav-links li {
     opacity: 0;
   }
-
-
 }
-
-
 
 .nav-active {
   -o-transform: translateX(0%);
