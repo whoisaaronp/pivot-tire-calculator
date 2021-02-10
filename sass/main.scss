@@ -94,7 +94,7 @@ h2 {
 p {
   font-size: $lato-p;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 24px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
 }
@@ -451,6 +451,7 @@ p {
   flex: 1 1;
   justify-content: center;
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .button-container-style div {
@@ -656,7 +657,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #2b2c31;
-    // background: #f5a851;
+    // background: #f5a851; 
   }
 
   .button-container-style input {
