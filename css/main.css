@@ -383,13 +383,12 @@ input:focus {
     align-items: center; }
 
   .white-box {
-    width: 85%;
-    height: 65%;
+    width: 90vw;
+    height: 33vh;
     border-radius: 5px;
     background: white;
     padding: 20px;
     outline: none;
-    margin-top: 40px;
     margin-bottom: 40px; }
 
   .equipment-suggestions-content {
@@ -441,7 +440,24 @@ input:focus {
     justify-content: center;
     align-items: center;
     margin: -90px 0 50px;
-    z-index: -1; } }
+    z-index: -1; }
+
+  .massmeasure-container-style {
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    padding-top: 40px; }
+
+  .massmeasure-container-style div {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #2b2c31; }
+
+  .massmeasure-container-style button {
+    border-style: none;
+    align-items: center;
+    padding: 22px 65px;
+    cursor: pointer; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);
