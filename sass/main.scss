@@ -55,13 +55,13 @@ $lato-p: 1rem;
 // SMALL Regular 12pt 100
 
 body {
-  background: #191b1d;
+  background: #2b2c31;
   font-family: "Lato", sans-serif;
 }
 
 header {
   width: 90%;
-  height: 10vh;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,6 +92,11 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+}
+
+.logo-container {
+  width: 10vw;
+  height: auto;
 }
 
 .sign-in-form .image-background {
@@ -307,7 +312,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -20px 0 50px;
+  margin: -140px 0 50px;
   z-index: -1;
 }
 
@@ -349,9 +354,12 @@ p {
   cursor: pointer;
   width: 311px;
   height: 56px;
-  border-radius: 4px;
+  // border-radius: 4px;
+  // background: #f5a851;
   border-style: none;
-  background: #f5a851;
+  border-radius: 4px;
+  background: #2b2c31;
+  box-shadow: 7px 7px 15px #1b1c1f, -7px -7px 15px #3b3c43;
   color: white;
   font-size: 21px;
   font-weight: 400;
@@ -420,7 +428,9 @@ p {
 
 // hover
 .welcome-container .continue-button input:hover {
-  background: #dd8928;
+  border-radius: 4px;
+  background: linear-gradient(145deg, #27282c, #2e2f34);
+  box-shadow: 7px 7px 15px #1b1c1f, -7px -7px 15px #3b3c43;
 }
 
 .welcome-container .continue-button:active {
@@ -449,6 +459,11 @@ p {
   html,
   body {
     overflow-x: hidden;
+  }
+
+  .logo-container {
+    width: 20vw;
+    height: auto;
   }
 
   .sign-in-form .image-background {
@@ -573,6 +588,17 @@ p {
 
   .nav-links li {
     opacity: 0;
+  }
+
+  // welcome
+  .welcome-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -90px 0 50px;
+    z-index: -1;
   }
 }
 
