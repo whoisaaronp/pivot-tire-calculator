@@ -10,6 +10,10 @@
 .hidden {
   display: none; }
 
+html,
+.custom-body-class {
+  overflow-x: hidden; }
+
 body {
   background: #2b2c31;
   font-family: "Lato", sans-serif; }
@@ -205,27 +209,33 @@ input:focus {
   transform: scale(0.96); }
 
 .welcome-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -140px 0 50px;
   z-index: -1; }
 
+.white-box-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .white-box {
-  width: 45%;
-  height: 50%;
+  width: 90%;
+  height: auto;
   border-radius: 5px;
   background: white;
-  padding: 40px; }
+  padding: 20px;
+  margin-top: 150px;
+  margin-bottom: 40px; }
 
 .white-box h3 {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  line-height: 3.4375rem; }
+  line-height: 3.4375rem;
+  text-align: center; }
 
 .equipment-suggestions-content {
   width: 93%;
@@ -312,16 +322,46 @@ input:focus {
 .welcome-container .continue-button:active {
   transform: scale(0.96); }
 
+.button-container-style {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  padding-top: 40px; }
+
+.button-container-style div {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #2b2c31; }
+
+.button-container-style input {
+  border-style: none;
+  align-items: center;
+  padding: 22px 65px;
+  cursor: pointer; }
+
+footer {
+  margin-top: 200px; }
+
 @media only screen and (max-width: 1024) {
   .white-box h3 {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    line-height: 3.4375rem; } }
+    line-height: 3.4375rem; }
+
+  .white-box {
+    width: 90vw;
+    height: 33vh;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+    outline: none;
+    margin-top: 150px;
+    margin-bottom: 40px; } }
 @media only screen and (max-width: 768px) {
   html,
-  body {
+  .custom-body-class {
     overflow-x: hidden; }
 
   .logo-container {
@@ -383,12 +423,12 @@ input:focus {
     align-items: center; }
 
   .white-box {
-    width: 90vw;
-    height: 33vh;
+    width: 90%;
+    height: auto;
     border-radius: 5px;
     background: white;
-    padding: 20px;
     outline: none;
+    margin-top: 150px;
     margin-bottom: 40px; }
 
   .equipment-suggestions-content {
@@ -442,22 +482,31 @@ input:focus {
     margin: -90px 0 50px;
     z-index: -1; }
 
-  .massmeasure-container-style {
+  .button-container-style {
     display: flex;
     flex: 1 1;
     justify-content: center;
     padding-top: 40px; }
 
-  .massmeasure-container-style div {
+  .button-container-style div {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #2b2c31; }
 
-  .massmeasure-container-style button {
+  .button-container-style input {
     border-style: none;
     align-items: center;
     padding: 22px 65px;
-    cursor: pointer; } }
+    cursor: pointer; }
+
+  .user-instructions {
+    width: 90%;
+    padding: 40px; }
+
+  .user-instructions p {
+    font-size: 1rem;
+    color: white;
+    font-weight: 200; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);

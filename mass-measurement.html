@@ -16,12 +16,12 @@
   <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class=".custom-body-class">
   <main>
     <header>
       <!-- back -->
       <div class="back-button">
-        <a href="index.html">
+        <a href="welcome.html">
           <img src="images/eva_arrow-back-fill.svg" alt="back-arrow-button">
         </a>
       </div>
@@ -47,24 +47,30 @@
     </header>
     <section class="welcome-container">
       <h2 class="hidden">Welcome user message</h2>
+      <section class="white-box-contain">
+
       <div class="white-box">
         <!-- content -->
         <h3>Select your preferred unit of mass measurement?</h3>
-        <div id="mass-input-content" class="massmeasure-container-style">
+        <div id="button-input-content" class="button-container-style">
           <div>
-            <button>KG</button>
+            <input type="button" onclick="alert('Hello World!')" value="KG">
           </div>
           <div>
-            <button>LBS</button>
+            <input type="button" onclick="alert('Hello World!')" value="LBS">
           </div>
         </div>
       </div>
+      </section>
       <div class="continue-button">
         <input type="text" value="Continue" name="continue">
       </div>
+      <div class="user-instructions">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, in consequuntur expedita at vitae, reiciendis asperiores error quam, distinctio ipsam vel!</p>
+      </div>
     </section>
     <footer>
-      
+      <h2 class="hidden">footer</h2>
     </footer>
   </main>
   <script src="js/main.js"></script>
