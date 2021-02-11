@@ -47,6 +47,10 @@ p {
   letter-spacing: 0.5px;
   margin: 20px 0 30px; }
 
+.back-button {
+  cursor: pointer;
+  display: block; }
+
 .logo-container {
   width: 10vw;
   height: auto; }
@@ -215,21 +219,21 @@ input:focus {
   align-items: center;
   z-index: -1; }
 
-.white-box-contain {
+.info-box-contain {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 120px; }
 
-.white-box {
-  width: 90%;
+.info-box {
+  width: 100%;
   height: auto;
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 20px;
-  margin-top: 150px;
+  padding: 20px 20px;
   margin-bottom: 40px; }
 
-.white-box h3 {
+.info-box h3 {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 2rem;
@@ -362,22 +366,25 @@ footer {
   color: white;
   font-weight: 200; }
 
+.white-box {
+  width: 45%;
+  background: white; }
+
 @media only screen and (max-width: 1024) {
-  .white-box h3 {
+  .info-box h3 {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 2rem;
     font-weight: 400;
     line-height: 3.4375rem; }
 
-  .white-box {
+  .info-box {
     width: 90vw;
     height: 33vh;
     border-radius: 5px;
     background: #e0e0e0;
     padding: 20px;
     outline: none;
-    margin-top: 150px;
     margin-bottom: 40px; }
 
   .user-instructions {
@@ -451,13 +458,11 @@ footer {
     justify-content: space-between;
     align-items: center; }
 
-  .white-box {
+  .info-box {
     width: 90%;
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
-    outline: none;
-    margin-top: 150px;
     margin-bottom: 40px; }
 
   .equipment-suggestions-content {
@@ -503,7 +508,7 @@ footer {
     opacity: 0; }
 
   .welcome-container {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -542,7 +547,14 @@ footer {
   .user-instructions p {
     font-size: 1rem;
     color: white;
-    font-weight: 200; } }
+    font-weight: 200; }
+
+  .white-box {
+    background: white; } }
+@media only screen and (max-width: 320px) {
+  .info-box {
+    margin-top: 200px;
+    margin-bottom: 40px; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);

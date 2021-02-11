@@ -99,6 +99,11 @@ p {
   margin: 20px 0 30px;
 }
 
+.back-button {
+  cursor: pointer;
+  display: block;
+}
+
 .logo-container {
   width: 10vw;
   height: auto;
@@ -319,23 +324,24 @@ p {
   z-index: -1;
 }
 
-.white-box-contain {
+.info-box-contain {
+  // width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 120px;
 }
 
-.white-box {
-  width: 90%;
+.info-box {
+  width: 100%;
   height: auto;
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 20px;
-  margin-top: 150px;
+  padding: 20px 20px;
   margin-bottom: 40px;
 }
 
-.white-box h3 {
+.info-box h3 {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-h4;
@@ -494,12 +500,18 @@ footer {
   font-weight: 200;
 }
 
+// welcome panel
+.white-box {
+  width: 45%;
+  background: white;
+}
+
 // MEDIA QUERIES ***********
 //****************************
 // If the browser window is 1024 or smaller, the background image would do this
 
 @media only screen and (max-width: 1024) {
-  .white-box h3 {
+  .info-box h3 {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: $saira-h4;
@@ -507,14 +519,14 @@ footer {
     line-height: $saira-message-line-height;
   }
 
-  .white-box {
+  .info-box {
     width: 90vw;
     height: 33vh;
     border-radius: 5px;
     background: #e0e0e0;
     padding: 20px;
     outline: none;
-    margin-top: 150px;
+    // margin-top: 150px;
     margin-bottom: 40px;
   }
 
@@ -608,13 +620,13 @@ footer {
     align-items: center;
   }
 
-  .white-box {
+  .info-box {
     width: 90%;
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
-    outline: none;
-    margin-top: 150px;
+    // padding: 20px 8px;
+    // margin-top: 70px;
     margin-bottom: 40px;
   }
 
@@ -635,8 +647,8 @@ footer {
     font-weight: 400;
     line-height: $saira-message-line-height;
   }
-  // hamburger
 
+  // hamburger
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -670,7 +682,7 @@ footer {
 
   // welcome
   .welcome-container {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -716,6 +728,18 @@ footer {
     font-size: $lato-small;
     color: white;
     font-weight: 200;
+  }
+
+  .white-box {
+    background: white;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  // welcome
+  .info-box {
+    margin-top: 200px;
+    margin-bottom: 40px;
   }
 }
 
