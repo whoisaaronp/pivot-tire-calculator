@@ -329,7 +329,7 @@ p {
   width: 90%;
   height: auto;
   border-radius: 5px;
-  background: white;
+  background: #e0e0e0;
   padding: 20px;
   margin-top: 150px;
   margin-bottom: 40px;
@@ -379,6 +379,7 @@ p {
   outline: none;
   text-decoration: none;
   transition: transform 80ms ease-in;
+  user-select: none;
 }
 
 // pressure suggestion desktop, tablet
@@ -445,19 +446,19 @@ p {
   transform: scale(0.96);
 }
 
-// mass measurement button
+// mass measurement button styling
 .button-container-style {
   display: flex;
   flex: 1 1;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 40px;
   padding-bottom: 40px;
+  user-select: none;
 }
 
 .button-container-style div {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #2b2c31;
 }
 
 .button-container-style input {
@@ -465,11 +466,34 @@ p {
   align-items: center;
   padding: 22px 65px;
   cursor: pointer;
+  border-radius: 10px;
+  font-size: $lato-p;
+  background: #e0e0e0;
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
+}
+
+// hover
+.button-container-style input:hover {
+  border-radius: 10px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
 
 footer {
   margin-top: 200px;
 }
+
+.user-instructions {
+  width: 50%;
+  padding: 40px;
+}
+
+.user-instructions p {
+  font-size: $lato-small;
+  color: white;
+  font-weight: 200;
+}
+
 // MEDIA QUERIES ***********
 //****************************
 // If the browser window is 1024 or smaller, the background image would do this
@@ -487,11 +511,22 @@ footer {
     width: 90vw;
     height: 33vh;
     border-radius: 5px;
-    background: white;
+    background: #e0e0e0;
     padding: 20px;
     outline: none;
     margin-top: 150px;
     margin-bottom: 40px;
+  }
+
+  .user-instructions {
+    width: 50%;
+    padding: 40px;
+  }
+
+  .user-instructions p {
+    font-size: $lato-small;
+    color: white;
+    font-weight: 200;
   }
 }
 
@@ -577,7 +612,7 @@ footer {
     width: 90%;
     height: auto;
     border-radius: 5px;
-    background: white;
+    background: #e0e0e0;
     outline: none;
     margin-top: 150px;
     margin-bottom: 40px;
@@ -648,16 +683,15 @@ footer {
   .button-container-style {
     display: flex;
     flex: 1 1;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .button-container-style div {
-    // width: 50%;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #2b2c31;
-    // background: #f5a851; 
+    justify-content: space-evenly;
   }
 
   .button-container-style input {
@@ -665,6 +699,13 @@ footer {
     align-items: center;
     padding: 22px 65px;
     cursor: pointer;
+    font-size: $lato-p;
+  }
+
+  .button-container-style input:hover {
+    border-radius: 10px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
   }
 
   .user-instructions {
