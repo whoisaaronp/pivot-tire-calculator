@@ -348,6 +348,7 @@ p {
   font-weight: 400;
   line-height: $saira-message-line-height;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 // equipment container
@@ -470,7 +471,7 @@ p {
 .button-container-style input {
   border-style: none;
   align-items: center;
-  padding: 22px 65px;
+  padding: 22px 55px;
   cursor: pointer;
   border-radius: 10px;
   font-size: $lato-p;
@@ -504,6 +505,79 @@ footer {
 .white-box {
   width: 45%;
   background: white;
+}
+
+//slider stlying
+// .slider-container-style
+// {
+
+// }
+
+input {
+  background-color: #919191;
+  height: 3px;
+}
+
+input[type="range"] range-thumb {
+  width: 8%;
+  height: 850%;
+  border-radius: 33px;
+  background-color: rgb(168, 168, 168);
+  overflow: hidden;
+}
+
+// FIREFOX
+input[type="range"]::-moz-range-thumb {
+  width: 8%;
+  height: 850%;
+  border-radius: 33px;
+  background-color: rgb(168, 168, 168);
+  overflow: hidden;
+}
+
+// CHROME, SAFARI, OPERA
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 500px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
+  margin-top: -14px;
+}
+
+// hover
+input[type="range"]::-webkit-slider-thumb:hover {
+  -webkit-appearance: none;
+  border: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
 }
 
 // MEDIA QUERIES ***********
@@ -621,11 +695,11 @@ footer {
   }
 
   .info-box {
-    width: 90%;
+    width: 375px;
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
-    // padding: 20px 8px;
+    // padding: 20px;
     // margin-top: 70px;
     margin-bottom: 40px;
   }
@@ -709,7 +783,7 @@ footer {
   .button-container-style input {
     border-style: none;
     align-items: center;
-    padding: 22px 65px;
+    padding: 22px 55px;
     cursor: pointer;
     font-size: $lato-p;
   }
