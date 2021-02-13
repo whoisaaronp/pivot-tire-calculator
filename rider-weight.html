@@ -23,18 +23,17 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
+  <body class=".custom-body-class">
     <main>
       <header>
         <!-- back -->
         <div class="back-button">
-          <a href="index.html">
+          <a href="mass-measurement.html">
             <img src="images/eva_arrow-back-fill.svg" alt="back-arrow-button" />
           </a>
         </div>
         <!-- logo -->
         <div class="logo-container">
-          <!-- <h1>Pivot</h1> -->
           <img src="images/white-pivot-gradient-logo.svg" alt="pivot logo" />
         </div>
         <nav>
@@ -52,20 +51,25 @@
         </nav>
       </header>
       <section class="welcome-container">
-        <h2 class="hidden">Welcome user message</h2>
-        <section class="info-box-contain ">
-          <div class="info-box white-box">
+        <h2 class="hidden">User Pressure unit input</h2>
+        <section class="info-box-contain">
+          <div class="info-box">
             <!-- content -->
-            <h3>
-              Ok Kirk, in order to give you an optical riding experience please
-              follow all the steps in the next sequence of pages.
-              There you will learn reasons
-              behind your choices in order to make you fast. Enjoy. 
-            </h3>
+            <h3>Select your body weight?</h3>
+            <div id="slider-input-content" class="slider-container-style">
+            </div>
+            <input type="range" min="55" max="275" value="0" id="slider-knob">
           </div>
         </section>
         <div class="continue-button">
           <input type="text" value="Continue" name="continue" />
+        </div>
+        <div class="user-instructions">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
+            in consequuntur expedita at vitae, reiciendis asperiores error quam,
+            distinctio ipsam vel!
+          </p>
         </div>
       </section>
       <footer>

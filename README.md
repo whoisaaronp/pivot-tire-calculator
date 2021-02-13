@@ -1,4 +1,6 @@
 # pivot-tire-calculator
 Optimal tire pressure calculator
 
-# Welcome to my optimal pressure cycling tire calculator
+# Welcome to an optimal cycling tire pressure calculator experience.
+
+# Let's make you fast!
