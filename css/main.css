@@ -53,7 +53,8 @@ p {
 
 .logo-container {
   width: 10vw;
-  height: auto; }
+  height: auto;
+  margin-left: 165px; }
 
 .sign-in-form .image-background {
   position: relative;
@@ -226,7 +227,7 @@ p {
   height: auto;
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 20px;
+  padding: 40px;
   margin-bottom: 40px; }
 
 .info-box h3 {
@@ -234,9 +235,9 @@ p {
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 2rem;
   font-weight: 300;
-  line-height: 3.4375rem;
   text-align: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  line-height: 2.75rem; }
 
 .equipment-suggestions-content {
   width: 93%;
@@ -446,6 +447,12 @@ input[type="range"]:focus {
 input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #ccc; }
 
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  cursor: pointer;
+  background: #adadad;
+  border-radius: 1.3px; }
+
 @media only screen and (max-width: 1024) {
   .info-box h3 {
     display: block;
@@ -478,7 +485,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   .logo-container {
     width: 20vw;
-    height: auto; }
+    height: auto;
+    margin-left: 35px; }
 
   .sign-in-form .image-background {
     position: absolute;
@@ -535,10 +543,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     align-items: center; }
 
   .info-box {
-    width: 375px;
+    width: 325px;
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
+    padding: 40px;
     margin-bottom: 40px; }
 
   .equipment-suggestions-content {
@@ -589,7 +598,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -90px 0 50px;
     z-index: -1; }
 
   .button-container-style {

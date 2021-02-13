@@ -107,6 +107,8 @@ p {
 .logo-container {
     width: 10vw;
     height: auto;
+    margin-left: 165px;
+
 }
 
 .sign-in-form .image-background {
@@ -306,7 +308,6 @@ p {
 }
 
 .info-box-contain {
-    // width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,7 +319,7 @@ p {
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
-    padding: 20px;
+    padding: 40px;
     margin-bottom: 40px;
 }
 
@@ -327,9 +328,9 @@ p {
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: $saira-h4;
     font-weight: 300;
-    line-height: $saira-message-line-height;
     text-align: center;
     margin-bottom: 2rem;
+    line-height: 2.75rem;
 }
 
 // equipment container
@@ -585,6 +586,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #ccc;
 }
 
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  cursor: pointer;
+  background: #adadad;
+  border-radius: 1.3px;
+}
+
 // MEDIA QUERIES ***********
 // ****************************
 // If the browser window is 1024 or smaller, the background image would do this
@@ -631,9 +639,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
         overflow-x: hidden;
     }
 
+
     .logo-container {
         width: 20vw;
         height: auto;
+        margin-left: 35px;
+
     }
 
     .sign-in-form .image-background {
@@ -700,12 +711,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     }
 
     .info-box {
-        width: 375px;
+        width: 325px;
         height: auto;
         border-radius: 5px;
         background: #e0e0e0;
-        // padding: 20px;
-        // margin-top: 70px;
+        padding: 40px;
         margin-bottom: 40px;
     }
 
@@ -766,7 +776,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: -90px 0 50px;
+        // margin: -90px 0 50px;
         z-index: -1;
     }
 
