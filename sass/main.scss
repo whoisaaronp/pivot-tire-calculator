@@ -815,6 +815,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
     // FIREFOX
     input[type="range"]::-moz-range-thumb {
+        cursor: pointer;
         width: 10%;
         height: 220%;
         border-radius: 33px;
@@ -827,6 +828,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
     // FIREFOX HOVER
     input[type="range"]::-moz-range-thumb:hover {
+        cursor: pointer;
         width: 10%;
         height: 220%;
         border-radius: 33px;
@@ -844,11 +846,20 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
         background: #d4d4d4;
     }
 
+    input[type="range"]::-ms-slider-runnable-track {
+        background: #d4d4d4;
+    }
+
     // FIREFOX TRACK
     input[type="range"]::-moz-slider-runnable-track {
-
-        // height: 1rem;
         background: #d4d4d4;
+    }
+
+    input[type="range"]::-moz-range-track {
+        width: 100%;
+        cursor: pointer;
+        background: #adadad;
+        border-radius: 1.3px;
     }
 }
 
