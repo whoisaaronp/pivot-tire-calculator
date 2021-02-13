@@ -388,29 +388,27 @@ input[type="range"]::-webkit-slider-runnable-track {
   background: #3b3c43; }
 
 input[type="range"]::-moz-range-thumb {
-  width: 14%;
-  height: 140%;
+  width: 15%;
+  height: 240%;
   border-radius: 33px;
   overflow: hidden;
   background: #e0e0e0;
-  border-radius: 50%;
-  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
-  margin-top: -14px;
-  border-style: initial; }
-
-input[type="range"]::-moz-range-thumb:hover {
-  width: 14%;
-  height: 140%;
-  border-radius: 33px;
-  overflow: hidden;
-  background: #e0e0e0;
-  border-radius: 50%;
-  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
   margin-top: -14px;
   border-style: initial;
   border-radius: 50%;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
+
+input[type="range"]::-moz-range-thumb:hover {
+  width: 15%;
+  height: 240%;
+  border-radius: 33px;
+  overflow: hidden;
+  background: #e0e0e0;
+  margin-top: -14px;
+  border-style: initial;
+  border-radius: 50%;
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0); }
 
 input[type="range"] {
   -webkit-appearance: none;
@@ -633,7 +631,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   input[type="range"]::-moz-range-thumb {
     width: 10%;
-    height: 140%;
+    height: 220%;
     border-radius: 33px;
     overflow: hidden;
     background: #e0e0e0;
@@ -644,17 +642,19 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   input[type="range"]::-moz-range-thumb:hover {
     width: 10%;
-    height: 140%;
+    height: 220%;
     border-radius: 33px;
     overflow: hidden;
     background: #e0e0e0;
     border-radius: 50%;
-    box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
     margin-top: -14px;
     border-style: initial;
     border-radius: 50%;
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; } }
+    box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
+
+  input[type='track']::-moz-track {
+    background: #3b3c43; } }
 @media only screen and (max-width: 320px) {
   .info-box {
     margin-top: 200px;
