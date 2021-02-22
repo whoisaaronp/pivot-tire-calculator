@@ -463,9 +463,6 @@ input[type="range"]::-moz-range-track {
   background: #444;
   margin-bottom: 20px; }
 
-.input-buttons {
-  width: 70%; }
-
 @media only screen and (max-width: 1024) {
   .info-box h3 {
     display: block;
@@ -644,8 +641,6 @@ input[type="range"]::-moz-range-track {
     font-weight: 200; }
 
   .white-box {
-    width: 100%;
-    height: auto;
     background: white;
     padding: 25px; }
 
@@ -701,10 +696,7 @@ input[type="range"]::-moz-range-track {
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 28px; }
-
-  .input-buttons {
-    width: 70%; } }
+    line-height: 28px; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);

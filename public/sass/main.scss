@@ -620,9 +620,9 @@ input[type="range"]::-moz-range-track {
 }
 
 // form button width
-.input-buttons {
-  width: 70%;
-}
+// .input-buttons {
+//   width: 70%;
+// }
 
 // MEDIA QUERIES ***********
 // ****************************
@@ -844,8 +844,6 @@ input[type="range"]::-moz-range-track {
   }
 
   .white-box {
-    width: 100%;
-    height: auto;
     background: white;
     padding: 25px;
   }
@@ -921,9 +919,9 @@ input[type="range"]::-moz-range-track {
   }
 
   // form button width
-  .input-buttons {
-    width: 70%;
-  }
+//   .input-buttons {
+//     width: 70%;
+//   }
 }
 
 // menu animation
