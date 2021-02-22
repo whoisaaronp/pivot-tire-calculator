@@ -335,8 +335,8 @@ p {
 }
 
 .info-box {
-  min-width: 70%;
-  min-height: auto;
+//   min-width: 70%;
+//   min-height: auto;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px;
@@ -456,7 +456,7 @@ p {
 }
 
 // mass measurement button styling
-.button-container-style {
+.button-container-style div{
   display: flex;
   flex: 1 1;
   justify-content: space-evenly;

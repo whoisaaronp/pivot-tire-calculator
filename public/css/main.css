@@ -229,8 +229,6 @@ input:focus {
   margin-top: 70px; }
 
 .info-box {
-  min-width: 70%;
-  min-height: auto;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px; }
@@ -330,7 +328,7 @@ input:focus {
 .welcome-container .continue-button:active {
   transform: scale(0.96); }
 
-.button-container-style {
+.button-container-style div {
   display: flex;
   flex: 1 1;
   justify-content: space-evenly;
