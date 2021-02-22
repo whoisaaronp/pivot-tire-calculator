@@ -163,7 +163,11 @@ p {
   text-decoration: none;
   font-weight: 400; }
 
-.sign-in-form .content-background .form-background .orange-lava-button input:focus {
+.sign-in-form
+.content-background
+.form-background
+.orange-lava-button
+input:focus {
   outline: focus; }
 
 .sign-in-form .content-background .form-background .input-box p {
@@ -217,18 +221,19 @@ p {
   z-index: -1; }
 
 .info-box-contain {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 70px; }
 
 .info-box {
-  width: 100%;
-  height: auto;
+  min-width: 70%;
+  min-height: auto;
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 40px;
-  margin-bottom: 40px; }
+  padding: 23px; }
 
 .info-box h3 {
   display: block;
@@ -329,15 +334,14 @@ p {
   display: flex;
   flex: 1 1;
   justify-content: space-evenly;
-  padding-top: 40px;
-  padding-bottom: 40px;
   user-select: none; }
 
-.button-container-style div {
+.button-container-style form {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: row;
+  justify-content: space-between; }
 
-.button-container-style input {
+.button-container-style form input {
   border-style: none;
   align-items: center;
   padding: 22px 55px;
@@ -389,9 +393,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   background: #3b3c43; }
 
 input[type="range"]::-moz-range-thumb {
-  width: 15%;
-  height: 240%;
-  border-radius: 33px;
+  cursor: grab;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   background: #e0e0e0;
   border-style: initial;
@@ -399,9 +403,9 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
 input[type="range"]::-moz-range-thumb:hover {
-  width: 15%;
-  height: 240%;
-  border-radius: 33px;
+  cursor: grab;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   background: #e0e0e0;
   margin-top: -14px;
@@ -454,11 +458,13 @@ input[type="range"]::-moz-range-track {
   border-radius: 1.3px; }
 
 .rim-width-contain div {
-  height: 225px;
-  width: auto;
-  background: red;
+  height: 100%;
+  width: 100%;
   background: #444;
   margin-bottom: 20px; }
+
+.input-buttons {
+  width: 70%; }
 
 @media only screen and (max-width: 1024) {
   .info-box h3 {
@@ -469,13 +475,11 @@ input[type="range"]::-moz-range-track {
     line-height: 3.4375rem; }
 
   .info-box {
-    width: 90vw;
-    height: 33vh;
+    max-width: 70%;
+    height: 100%;
     border-radius: 5px;
     background: #e0e0e0;
-    padding: 20px;
-    outline: none;
-    margin-bottom: 40px; }
+    padding: 23px; }
 
   .user-instructions {
     width: 50%;
@@ -550,12 +554,11 @@ input[type="range"]::-moz-range-track {
     align-items: center; }
 
   .info-box {
-    width: 325px;
+    width: 90%;
     height: auto;
     border-radius: 5px;
     background: #e0e0e0;
-    padding: 40px;
-    margin-bottom: 40px; }
+    padding: 23px; }
 
   .equipment-suggestions-content {
     width: 85%;
@@ -607,19 +610,19 @@ input[type="range"]::-moz-range-track {
     align-items: center;
     z-index: -1; }
 
-  .button-container-style {
+  .button-container-style form {
     display: flex;
     flex: 1 1;
     justify-content: space-evenly;
-    padding-top: 40px;
-    padding-bottom: 40px; }
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
-  .button-container-style div {
+  .button-container-style form div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; }
 
-  .button-container-style input {
+  .button-container-style form input {
     border-style: none;
     align-items: center;
     padding: 22px 55px;
@@ -641,13 +644,15 @@ input[type="range"]::-moz-range-track {
     font-weight: 200; }
 
   .white-box {
-    background: white; }
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 25px; }
 
   input[type="range"]::-moz-range-thumb {
-    cursor: pointer;
-    width: 10%;
-    height: 220%;
-    border-radius: 33px;
+    cursor: grab;
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     background: #e0e0e0;
     border-style: initial;
@@ -655,10 +660,9 @@ input[type="range"]::-moz-range-track {
     box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
   input[type="range"]::-moz-range-thumb:hover {
-    cursor: pointer;
-    width: 10%;
-    height: 220%;
-    border-radius: 33px;
+    cursor: grab;
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     background: #e0e0e0;
     border-radius: 50%;
@@ -683,15 +687,24 @@ input[type="range"]::-moz-range-track {
     border-radius: 1.3px; }
 
   .rim-width-contain div {
+    width: 100%;
     height: 225px;
-    width: auto;
-    background: red;
     background: #444;
     margin-bottom: 20px; } }
 @media only screen and (max-width: 320px) {
   .info-box {
-    margin-top: 200px;
-    margin-bottom: 40px; } }
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
+  .info-box h3 {
+    display: block;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 28px; }
+
+  .input-buttons {
+    width: 70%; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);
