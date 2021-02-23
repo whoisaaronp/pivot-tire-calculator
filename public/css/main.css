@@ -297,6 +297,7 @@ input:focus {
 .nav-links li a {
   padding: 10px 20px;
   text-decoration: none;
+  letter-spacing: 1px;
   list-style: none;
   text-transform: uppercase;
   color: white;
@@ -591,8 +592,9 @@ input[type="range"]::-moz-range-track {
 
   .nav-links li a {
     color: black;
-    font-size: 1.5rem;
-    font-weight: 400; }
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 1px; }
 
   .nav-links li {
     opacity: 0; }

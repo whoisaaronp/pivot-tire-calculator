@@ -335,8 +335,8 @@ p {
 }
 
 .info-box {
-//   min-width: 70%;
-//   min-height: auto;
+  //   min-width: 70%;
+  //   min-height: auto;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px;
@@ -417,6 +417,7 @@ p {
 .nav-links li a {
   padding: 10px 20px;
   text-decoration: none;
+  letter-spacing: 1px;
   list-style: none;
   text-transform: uppercase;
   color: white;
@@ -456,12 +457,10 @@ p {
 }
 
 // mass measurement button styling
-.button-container-style div{
+.button-container-style div {
   display: flex;
   flex: 1 1;
   justify-content: space-evenly;
-  // padding-top: 40px;
-  // padding-bottom: 40px;
   user-select: none;
 }
 
@@ -618,11 +617,6 @@ input[type="range"]::-moz-range-track {
   background: #444;
   margin-bottom: 20px;
 }
-
-// form button width
-// .input-buttons {
-//   width: 70%;
-// }
 
 // MEDIA QUERIES ***********
 // ****************************
@@ -785,8 +779,9 @@ input[type="range"]::-moz-range-track {
 
   .nav-links li a {
     color: black;
-    font-size: $lato-h4;
-    font-weight: 400;
+    font-size:$saira-h4;
+    font-weight: 200;
+    letter-spacing: 1px;
   }
 
   .nav-links li {
@@ -800,7 +795,6 @@ input[type="range"]::-moz-range-track {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // margin: -90px 0 50px;
     z-index: -1;
   }
 
@@ -917,11 +911,6 @@ input[type="range"]::-moz-range-track {
     font-weight: 300;
     line-height: 28px;
   }
-
-  // form button width
-//   .input-buttons {
-//     width: 70%;
-//   }
 }
 
 // menu animation
