@@ -322,7 +322,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -1;
 }
 
 .info-box-contain {
@@ -335,11 +334,19 @@ p {
 }
 
 .info-box {
-//   min-width: 70%;
-//   min-height: auto;
+  // width: 90%;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px;
+  margin: 0 auto;
+}
+
+.swiper-info-box {
+  width: 90%;
+  border-radius: 5px;
+  background: #e0e0e0;
+  padding: 23px;
+  margin: 0 auto;
 }
 
 .info-box h3 {
@@ -406,6 +413,10 @@ p {
   align-items: center;
 }
 
+nav {
+  z-index: 2;
+}
+
 // desktop menu with setup
 .nav-links {
   width: 100%;
@@ -417,6 +428,7 @@ p {
 .nav-links li a {
   padding: 10px 20px;
   text-decoration: none;
+  letter-spacing: 1px;
   list-style: none;
   text-transform: uppercase;
   color: white;
@@ -455,36 +467,58 @@ p {
   transform: scale(0.96);
 }
 
-// mass measurement button styling
-.button-container-style div{
-  display: flex;
-  flex: 1 1;
-  justify-content: space-evenly;
-  // padding-top: 40px;
-  // padding-bottom: 40px;
-  user-select: none;
-}
-
 .button-container-style form {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.button-container-style form input {
-  border-style: none;
-  align-items: center;
-  padding: 22px 55px;
+.button-container-style div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+
+.button-container-style label {
+  justify-items: center;
+}
+
+.button-container-style label,
+.button-container-style input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
+}
+
+.button-container-style input[type="radio"] {
+  opacity: 0;
+  z-index: 100;
+}
+/* need to fix */
+.button-container-style form input[type="radio"]:checked + label,
+.Checked + label {
+  background: yellow;
+}
+
+.button-container-style label {
   cursor: pointer;
-  border-radius: 10px;
-  font-size: $lato-p;
+  border-radius: 5px;
   background: #e0e0e0;
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
 
-// hover
-.button-container-style input:hover {
-  border-radius: 10px;
+/* distance intensity blur */
+.button-container-style label:hover {
+  border-radius: 5px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
@@ -619,10 +653,41 @@ input[type="range"]::-moz-range-track {
   margin-bottom: 20px;
 }
 
-// form button width
-// .input-buttons {
-//   width: 70%;
-// }
+// swiper js
+.swipe-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.swiper-slide {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  /* Center slide text vertically */
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  // background: #fff;
+}
+
+.swiper-slide img {
+  cursor: grab;
+  width: 90%;
+  height: 100%;
+}
+
+.swiper-slide h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.swiper-slide h4 {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: grey;
+}
 
 // MEDIA QUERIES ***********
 // ****************************
@@ -741,6 +806,7 @@ input[type="range"]::-moz-range-track {
     border-radius: 5px;
     background: #e0e0e0;
     padding: 23px;
+    margin: 0 auto;
   }
 
   // equipment container
@@ -785,8 +851,9 @@ input[type="range"]::-moz-range-track {
 
   .nav-links li a {
     color: black;
-    font-size: $lato-h4;
+    font-size: $saira-h4;
     font-weight: 400;
+    letter-spacing: 1px;
   }
 
   .nav-links li {
@@ -800,37 +867,6 @@ input[type="range"]::-moz-range-track {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // margin: -90px 0 50px;
-    z-index: -1;
-  }
-
-  // mass measurement button
-  .button-container-style form {
-    display: flex;
-    flex: 1 1;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .button-container-style form div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .button-container-style form input {
-    border-style: none;
-    align-items: center;
-    padding: 22px 55px;
-    cursor: pointer;
-    font-size: $lato-p;
-  }
-
-  .button-container-style input:hover {
-    border-radius: 10px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
   }
 
   .user-instructions {
@@ -901,13 +937,24 @@ input[type="range"]::-moz-range-track {
     background: #444;
     margin-bottom: 20px;
   }
-}
 
-@media only screen and(max-width: 320px) {
-  // welcome
-  .info-box {
+  .swiper-info-box {
+    width: 80%;
+    height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and(max-width: 375px) {
+  // welcome
+  .info-box {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
   }
 
   .info-box h3 {
@@ -917,11 +964,6 @@ input[type="range"]::-moz-range-track {
     font-weight: 300;
     line-height: 28px;
   }
-
-  // form button width
-//   .input-buttons {
-//     width: 70%;
-//   }
 }
 
 // menu animation

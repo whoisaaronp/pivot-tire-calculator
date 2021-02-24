@@ -50,22 +50,24 @@
           <!-- content -->
           <h3>Select your preferred unit of mass measurement?</h3>
           <div id="button-input-content" class="button-container-style">
-            <form action="" id="mass-measurement" class="input-buttons">
+            <form id="mass-measurement">
 
               <div>
-                <input type="button" onclick="alert('Hello World!')" value="KG" />
+                <label for="KG">KG</label>
+                <input type="radio" name="weight-unit" required="" value="KG" id="KG" />
               </div>
               <div>
-                <input type="button" onclick="alert('Hello World!')" value="LBS" />
+                <label for="LBS">LBS</label>
+                <input type="radio" name="weight-unit" required="" value="LBS" id="LBS" />
               </div>
+              
             </form>
-
           </div>
         </div>
       </section>
       <div class="continue-button">
         <a href="/pressure-unit">
-          <input type="text" value="Continue" name="continue" />
+          <input type="button" value="Continue" name="continue" id="next-page"/>
         </a>
       </div>
       <div class="user-instructions">
@@ -81,6 +83,7 @@
     </footer>
   </main>
   <script src="/js/main.js"></script>
+<script src="/js/localStorage.js"></script>
 </body>
 
 </html>
