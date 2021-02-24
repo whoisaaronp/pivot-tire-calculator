@@ -50,13 +50,15 @@
           <!-- content -->
           <h3>Select your preferred unit to measure pressure?</h3>
           <div id="button-input-content" class="button-container-style">
-            <form action="" id="mass-measurement" class="input-buttons">
+            <form action="" id="mass-measurement">
 
               <div>
-                <input type="button" onclick="alert('Hello World!')" value="BAR" />
+                <label for="BAR">KG</label>
+                <input type="radio" name="pressure-unit" required="" value="BAR" />
               </div>
               <div>
-                <input type="button" onclick="alert('Hello World!')" value="PSI" />
+                <label for="PSI">PSI</label>
+                <input type="radio" required="" value="PSI" />
               </div>
 
             </form>

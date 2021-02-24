@@ -53,10 +53,12 @@
             <form id="mass-measurement">
 
               <div>
-                <input type="button" required="" value="KG" />
+                <label for="KG">KG</label>
+                <input type="radio" name="weight-unit" required="" value="KG" id="KG" />
               </div>
               <div>
-                <input type="button" required="" value="LBS" />
+                <label for="LBS">LBS</label>
+                <input type="radio" name="weight-unit" required="" value="LBS" id="LBS" />
               </div>
               
             </form>
@@ -81,6 +83,7 @@
     </footer>
   </main>
   <script src="/js/main.js"></script>
+<script src="/js/localStorage.js"></script>
 </body>
 
 </html>
