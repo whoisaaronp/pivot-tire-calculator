@@ -22,16 +22,20 @@ export const OptimalSchema = new Schema({
         type: String,
         required: 'Select a bicycle type'
     },
+    // calculator structure as one thing as a array, inside would be an object
+    // measurements:[
+        // objects go in here
     riderWeight:{
-        type: integer,
+        type: String,
         required: 'Select your weight'
+        // repeating measurements
     },
     rimWidth:{
-        type: integer,
+        type: String,
         required: 'Select your rim width'
     },
     innerRimWidth:{
-        type: integer,
+        type: String,
         required: 'Select your inner rim width'
     },
     wheelDiameter:{
@@ -46,5 +50,6 @@ export const OptimalSchema = new Schema({
         type: Date,
         default: Date.now
     }
+// ]
 
 });

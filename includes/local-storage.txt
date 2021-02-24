@@ -11,74 +11,73 @@
 10. rim type
 11. riding surface
 
-//example
-localStorage.setItem('bar', '50kg');
-Let pressureBars = localStorage.getItem('dude');
-console.log(PressureBars);
 
-Or
+Local Storage 
 
-// 1. mass units
-let kg = 'kilo_weight';
-localStorage.setItem(kilo_weight);
-
-//1.2 mass units
-let lbs = 'pound_weight';
-localStorage.setItem(pound_weight);
-
-// 2.1pressure unit
-let bar = 'bar_pressure';
-localStorage.setItem(bar_pressure, 50);
-
-//2.2 pressure unit
-let psi = 'psi_pressure';
-localStorage.setItem(psi_pressure, 110);
-
-// 3.0 riding style
-let road_cycling = 'road';
-localStorage.setItem(road_cycling);
+// 1.
+let kg = "kg";
+let str = JSON.stringify(kg);
+localStorage.setItem( "KG", kg);
 
 
-//rider_weight
-???
+// 2.
+let lbs = "lbs";
+let str = JSON.stringify(lbs);
+localStorage.setItem( "LBS", lbs);
 
-// 3.1 rim width
-let rim_width = {
-	"rim_width":['18', '22', '26', '28', '29']};
+
+// 3.
+let bar = "50"; 
+let str = JSON.stringify(bar);
+localStorage.setItem( "Pressure_Unit", bar);
+
+
+// 4.
+let psi = "110"; 
+let str = JSON.stringify(psi);
+localStorage.setItem( "Psi_Pressure", psi);
+
+
+// 5.
+let riding_style = "road";
+let str = JSON.stringify(riding_style);
+localStorage.setItem( "Riding_Style", riding_style);
+
+
+// 6. Rider weight repeats for calculations(*** not sure what to put my default weight amount as, so I put 65 i.e. 65 kg)
+let rider_weight = "65"
+let str = JSON.stringify(rider_weight);
+localStorage.setItem( "Rider_Weight", rider_weight);
+
+
+// 7. "18", "22", "26", "28", "29"
+let rim_width = "18";
 let str = JSON.stringify(rim_width);
-
-localStorage.setItem("myRim_width", rim-width);
-
-// 3.2 retrieve the information
-let rim_width = localStorage.getItem("myRim_width);
-console.log(original);
+localStorage.setItem("Rim_Width", rim_width);
 
 
-// 3.3 inner rim width
-let inner_rim_width = {
-	"inner_rim_width":["15", "17", "19", "20", "21"]};
-
-localStorage.setItem("myInner_rim", inner-rim-width);
-
-
-// 3.4 wheel-diameter
-let wheel_diameter = {
-	"wheel_diameter":["584", "622", "700"]};
-}
-
-localStorage.setItem("myWheel_diameter",wheel_diameter);
-
-// 3.5 rim type
-let rim-type = {
-	"rim_type":["tubes", "tubular", "tubeless", "tubeless straight side"]};
-
-localStorage.setItem("tubes", "tubular", "tubeless", "tubeless straight side");
+// 8. "15", "17", "19", "20", "21"
+let inner_rim_width = "15";
+let str = JSON.stringify(inner_rim_width);
+localStorage.setItem("Inner_Rim_Width", inner_rim_width);
 
 
-// 3.6 riding surface
-let riding_surface ={
-	"riding_surface":["Dry", "Wet"]};
+// 9. "622", "700"
+let wheel_diameter = "584";
+let str = JSON.stringify(wheel_diameter);
+localStorage.setItem("Wheel_Diameter", wheel_diameter);
 
-localStorage.setItem("Dry", "Wet");
+
+// 10. "tubular", "tubeless" "tubeless straight sides"
+let rim_type = "tubes";
+let str = JSON.stringify(rim_type);
+localStorage.setItem("Rim_Type", rim_type);
+
+
+// 11. "Wet"
+let riding_surface = "Dry";
+let str = JSON.stringify(riding_surface);
+localStorage.setItem("Riding_Surface", riding_surface);
+
 
 

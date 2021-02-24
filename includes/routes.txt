@@ -1,0 +1,24 @@
+Users
+
+Const routes = (app) => {
+
+	app.users(‘/schema’)
+		.get((req,res,next) => {
+			console.log(`Request from: ${req.originalUrl}`)
+			console.log(`Request type: ${req.method}`)
+			next();
+		}, (req,res,next) => {
+			res.send('GET request successful!');
+		})
+
+		.post();
+	app.users('/users/:usersID')
+		.put((req,res) => 
+		res.send('PUT request successful!'))
+		
+		.delete((req,res) =>
+		res.send('DELETE request successful!));
+})
+
+export default users;
+
