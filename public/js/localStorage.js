@@ -18,7 +18,8 @@ function getData() {
 
 next.addEventListener("click", getData);
 
-// local storage job don't first then -> redirect
-// remove the a tag from html, redirect through JS
-// data attrituve on the continue button -> redirect to that page
+// local storage job done first then -> redirect
+// remove the a tag from html pages, redirect through JS instead
+// data attritube on the continue button -> redirect to that page instead
 // localstorage can work on each page 
+// window localStorage

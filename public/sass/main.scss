@@ -655,6 +655,7 @@ input[type="range"]::-moz-range-track {
 
 // swiper js
 .swipe-container {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -688,6 +689,15 @@ input[type="range"]::-moz-range-track {
   margin-bottom: 40px;
   color: grey;
 }
+
+// dots
+// .swiper-pagination
+// {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 0;
+//   right: 0;
+// }
 
 // MEDIA QUERIES ***********
 // ****************************

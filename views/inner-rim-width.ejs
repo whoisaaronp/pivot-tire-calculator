@@ -2,81 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <!-- very important to include this tag, set the site size to equal the device width -->
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <script src="https://kit.fontawesome.com/2e0221c94f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/hamburger.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="shortcut icon" type="image/svg" href="/images/16-flaviconpivot-gradient-logo.svg" />
-  <title>Pivot Tire Calculator</title>
-  <link href="/css/reset.css" rel="stylesheet" type="text/css" />
-  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8" />
+	<!-- very important to include this tag, set the site size to equal the device width -->
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<script src="https://kit.fontawesome.com/2e0221c94f.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/hamburger.css" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet" />
+	<link rel="shortcut icon" type="image/svg" href="/images/16-flaviconpivot-gradient-logo.svg" />
+	<title>Pivot Tire Calculator</title>
+	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class=".custom-body-class">
-  <main>
-    <header>
-      <!-- back -->
-      <div class="back-button">
-        <a href="/rim-width">
-          <img src="/images/eva_arrow-back-fill.svg" alt="back-arrow-button" />
-        </a>
-      </div>
-      <!-- logo -->
-      <div class="logo-container">
-        <img src="/images/white-pivot-gradient-logo.svg" alt="pivot logo" />
-      </div>
-      <nav>
-        <h2 class="hidden">Navigation</h2>
-        <ul class="nav-links">
-          <li class="nav-link"><a href="#">Dashboard</a></li>
-          <li class="nav-link"><a href="#">Settings</a></li>
-        </ul>
-
-        <button class="hamburger hamburger--elastic" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </nav>
-    </header>
-    <section class="welcome-container">
-      <h2 class="hidden">User Pressure unit input</h2>
-      <section class="info-box-contain">
-        <div class="info-box">
-          <!-- content -->
-          <h3>Select your inner rim width?</h3>
-          <div id="slider-input-content" class="slider-container-style rim-width-contain">
-            <div>
-              <!-- rim width graphic -->
-            </div>
-          </div>
-          <form action="" id="inner-rim-width">
-            <input type="range" min="55" max="275" value="0" id="slider-knob">
-          </form>
-        </div>
-      </section>
-      <div class="continue-button">
-        <a href="/wheel-diameter">
-          <input type="text" value="Continue" name="continue" />
-        </a>
-      </div>
-      <div class="user-instructions">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
-          in consequuntur expedita at vitae, reiciendis asperiores error quam,
-          distinctio ipsam vel!
-        </p>
-      </div>
-    </section>
-    <footer>
-      <h2 class="hidden">footer</h2>
-    </footer>
-  </main>
-  <script src="/js/main.js"></script>
+	<main>
+		<header>
+			<!-- back -->
+			<div class="back-button">
+				<a href="/rim-width">
+					<img src="/images/eva_arrow-back-fill.svg" alt="back-arrow-button" />
+				</a>
+			</div>
+			<!-- logo -->
+			<div class="logo-container">
+				<img src="/images/white-pivot-gradient-logo.svg" alt="pivot logo" />
+			</div>
+			<nav>
+				<h2 class="hidden">Navigation</h2>
+				<ul class="nav-links">
+					<li class="nav-link"><a href="#">Dashboard</a></li>
+					<li class="nav-link"><a href="#">Settings</a></li>
+				</ul>
+				<button class="hamburger hamburger--elastic" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</nav>
+		</header>
+		<section class="welcome-container">
+			<h2 class="hidden">User inner rim width input</h2>
+			<section class="info-box-contain">
+				<h2 class="hidden">Inner rim width selection</h2>
+				<div class="info-box">
+					<!-- content -->
+					<h3>Select your inner rim width?</h3>
+					<div id="slider-input-content" class="slider-container-style rim-width-contain">
+						<div>
+							<!-- rim width graphic -->
+						</div>
+					</div>
+					<form id="inner-rim-width">
+						<input name="inner-rim-width" type="range" min="18" max="29" value="18">
+					</form>
+				</div>
+			</section>
+			<div class="continue-button">
+				<a href="/wheel-diameter">
+					<input type="text" value="Continue" name="continue" />
+				</a>
+			</div>
+			<div class="user-instructions">
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
+					in consequuntur expedita at vitae, reiciendis asperiores error quam,
+					distinctio ipsam vel!
+				</p>
+			</div>
+		</section>
+		<footer>
+			<h2 class="hidden">footer</h2>
+		</footer>
+	</main>
+	<script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -60,6 +60,10 @@ router.get('/road-surface', function (req, res, next) {
     res.render('road-surface');
 });
 
+router.get('/pressure-suggestion', function (req, res, next) {
+    res.render('pressure-suggestion');
+});
+
 
 module.exports = router;
 
