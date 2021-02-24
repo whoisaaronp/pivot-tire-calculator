@@ -334,9 +334,19 @@ p {
 }
 
 .info-box {
+  // width: 90%;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px;
+  margin: 0 auto;
+}
+
+.swiper-info-box {
+  width: 90%;
+  border-radius: 5px;
+  background: #e0e0e0;
+  padding: 23px;
+  margin: 0 auto;
 }
 
 .info-box h3 {
@@ -933,6 +943,14 @@ input[type="range"]::-moz-range-track {
     margin-bottom: 20px;
   }
 
+  .swiper-info-box {
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+
 }
 
 @media only screen and(max-width: 375px) {
@@ -942,6 +960,7 @@ input[type="range"]::-moz-range-track {
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
 
   .info-box h3 {
