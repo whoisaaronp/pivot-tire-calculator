@@ -54,23 +54,21 @@
 						<form id="mass-measurement">
 
 							<div>
+								<input type="radio" name="weight-unit" required="" value="KG" id="KG" checked="checked" />
 								<label for="KG">KG</label>
-								<input type="radio" name="weight-unit" required="" value="KG" id="KG" />
 							</div>
 							<div>
-								<label for="LBS">LBS</label>
 								<input type="radio" name="weight-unit" required="" value="LBS" id="LBS" />
+								<label for="LBS">LBS</label>
 							</div>
 
 						</form>
 					</div>
 				</div>
 			</section>
-			<div class="continue-button">
-				<a href="/pressure-unit">
-					<input type="button" value="Continue" name="continue" id="next-page" />
-				</a>
-			</div>
+				<div class="continue-button">
+						<input type="button" value="Continue" name="continue" data-save-then-goto="/pressure-unit" />
+				</div>
 			<div class="user-instructions">
 				<p>
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,

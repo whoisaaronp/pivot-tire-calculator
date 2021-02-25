@@ -54,12 +54,12 @@
 						<form id="pressure-unit">
 
 							<div>
-								<label for="BAR">KG</label>
-								<input type="radio" name="pressure-unit" required="" value="BAR" />
+								<input type="radio" name="pressure-unit" required="" value="BAR" checked="checked"/>
+								<label for="BAR">BAR</label>
 							</div>
 							<div>
-								<label for="PSI">PSI</label>
 								<input type="radio" name="pressure-unit" required="" value="PSI" />
+								<label for="PSI">PSI</label>
 							</div>
 
 						</form>
@@ -69,7 +69,7 @@
 			</section>
 			<div class="continue-button">
 				<a href="/riding-style">
-					<input type="text" value="Continue" name="continue" />
+					<input type="button" value="Continue" name="continue" data-save-then-goto="/riding-style" />
 				</a>
 			</div>
 			<div class="user-instructions">
@@ -85,6 +85,7 @@
 		</footer>
 	</main>
 	<script src="/js/main.js"></script>
+	<script src="/js/localStorage.js"></script>
 </body>
 
 </html>

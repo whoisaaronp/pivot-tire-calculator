@@ -359,6 +359,9 @@ nav {
 
 .button-container-style label,
 .button-container-style input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
   display: block;
   position: absolute;
   top: 0;
@@ -374,7 +377,7 @@ nav {
 /* need to fix */
 .button-container-style form input[type="radio"]:checked + label,
 .Checked + label {
-  background: yellow; }
+  background: #bebebe; }
 
 .button-container-style label {
   cursor: pointer;
