@@ -46,21 +46,17 @@
 			<h2 class="hidden">User inner rim width input</h2>
 			<section class="info-box-contain">
 				<h2 class="hidden">Inner rim width selection</h2>
-				<div class="info-box">
+				<div class="info-box slider-box">
 					<!-- content -->
 					<h3>Select your inner rim width?</h3>
-					<div id="slider-input-content" class="slider-container-style rim-width-contain">
-						<div>
-							<!-- rim width graphic -->
-						</div>
-					</div>
-					<form id="inner-rim-width">
-						<input name="inner-rim-width" type="range" min="18" max="29" value="18">
+					<form  class="range-indicator">
+						<div id="slider-input-content" class="slider-container-style range-value"></div>
+						<input name="inner-rim-width" type="range" min="18" max="29" value="18" step="1">
 					</form>
 				</div>
 			</section>
 			<div class="continue-button">
-				<input type="button" value="Continue" name="continue" data-save-then-goto="//wheel-diameter" />
+				<input type="button" value="Continue" name="continue" data-save-then-goto="/wheel-diameter" />
 			</div>
 			<div class="user-instructions">
 				<p>
@@ -75,6 +71,7 @@
 		</footer>
 	</main>
 	<script src="/js/main.js"></script>
+	<script src="/js/localStorage.js"></script>
 </body>
 
 </html>

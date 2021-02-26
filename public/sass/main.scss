@@ -360,9 +360,8 @@ p {
   font-size: $saira-h4;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   line-height: 2.75rem;
-  // padding: 40px;
 }
 
 // equipment container
@@ -657,7 +656,7 @@ input[type="range"]:focus {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
+  background: #b6b6b6;
 }
 
 input[type="range"]::-moz-range-track {
@@ -666,7 +665,6 @@ input[type="range"]::-moz-range-track {
   background: #b6b6b6;
   border-radius: 1.3px;
 }
-
 input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #b6b6b6;
 }
@@ -678,10 +676,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin: 0 auto;
 }
 
-.range-value{
-	position: absolute;
-	top: -50%;
-}
 .range-value {
 	width: 30px;
 	height: 24px;
@@ -692,8 +686,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 	font-size:$lato-h4;
 	display: block;
 	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+  top: -80%;
+	left: 0;
+	transform: translate(0, 0);
 	border-radius: 2px;
 }
 
@@ -712,12 +707,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 // rim-width-graphic
-.rim-width-contain div {
-  height: 100%;
-  width: 100%;
-  background: #444;
-  margin-bottom: 20px;
-}
+// .rim-width-contain div {
+//   height: 100%;
+//   width: 100%;
+//   background: #444;
+//   margin-bottom: 20px;
+// }
 
 // swiper js
 .swipe-container {
@@ -795,6 +790,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     color: white;
     font-weight: 200;
   }
+
 }
 
 // MEDIA QUERIES ***********
@@ -1008,14 +1004,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     border-radius: 1.3px;
   }
 
-  // rim-width-graphic
-  .rim-width-contain div {
-    width: 100%;
-    height: 225px;
-    background: #444;
-    margin-bottom: 20px;
-  }
-
   .swiper-info-box {
     width: 80%;
     height: 100%;
@@ -1023,6 +1011,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin-bottom: 20px;
     margin: 0 auto;
   }
+  
 }
 
 @media only screen and(max-width: 375px) {

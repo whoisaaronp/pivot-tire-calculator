@@ -249,7 +249,7 @@ input:focus {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   line-height: 2.75rem; }
 
 .equipment-suggestions-content {
@@ -495,7 +495,7 @@ input[type="range"]:focus {
   outline: none; }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ccc; }
+  background: #b6b6b6; }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
@@ -512,10 +512,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin: 0 auto; }
 
 .range-value {
-  position: absolute;
-  top: -50%; }
-
-.range-value {
   width: 30px;
   height: 24px;
   line-height: 24px;
@@ -525,8 +521,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-size: 1.5rem;
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: -80%;
+  left: 0;
+  transform: translate(0, 0);
   border-radius: 2px; }
 
 .range-value :before {
@@ -541,12 +538,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   left: 50%;
   margin-left: -5px;
   margin-top: -1px; }
-
-.rim-width-contain div {
-  height: 100%;
-  width: 100%;
-  background: #444;
-  margin-bottom: 20px; }
 
 .swipe-container {
   position: relative;
@@ -774,12 +765,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     cursor: pointer;
     background: #949494;
     border-radius: 1.3px; }
-
-  .rim-width-contain div {
-    width: 100%;
-    height: 225px;
-    background: #444;
-    margin-bottom: 20px; }
 
   .swiper-info-box {
     width: 80%;

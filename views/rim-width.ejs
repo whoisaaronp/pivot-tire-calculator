@@ -10,7 +10,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet" />
-	<link rel="shortcut icon" type="image/svg" href="/public/images/16-flaviconpivot-gradient-logo.svg" />
+	<link rel="shortcut icon" type="image/svg" href="/images/16-flaviconpivot-gradient-logo.svg" />
 	<title>Pivot Tire Calculator</title>
 	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
 	<link href="/css/main.css" rel="stylesheet" type="text/css" />
@@ -46,18 +46,12 @@
 			<h2 class="hidden">User rim width input</h2>
 			<section class="info-box-contain">
 				<h2 class="hidden">form</h2>
-				<div class="info-box">
+				<div class="info-box slider-box">
 					<!-- content -->
 					<h3>Select your rim width?</h3>
-					<form id="rim-width">
-					<div id="slider-input-content" class="slider-container-style rim-width-contain">
-
-							<div>
-								<!-- rim width graphic -->
-							</div>
-
-					</div>
-					<input type="range" name="rim-width" min="15" max="21" value="15" >
+					<form class="range-indicator">
+						<div id="slider-input-content" class="slider-container-style rim-width-contain range-value"></div>
+						<input type="range" name="rim-width" min="15" max="21" value="15" step="1">
 					</form>
 				</div>
 			</section>
@@ -79,6 +73,7 @@
 		</footer>
 	</main>
 	<script src="/js/main.js"></script>
+	<script src="/js/localStorage.js"></script>
 </body>
 
 </html>
