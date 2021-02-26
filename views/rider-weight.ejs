@@ -46,12 +46,12 @@
     <section class="welcome-container">
       <h2 class="hidden">User Pressure unit input</h2>
       <section class="info-box-contain">
-        <div class="info-box">
+        <div class="info-box slider-box">
           <!-- content -->
           <h3>Select your body weight?</h3>
-          <form action="" id="rider-weight">
-            <div id="slider-input-content" class="slider-container-style"></div>
-            <input type="range" name="rider-weight" min="55" max="275" value="55" id="slider-knob">
+          <form class="range-indicator">
+            <div id="slider-input-content" class="slider-container-style range-value"></div>
+            <input type="range" name="rider-weight" min="55" max="275" value="55" step="1">
           </form>
         </div>
       </section>
@@ -71,6 +71,7 @@
     </footer>
   </main>
   <script src="/js/main.js"></script>
+  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>

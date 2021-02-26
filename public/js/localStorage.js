@@ -13,7 +13,7 @@ function getData() {
   console.log(selectedRadio);
 
   if (selectedRadio) {
-    alert('saved!');
+    alert('saved Radio!');
     const value = selectedRadio.getAttribute('value');
     const propertyName = selectedRadio.getAttribute('name');
     let str = JSON.stringify(value);
@@ -25,11 +25,11 @@ function getData() {
 function getData() {
   // console.log(form.elements.mass.value);
   const selectedRange = form.querySelector('input[type="range"]');
-  //change to range, for the sliders
+  //for the sliders
   console.log(selectedRange);
 
-  if (selectedRadio) {
-    alert('saved!');
+  if (selectedRange) {
+    alert('saved Range!');
     const value = selectedRange.getAttribute('value');
     const propertyName = selectedRange.getAttribute('name');
     let str = JSON.stringify(value);
@@ -56,6 +56,9 @@ function saveBike() {
   const selectedBike = bikeData[swiper.activeIndex];
   localStorage.setItem('bike', selectedBike);
 }
+
+// 4. ranger slider indicator
+
 
 // next.addEventListener("click", getData);
 // On click event function

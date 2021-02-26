@@ -227,6 +227,9 @@ input:focus {
   align-items: center;
   margin-top: 70px; }
 
+.slider-box {
+  width: 35%; }
+
 .info-box {
   border-radius: 5px;
   background: #e0e0e0;
@@ -374,10 +377,12 @@ nav {
   opacity: 0;
   z-index: 100; }
 
-/* need to fix */
+/* radio button pressed */
 .button-container-style form input[type="radio"]:checked + label,
 .Checked + label {
-  background: #bebebe; }
+  border-radius: 5px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
 .button-container-style label {
   cursor: pointer;
@@ -407,10 +412,6 @@ footer {
   width: 45%;
   background: white; }
 
-.slider-container-style input {
-  background-color: #e0e0e0;
-  height: 23px; }
-
 input[type="range"] range-thumb {
   width: 8%;
   height: 113%;
@@ -425,9 +426,10 @@ input[type="range"]::-webkit-slider-runnable-track {
   align-self: center;
   box-sizing: border-box;
   display: block;
-  background: #3b3c43; }
+  background: #b6b6b6; }
 
 input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
   cursor: grab;
   width: 40px;
   height: 40px;
@@ -438,6 +440,7 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
 input[type="range"]::-moz-range-thumb:hover {
+  -webkit-appearance: none;
   cursor: grab;
   width: 40px;
   height: 40px;
@@ -455,11 +458,19 @@ input[type="range"] {
   width: 100%; }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  width: 500px;
-  height: 5px;
-  background: #ddd;
+  background: #b6b6b6;
   border: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 500px;
+  height: 5px; }
+
+input[type="range"]::-ms-slider-runnable-track {
+  border: none;
+  background: #b6b6b6; }
+
+input[type="range"]::-moz-slider-runnable-track {
+  border: none;
+  background: #b6b6b6; }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -489,8 +500,47 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 input[type="range"]::-moz-range-track {
   width: 100%;
   cursor: pointer;
-  background: #adadad;
+  background: #b6b6b6;
   border-radius: 1.3px; }
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #b6b6b6; }
+
+.range-indicator {
+  position: relative;
+  width: 80%;
+  margin: 0 auto; }
+
+.range-value {
+  position: absolute;
+  top: -50%; }
+
+.range-value {
+  width: 30px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: #3b3c43;
+  color: #fff;
+  font-size: 1.5rem;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 2px; }
+
+.range-value :before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #3b3c43;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px; }
 
 .rim-width-contain div {
   height: 100%;
@@ -687,6 +737,7 @@ input[type="range"]::-moz-range-track {
     padding: 25px; }
 
   input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
     cursor: grab;
     width: 40px;
     height: 40px;
@@ -697,6 +748,7 @@ input[type="range"]::-moz-range-track {
     box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
   input[type="range"]::-moz-range-thumb:hover {
+    -webkit-appearance: none;
     cursor: grab;
     width: 40px;
     height: 40px;
@@ -709,18 +761,18 @@ input[type="range"]::-moz-range-track {
     box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
 
   input[type="range"]::-webkit-slider-runnable-track {
-    background: #d4d4d4; }
+    background: #b6b6b6; }
 
   input[type="range"]::-ms-slider-runnable-track {
-    background: #d4d4d4; }
+    background: #b6b6b6; }
 
   input[type="range"]::-moz-slider-runnable-track {
-    background: #d4d4d4; }
+    background: #b6b6b6; }
 
   input[type="range"]::-moz-range-track {
     width: 100%;
     cursor: pointer;
-    background: #adadad;
+    background: #949494;
     border-radius: 1.3px; }
 
   .rim-width-contain div {
