@@ -333,8 +333,13 @@ p {
   margin-top: 70px;
 }
 
+//range slider
+.slider-box
+{
+  width: 35%;
+}
+
 .info-box {
-  // width: 90%;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 23px;
@@ -355,9 +360,8 @@ p {
   font-size: $saira-h4;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   line-height: 2.75rem;
-  // padding: 40px;
 }
 
 // equipment container
@@ -490,6 +494,9 @@ nav {
 
 .button-container-style label,
 .button-container-style input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
   display: block;
   position: absolute;
   top: 0;
@@ -503,10 +510,14 @@ nav {
   opacity: 0;
   z-index: 100;
 }
-/* need to fix */
+
+/* radio button pressed */
 .button-container-style form input[type="radio"]:checked + label,
 .Checked + label {
-  background: yellow;
+  // background:#bebebe;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
 
 .button-container-style label {
@@ -544,11 +555,6 @@ footer {
   background: white;
 }
 
-.slider-container-style input {
-  background-color: #e0e0e0;
-  height: 23px;
-}
-
 input[type="range"] range-thumb {
   width: 8%;
   height: 113%;
@@ -557,6 +563,7 @@ input[type="range"] range-thumb {
   overflow: hidden;
 }
 
+// CHROME
 input[type="range"]::-webkit-slider-runnable-track {
   flex-grow: 1;
   flex-shrink: 1;
@@ -564,11 +571,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   align-self: center;
   box-sizing: border-box;
   display: block;
-  background: #3b3c43;
+  background: #b6b6b6;
 }
 
 // FIREFOX
 input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
   cursor: grab;
   width: 40px;
   height: 40px;
@@ -581,6 +589,7 @@ input[type="range"]::-moz-range-thumb {
 
 // FIREFOX HOVER
 input[type="range"]::-moz-range-thumb:hover {
+  -webkit-appearance: none;
   cursor: grab;
   width: 40px;
   height: 40px;
@@ -600,12 +609,24 @@ input[type="range"] {
   width: 100%;
 }
 
+// range slider track line
 input[type="range"]::-webkit-slider-runnable-track {
-  width: 500px;
-  height: 5px;
-  background: #ddd;
+  background: #b6b6b6;
   border: none;
   border-radius: 5px;
+  width: 500px;
+  height: 5px;
+}
+
+input[type="range"]::-ms-slider-runnable-track {
+  border: none;
+  background: #b6b6b6;
+}
+
+// FIREFOX TRACK
+input[type="range"]::-moz-slider-runnable-track {
+  border: none;
+  background: #b6b6b6;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -635,26 +656,67 @@ input[type="range"]:focus {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
+  background: #b6b6b6;
 }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
   cursor: pointer;
-  background: #adadad;
+  background: #b6b6b6;
   border-radius: 1.3px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #b6b6b6;
+}
+
+// indicator
+.range-indicator{
+	position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.range-value {
+	width: 30px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background: #3b3c43;
+	color: #fff;
+	font-size:$lato-h4;
+	display: block;
+	position: absolute;
+  top: -80%;
+	left: 0;
+	transform: translate(0, 0);
+	border-radius: 2px;
+}
+
+.range-value :before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #3b3c43;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
 }
 
 // rim-width-graphic
-.rim-width-contain div {
-  height: 100%;
-  width: 100%;
-  background: #444;
-  margin-bottom: 20px;
-}
+// .rim-width-contain div {
+//   height: 100%;
+//   width: 100%;
+//   background: #444;
+//   margin-bottom: 20px;
+// }
 
 // swiper js
 .swipe-container {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -689,6 +751,15 @@ input[type="range"]::-moz-range-track {
   color: grey;
 }
 
+// dots
+// .swiper-pagination
+// {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 0;
+//   right: 0;
+// }
+
 // MEDIA QUERIES ***********
 // ****************************
 // If the browser window is 1024 or smaller, the background image would do this
@@ -719,6 +790,7 @@ input[type="range"]::-moz-range-track {
     color: white;
     font-weight: 200;
   }
+
 }
 
 // MEDIA QUERIES ***********
@@ -886,6 +958,7 @@ input[type="range"]::-moz-range-track {
 
   // FIREFOX
   input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
     cursor: grab;
     width: 40px;
     height: 40px;
@@ -898,6 +971,7 @@ input[type="range"]::-moz-range-track {
 
   // FIREFOX HOVER
   input[type="range"]::-moz-range-thumb:hover {
+    -webkit-appearance: none;
     cursor: grab;
     width: 40px;
     height: 40px;
@@ -911,31 +985,23 @@ input[type="range"]::-moz-range-track {
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
-    background: #d4d4d4;
+    background: #b6b6b6;
   }
 
   input[type="range"]::-ms-slider-runnable-track {
-    background: #d4d4d4;
+    background: #b6b6b6;
   }
 
   // FIREFOX TRACK
   input[type="range"]::-moz-slider-runnable-track {
-    background: #d4d4d4;
+    background: #b6b6b6;
   }
 
   input[type="range"]::-moz-range-track {
     width: 100%;
     cursor: pointer;
-    background: #adadad;
+    background: #949494;
     border-radius: 1.3px;
-  }
-
-  // rim-width-graphic
-  .rim-width-contain div {
-    width: 100%;
-    height: 225px;
-    background: #444;
-    margin-bottom: 20px;
   }
 
   .swiper-info-box {
@@ -945,6 +1011,7 @@ input[type="range"]::-moz-range-track {
     margin-bottom: 20px;
     margin: 0 auto;
   }
+  
 }
 
 @media only screen and(max-width: 375px) {

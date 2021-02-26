@@ -48,12 +48,26 @@
     <section class="welcome-container">
       <h2 class="hidden">Riding style input</h2>
       <section class="info-box-contain">
-        <form action="" id="riding-style">
-          <div class="info-box">
-            <!-- content -->
-            <h3>What is your average daily riding surface?</h3>
-            </div>
-        </form>
+        <div class="info-box">
+          <!-- content -->
+          <h3>What is your average daily riding surface?</h3>
+
+          <div id="button-input-content" class="button-container-style">
+            <form id="road-surface">
+
+              <div>
+                <label for="DRY">Dry</label>
+                <input type="radio" name="road-surface" required="" value="DRY" id="DRY" />
+              </div>
+              <div>
+                <label for="WET">Wet</label>
+                <input type="radio" name="road-surface" required="" value="WET" id="WET" />
+              </div>
+
+            </form>
+          </div>
+
+        </div>
       </section>
       <div class="continue-button">
         <a href="/pressure-suggestion">
@@ -70,6 +84,7 @@
     </footer>
   </main>
   <script src="/js/main.js"></script>
+  <script src="/js/localStorage.js"></script>
 </body>
 
 </html>
