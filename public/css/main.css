@@ -545,6 +545,23 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-left: -5px;
   margin-top: -1px; }
 
+.rim-width-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 100px; }
+
+.rim-width-contain div {
+  width: 300px;
+  height: 300px;
+  background: white; }
+
+.slider-input-content {
+  position: relative; }
+
 .swipe-container {
   overflow: visible;
   position: relative;
