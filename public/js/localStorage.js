@@ -6,7 +6,7 @@ const form = document.querySelector("form");
 const next = document.querySelector("#next-page");
 
 // 1. selected buttons function
-function getData() {
+function saveRadio() {
   // console.log(form.elements.mass.value);
   const selectedRadio = form.querySelector('input[type="radio"]:checked');
   //change to range, for the sliders
@@ -22,7 +22,7 @@ function getData() {
 }
 
 // 2. selected range function
-function getData() {
+function saveRange() {
   // console.log(form.elements.mass.value);
   const selectedRange = form.querySelector('input[type="range"]');
   //for the sliders
@@ -30,7 +30,7 @@ function getData() {
 
   if (selectedRange) {
     alert('saved Range!');
-    const value = selectedRange.getAttribute('value');
+    const value = selectedRange.value;
     const propertyName = selectedRange.getAttribute('name');
     let str = JSON.stringify(value);
     localStorage.setItem(propertyName, str);
@@ -58,7 +58,24 @@ function saveBike() {
 }
 
 // 4. ranger slider indicator
+// checking the range to see if it exist and add an event listener to it, it not then skip it.
+// add an event listener when you have a range
+const indicator = document.getElementById('slider-input-content');
+const range = document.querySelector('input[type="range"]');
 
+if (range) {
+  range.addEventListener('input', (e) => {
+    const slider = e.target;
+    const min = parseInt(slider.getAttribute('min'), 10);
+    const max = parseInt(slider.getAttribute('max'), 10);
+    const val = parseInt(slider.value, 10);
+
+    const scalar = (((val - min) / (max - min)) * 100);
+
+    indicator.style.left = `${scalar}%`;
+    indicator.innerHTML = `${Math.floor(val)}`;
+  });
+}
 
 // next.addEventListener("click", getData);
 // On click event function
@@ -68,7 +85,8 @@ linkBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     const href = e.target.getAttribute('data-save-then-goto');
 
-    getData();
+    saveRadio();
+    saveRange();
 
     window.location.href = href;
 
