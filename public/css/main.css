@@ -413,6 +413,7 @@ footer {
   background: white; }
 
 .white-box h2 {
+  font-size: 2rem;
   font-weight: 300;
   text-align: center;
   line-height: 2.75rem;
