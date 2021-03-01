@@ -13,7 +13,7 @@ function saveRadio() {
   console.log(selectedRadio);
 
   if (selectedRadio) {
-    alert('saved Radio!');
+    alert('Data saved!');
     const value = selectedRadio.getAttribute('value');
     const propertyName = selectedRadio.getAttribute('name');
     let str = JSON.stringify(value);
@@ -29,7 +29,7 @@ function saveRange() {
   console.log(selectedRange);
 
   if (selectedRange) {
-    alert('saved Range!');
+    alert('Data saved!');
     const value = selectedRange.value;
     const propertyName = selectedRange.getAttribute('name');
     let str = JSON.stringify(value);
