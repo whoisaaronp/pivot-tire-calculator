@@ -808,7 +808,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
-    padding: 23px 0; } }
+    padding: 23px 0; }
+
+  .sign-in-form .form-background .input-box p {
+    font-size: 1rem; } }
 @media only screen and (max-width: 375px) {
   .info-box {
     width: 90%;

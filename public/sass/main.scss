@@ -334,8 +334,7 @@ p {
 }
 
 //range slider
-.slider-box
-{
+.slider-box {
   // width: 35%;
   width: 33vw;
 }
@@ -515,7 +514,7 @@ nav {
 /* radio button pressed */
 .button-container-style form input[type="radio"]:checked + label,
 .Checked + label {
-  background:#bebebe;
+  background: #bebebe;
   border-radius: 50%;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
@@ -556,7 +555,7 @@ footer {
   background: white;
 }
 
-.white-box h2{
+.white-box h2 {
   font-size: $lato-h3;
   font-weight: 400;
   text-align: center;
@@ -679,40 +678,40 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 // indicator
-.range-indicator{
-	position: relative;
+.range-indicator {
+  position: relative;
   width: 80%;
   margin: 0 auto;
 }
 
-.range-value{
-	width: 50px;
-	height: 30px;
-	line-height: 27px;
-	text-align: center;
-	background: #f28e25;
-	color: #fff;
-	font-size:$saira-small;
-	display: block;
-	position: absolute;
+.range-value {
+  width: 50px;
+  height: 30px;
+  line-height: 27px;
+  text-align: center;
+  background: #f28e25;
+  color: #fff;
+  font-size: $saira-small;
+  display: block;
+  position: absolute;
   top: -107%;
-	left: 0;
-	transform: translate(0, 0);
-	border-radius: 2px;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 2px;
 }
 
-.range-value :before{
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-top: 10px solid #f28e25;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	margin-top: -1px;
+.range-value :before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #f28e25;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
 }
 
 // rim-width-graphic
@@ -726,34 +725,29 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 100px;
 }
 
-.rim-width-contain div
-{
+.rim-width-contain div {
   width: 300px;
   height: 300px;
   background: white;
 }
 
-.slider-input-content
-{
+.slider-input-content {
   position: relative;
 }
 
-
 // swiper js
-.swipe-container{
+.swipe-container {
   overflow: visible;
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.swiper-wrapper
-{
+.swiper-wrapper {
   display: flex;
 }
 
-
-.swiper-slide{
+.swiper-slide {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -830,7 +824,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     color: white;
     font-weight: 200;
   }
-
 }
 
 // MEDIA QUERIES ***********
@@ -1052,7 +1045,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin: 0 auto;
     padding: 23px 0;
   }
-  
+
+  .sign-in-form .form-background .input-box p {
+    font-size: $lato-small;
+  }
 }
 
 @media only screen and(max-width: 375px) {

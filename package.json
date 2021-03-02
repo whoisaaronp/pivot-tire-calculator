@@ -19,5 +19,8 @@
     "save": "^2.4.0",
     "scrollmagic": "^2.0.8",
     "socket.io": "^3.1.1"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
