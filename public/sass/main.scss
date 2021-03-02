@@ -337,7 +337,7 @@ p {
 .slider-box
 {
   // width: 35%;
-  width: 63vw;
+  width: 33vw;
 }
 
 .info-box {
@@ -484,8 +484,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100px;
-  height: 50px;
+  width: 85px;
+  height: 85px;
   text-align: center;
 }
 
@@ -495,16 +495,16 @@ nav {
 
 .button-container-style label,
 .button-container-style input {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 0;
+  top: -11px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 18px;
+  padding: 36px 0;
 }
 
 .button-container-style input[type="radio"] {
@@ -515,15 +515,15 @@ nav {
 /* radio button pressed */
 .button-container-style form input[type="radio"]:checked + label,
 .Checked + label {
-  // background:#bebebe;
-  border-radius: 5px;
+  background:#bebebe;
+  border-radius: 50%;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
 
 .button-container-style label {
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
   background: #e0e0e0;
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
 }
@@ -738,17 +738,33 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   position: relative;
 }
 
+
 // swiper js
-.swipe-container .swiper-wrapper .swiper-slide{
+.swipe-container{
   overflow: visible;
   position: relative;
   width: 100%;
   height: 100%;
 }
 
+.swiper-wrapper
+{
+  display: flex;
+}
+
+
 .swiper-slide{
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   width: 60%;
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   justify-content: center;
   /* Center slide text vertically */
   align-items: center;

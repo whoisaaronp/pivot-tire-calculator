@@ -62,7 +62,7 @@ let str = JSON.stringify(inner_rim_width);
 localStorage.setItem("Inner_Rim_Width", inner_rim_width);
 
 
-// 9. "622", "700"
+// 9. "584", "599", 650A", "700"
 let wheel_diameter = "584";
 let str = JSON.stringify(wheel_diameter);
 localStorage.setItem("Wheel_Diameter", wheel_diameter);
