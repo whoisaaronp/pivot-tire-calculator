@@ -824,10 +824,27 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     color: white;
     font-weight: 200;
   }
+
+  // Black logo and intro
+  .logo-child {
+    position: absolute;
+    top: 70px;
+    left: 260px;
+    width: 30%;
+    height: auto;
+  }
+  
 }
 
-// MEDIA QUERIES ***********
-// ****************************
+// *************************************
+// *************************************
+// *************************************
+// *************************************
+// *********** MEDIA QUERIES ***********
+// *************************************
+// *************************************
+// *************************************
+// *************************************
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
@@ -840,6 +857,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     width: 20vw;
     height: auto;
     margin-left: 35px;
+  }
+
+  .image-background {
+    position: relative;
   }
 
   .sign-in-form .image-background {
@@ -882,6 +903,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     color: #2b2c31;
     font-size: $lato-p;
     font-weight: 300;
+    display: block;
     a {
       font-weight: 700;
     }
@@ -1049,6 +1071,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .sign-in-form .form-background .input-box p {
     font-size: $lato-small;
   }
+
 }
 
 @media only screen and(max-width: 375px) {

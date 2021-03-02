@@ -627,7 +627,14 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .user-instructions p {
     font-size: 1rem;
     color: white;
-    font-weight: 200; } }
+    font-weight: 200; }
+
+  .logo-child {
+    position: absolute;
+    top: 70px;
+    left: 260px;
+    width: 30%;
+    height: auto; } }
 @media only screen and (max-width: 768px) {
   html,
   .custom-body-class {
@@ -637,6 +644,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     width: 20vw;
     height: auto;
     margin-left: 35px; }
+
+  .image-background {
+    position: relative; }
 
   .sign-in-form .image-background {
     position: absolute;
@@ -674,7 +684,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .sign-in-form .content-background .form-background .input-box p {
     color: #2b2c31;
     font-size: 1rem;
-    font-weight: 300; }
+    font-weight: 300;
+    display: block; }
     .sign-in-form .content-background .form-background .input-box p a {
       font-weight: 700; }
 
