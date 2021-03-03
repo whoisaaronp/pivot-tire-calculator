@@ -21,7 +21,7 @@ html,
 }
 
 html {
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 // Sass Variables font size
@@ -154,6 +154,7 @@ p {
 // center form to the window
 .sign-in-form .content-background {
   display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
   justify-content: center;
@@ -686,7 +687,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   width: 80%;
   margin: 0 auto;
   font-family: "Saira Extra Condensed", sans-serif;
-
 }
 
 .range-value {
@@ -789,59 +789,37 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 40px;
 }
 
-// black logo container
-.intro-logo-container {
-  position: absolute;
-  top: 70px;
-  left: 296px;
-  width: 15%;
-  z-index: 4;
-}
+  // black logo container
+  .intro-logo-container {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
-// Black logo and intro
-.logo-child {
-  background-color: teal;
-}
+  .intro-logo-container p {
+    width: 375px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h5;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+  }
 
-// *************************************
-// *************************************
-// *************************************
-// *************************************
-// *********** MEDIA QUERIES ***********
-// *************************************
-// *************************************
-// *************************************
-// *************************************
-// If the browser window is 1024 or smaller, the background image would do this
+  .logo-child {
+    margin-bottom: 75px
+  }
 
-// @media only screen and(max-width: 1024) {
-//   .info-box h3 {
-//     display: block;
-//     font-family: "lato", sans-serif;
-//     font-size: $lato-h4;
-//     font-weight: 300;
-//   }
-
-//   .info-box {
-//     max-width: 70%;
-//     height: 100%;
-//     border-radius: 5px;
-//     background: #e0e0e0;
-//     padding: 23px;
-//   }
-
-//   .user-instructions {
-//     width: 50%;
-//     padding: 40px;
-//   }
-
-//   .user-instructions p {
-//     font-size: $lato-small;
-//     color: white;
-//     font-weight: 200;
-//   }
-
-// }
+  .logo-child img{
+    background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+   
+  }
 
 // *************************************
 // *************************************
@@ -1087,16 +1065,33 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   // black logo container
   .intro-logo-container {
-    position: absolute;
-    z-index: 4;
-    top: 70px;
-    left: 296px;
-    width: 15%;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 
-  // Black logo and intro
+  .intro-logo-container p {
+    width: 375px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h5;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+
+  }
+
   .logo-child {
-    background-color: red;
+    // background-color: red;
+  }
+
+  .logo-child img{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
