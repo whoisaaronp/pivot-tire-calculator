@@ -14,6 +14,9 @@ html,
 .custom-body-class {
   overflow-x: hidden; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   background: #2b2c31;
   font-family: "Lato", sans-serif; }
@@ -34,11 +37,6 @@ header h1 {
   width: 100%;
   height: 100vh;
   display: flex; }
-
-h2 {
-  font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 2.441rem;
-  margin: 0; }
 
 p {
   font-size: 1rem;
@@ -86,6 +84,7 @@ p {
 
 .sign-in-form .content-background {
   display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
   justify-content: center;
@@ -178,6 +177,11 @@ input:focus {
   font-weight: 300;
   letter-spacing: 1px; }
 
+.form-background h2 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 2.441rem;
+  margin: 0; }
+
 .social-media-title {
   color: #f5a851;
   font-weight: 400;
@@ -233,24 +237,27 @@ input:focus {
 .info-box {
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 23px;
-  margin: 0 auto; }
+  padding: 33px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
 
 .swiper-info-box {
-  width: 90%;
+  width: 60%;
   border-radius: 5px;
   background: #e0e0e0;
-  padding: 23px 0;
+  padding: 33px 0;
   margin: 0 auto; }
 
 .info-box h3 {
   display: block;
-  font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 4rem;
-  line-height: 2.75rem; }
+  line-height: 2.75rem;
+  margin-bottom: 4rem; }
 
 .equipment-suggestions-content {
   width: 93%;
@@ -414,11 +421,10 @@ footer {
   background: white; }
 
 .white-box h2 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
-  line-height: 2.75rem;
-  margin-bottom: 2rem; }
+  line-height: 2.5rem; }
 
 input[type="range"] range-thumb {
   width: 8%;
@@ -438,7 +444,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
-  cursor: grab;
+  cursor: pointer;
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -449,7 +455,7 @@ input[type="range"]::-moz-range-thumb {
 
 input[type="range"]::-moz-range-thumb:hover {
   -webkit-appearance: none;
-  cursor: grab;
+  cursor: pointer;
   width: 40px;
   height: 40px;
   overflow: hidden;
@@ -517,16 +523,17 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 .range-indicator {
   position: relative;
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Saira Extra Condensed", sans-serif; }
 
 .range-value {
   width: 50px;
   height: 30px;
-  line-height: 27px;
+  line-height: 31px;
   text-align: center;
   background: #f28e25;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: block;
   position: absolute;
   top: -107%;
@@ -553,13 +560,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 20px;
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
 
-.rim-width-contain div {
+.rim-width-contain div img {
   width: 300px;
-  height: 300px;
-  background: white; }
+  height: 300px; }
 
 .slider-input-content {
   position: relative; }
@@ -598,37 +603,49 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 .swiper-slide h2 {
   font-size: 1.5rem;
+  font-weight: 300;
   margin-bottom: 5px; }
 
 .swiper-slide h4 {
   font-size: 1rem;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  color: grey; }
+  margin-top: 10px;
+  color: grey;
+  margin-bottom: 40px; }
 
-@media only screen and (max-width: 1024) {
-  .info-box h3 {
-    display: block;
-    font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 3.4375rem; }
+.intro-logo-container {
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; }
 
-  .info-box {
-    max-width: 70%;
-    height: 100%;
-    border-radius: 5px;
-    background: #e0e0e0;
-    padding: 23px; }
+.intro-logo-container p {
+  width: 800px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  margin-top: 30px; }
 
-  .user-instructions {
-    width: 50%;
-    padding: 40px; }
+.logo-child {
+  margin-bottom: 75px; }
 
-  .user-instructions p {
-    font-size: 1rem;
-    color: white;
-    font-weight: 200; } }
+.logo-child img {
+  background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; }
+
+.slider-box h3 {
+  margin-bottom: 1rem; }
+
+.slider-weight-box {
+  width: 33vw;
+  margin-bottom: 4rem; }
+
 @media only screen and (max-width: 768px) {
   html,
   .custom-body-class {
@@ -638,6 +655,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     width: 20vw;
     height: auto;
     margin-left: 35px; }
+
+  .image-background {
+    position: relative; }
 
   .sign-in-form .image-background {
     position: absolute;
@@ -675,9 +695,15 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .sign-in-form .content-background .form-background .input-box p {
     color: #2b2c31;
     font-size: 1rem;
-    font-weight: 300; }
+    font-weight: 300;
+    display: block; }
     .sign-in-form .content-background .form-background .input-box p a {
       font-weight: 700; }
+
+  .form-background h2 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 2.441rem;
+    margin: 0; }
 
   .social-container h3 {
     color: #2b2b2b; }
@@ -700,6 +726,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #e0e0e0;
     padding: 23px;
     margin: 0 auto; }
+
+  .info-box h3 {
+    margin-bottom: 2rem; }
 
   .equipment-suggestions-content {
     width: 85%;
@@ -766,7 +795,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
-    cursor: grab;
+    cursor: pointer;
     width: 40px;
     height: 40px;
     overflow: hidden;
@@ -777,7 +806,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   input[type="range"]::-moz-range-thumb:hover {
     -webkit-appearance: none;
-    cursor: grab;
+    cursor: pointer;
     width: 40px;
     height: 40px;
     overflow: hidden;
@@ -804,12 +833,37 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     border-radius: 1.3px; }
 
   .swiper-info-box {
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
-    padding: 23px 0; } }
+    padding: 23px 0; }
+
+  .sign-in-form .form-background .input-box p {
+    font-size: 1rem; }
+
+  .intro-logo-container {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; }
+
+  .intro-logo-container p {
+    width: 375px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    color: black; }
+
+  .logo-child img {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; } }
 @media only screen and (max-width: 375px) {
   .info-box {
     width: 90%;
@@ -820,9 +874,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   .info-box h3 {
     display: block;
-    font-family: "Saira Extra Condensed", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 28px; } }
 .nav-active {
   -o-transform: translateX(0%);
