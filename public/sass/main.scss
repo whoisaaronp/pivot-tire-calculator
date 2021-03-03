@@ -351,7 +351,6 @@ p {
 }
 
 .swiper-info-box {
-  // width: 90%;
   width: 60%;
   border-radius: 5px;
   background: #e0e0e0;
@@ -692,11 +691,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 .range-value {
   width: 50px;
   height: 30px;
-  line-height: 27px;
+  line-height: 31px;
   text-align: center;
   background: #f28e25;
   color: #fff;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   display: block;
   position: absolute;
   top: -107%;
@@ -729,10 +728,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 100px;
 }
 
-.rim-width-contain div {
+.rim-width-contain div img {
   width: 300px;
   height: 300px;
-  background: white;
 }
 
 .slider-input-content {
@@ -798,12 +796,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   }
 
   .intro-logo-container p {
-    width: 375px;
+    width: 800px;
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h5;
+    font-size: $saira-h4;
     font-weight: 300;
     text-align: center;
     color: white;
+    margin-top: 30px;
   }
 
   .logo-child {
@@ -811,14 +810,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   }
 
   .logo-child img{
-    background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat;
+    background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
     width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-   
   }
 
 // *************************************
@@ -1051,7 +1049,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   }
 
   .swiper-info-box {
-    width: 60%;
+    width: 90%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1081,9 +1079,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   }
 
-  .logo-child {
-    // background-color: red;
-  }
+  // .logo-child {
+  //   // background-color: red;
+  // }
 
   .logo-child img{
     width: 100px;
@@ -1116,9 +1114,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   .info-box h3 {
     display: block;
-    font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h5;
-    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    font-size: $lato-h4;
+    font-weight: 400;
     line-height: 28px;
   }
 }
