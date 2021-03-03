@@ -20,9 +20,9 @@ html,
   overflow-x: hidden;
 }
 
-// html {
-// overflow-x: hidden;
-// }
+html {
+overflow-x: hidden;
+}
 
 // Sass Variables font size
 // $saira-h1: 5vw;
@@ -268,6 +268,12 @@ p {
   letter-spacing: 1px;
 }
 
+.form-background h2 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h2;
+  margin: 0;
+}
+
 // social media
 .social-media-title {
   color: #f5a851;
@@ -338,9 +344,9 @@ p {
   background: #e0e0e0;
   padding: 33px;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 53px 27px -43px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 53px 27px -43px rgba(0,0,0,0.75);
-  box-shadow: 0px 53px 27px -43px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
 .swiper-info-box {
@@ -558,7 +564,6 @@ footer {
   font-weight: 400;
   text-align: center;
   line-height: 2.5rem;
-  
 }
 
 input[type="range"] range-thumb {
@@ -680,6 +685,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  font-family: "Saira Extra Condensed", sans-serif;
+
 }
 
 .range-value {
@@ -689,7 +696,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   text-align: center;
   background: #f28e25;
   color: #fff;
-  font-size: $saira-small;
+  font-size: 1.75rem;
   display: block;
   position: absolute;
   top: -107%;
@@ -719,7 +726,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 20px;
   margin-bottom: 100px;
 }
 
@@ -784,19 +790,18 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 // black logo container
-  .intro-logo-container
-  {
-    position: absolute;
-    top: 70px;
-    left: 296px;
-    width: 15%;
-    z-index: 4;
-  }
-  
-  // Black logo and intro
-  .logo-child {
-    background-color: teal;
-  }
+.intro-logo-container {
+  position: absolute;
+  top: 70px;
+  left: 296px;
+  width: 15%;
+  z-index: 4;
+}
+
+// Black logo and intro
+.logo-child {
+  background-color: teal;
+}
 
 // *************************************
 // *************************************
@@ -916,7 +921,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     font-size: $saira-h2;
     margin: 0;
   }
-  
 
   .social-container h3 {
     color: #2b2b2b;
@@ -1081,26 +1085,20 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     font-size: $lato-small;
   }
 
-
   // black logo container
-  .intro-logo-container
-  {
+  .intro-logo-container {
     position: absolute;
     z-index: 4;
     top: 70px;
     left: 296px;
     width: 15%;
   }
-  
+
   // Black logo and intro
   .logo-child {
     background-color: red;
   }
-
-
 }
-
-
 
 // *************************************
 // *************************************
@@ -1119,7 +1117,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
-    
   }
 
   .info-box h3 {
