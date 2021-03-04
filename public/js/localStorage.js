@@ -37,7 +37,7 @@ function saveRange() {
   }
 }
 
-// 3. Bike functions or riding stlye page
+// 3. Riding style selection
 const saveBikeBtn = document.getElementById('saveBikeBtn');
 if (saveBikeBtn) {
   saveBikeBtn.addEventListener('click', saveBike);
@@ -57,7 +57,29 @@ function saveBike() {
   localStorage.setItem('bike', selectedBike);
 }
 
-// 4. ranger slider indicator
+// 4. Rim type selection
+const saveRimTypeBtn = document.getElementById('saveRim');
+if (saveRimTypeBtn) {
+  saveRimTypeBtn.addEventListener('click', saveRim);
+  alert('Data saved!');
+
+}
+
+function saveRim() {
+  const rimData = [
+    "Inner Tube",
+    "Tubular",
+    "Hookless-Rim",
+    "Hookless-Tubeless"
+  ];
+
+  const selectedRim = rimData[swiper.activeIndex];
+  localStorage.setItem('rim', selectedRim);
+}
+
+
+
+// 5. ranger slider indicator
 // checking the range to see if it exist and add an event listener to it, it not then skip it.
 // add an event listener when you have a range
 const indicator = document.getElementById('slider-input-content');
@@ -75,23 +97,6 @@ if (range) {
     indicator.style.left = `${scalar}%`;
     indicator.innerHTML = `${Math.floor(val)}`;
   });
-}
-
-// 5 rim type
-const saveRimTypeBtn = document.getElementById('saveRim');
-if (saveRimTypeBtn) {
-  saveRimTypeBtn.addEventListener('click', saveRim);
-}
-
-function saveRim() {
-  const rimData = [
-    "Inner Tube",
-    "Hookless-Rim",
-    "Hookless-Tubeless"
-  ];
-
-  const selectedRim = rimData[swiper.activeIndex];
-  localStorage.setItem('bike', selectedRim);
 }
 
 
