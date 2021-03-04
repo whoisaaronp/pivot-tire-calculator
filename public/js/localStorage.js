@@ -37,7 +37,7 @@ function saveRange() {
   }
 }
 
-// 3. Bike functions
+// 3. Bike functions or riding stlye page
 const saveBikeBtn = document.getElementById('saveBikeBtn');
 if (saveBikeBtn) {
   saveBikeBtn.addEventListener('click', saveBike);
@@ -76,6 +76,24 @@ if (range) {
     indicator.innerHTML = `${Math.floor(val)}`;
   });
 }
+
+// 5 rim type
+const saveRimTypeBtn = document.getElementById('saveRim');
+if (saveRimTypeBtn) {
+  saveRimTypeBtn.addEventListener('click', saveRim);
+}
+
+function saveRim() {
+  const rimData = [
+    "Inner Tube",
+    "Hookless-Rim",
+    "Hookless-Tubeless"
+  ];
+
+  const selectedRim = rimData[swiper.activeIndex];
+  localStorage.setItem('bike', selectedRim);
+}
+
 
 // next.addEventListener("click", getData);
 // On click event function
