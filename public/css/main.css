@@ -569,15 +569,17 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 .slider-input-content {
   position: relative; }
 
-.swipe-container {
+.swiper-container {
   overflow: visible;
   position: relative;
   width: 100%;
   height: 100%; }
 
 .swiper-wrapper {
-  display: flex; }
+  margin-top: 10px;
+  padding-bottom: 50px; }
 
+/* Center slide text vertically */
 .swiper-slide {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -591,14 +593,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   display: -ms-flexbox;
   display: -webkit-flex;
   justify-content: center;
-  /* Center slide text vertically */
   align-items: center;
   text-align: center;
   font-size: 18px; }
 
 .swiper-slide img {
   cursor: grab;
-  width: 90%;
+  width: 50%;
   height: 100%; }
 
 .swiper-slide h2 {
@@ -631,8 +632,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 75px; }
 
 .logo-child img {
-  background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
-  width: 100px;
+  width: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -863,7 +863,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .swiper-slide img {
+    cursor: grab;
+    width: 90%;
+    height: 100%; } }
 @media only screen and (max-width: 375px) {
   .info-box {
     width: 90%;
