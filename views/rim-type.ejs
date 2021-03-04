@@ -14,6 +14,9 @@
 	<title>Pivot Tire Calculator</title>
 	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
 	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<!-- swiperjs -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link href="/css/main.css" rel="stylesheet" type="text/css">
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 </head>
 
@@ -49,49 +52,50 @@
 		<section class="welcome-container">
 			<h2 class="hidden">Riding style input</h2>
 			<section class="info-box-contain">
-				<form id="rim-type">
+				<form id="riding-style">
 					<div class="info-box swiper-info-box">
 						<!-- content -->
-						<h3>Select your rim structure type</h3>
+						<h3>Select your riding style?</h3>
 						<section class="swiper-container">
-							<h2 class="hidden">Rim Swiper container</h2>
+							<h2 class="hidden">Swiper container</h2>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<section>
-										<h2>Inner Tubes</h2>
-										<h4>For the Brave!</h4>
-										<img src="/images/inner-tubes.png" alt="Image of wheel with tubes">
+										<h2>Tire & Tubes</h2>
+										<h4>For the brave!</h4>
+										<img src="/images/inner-tubes.png" alt="Image of transparent mountain">
 									</section>
 								</div>
 								<div class="swiper-slide">
 									<section>
-										<h2>Tubular</h2>
-										<h4>For the Brave!</h4>
-										<img src="/images/tubular.png" alt="Image of wheel with tubular tires">
+										<h2>Tubular Tire</h2>
+										<h4>For the really brave!</h4>
+										<img src="/images/tubular.png" alt="Image of transparent Cyclocross">
 									</section>
 								</div>
 								<div class="swiper-slide">
 									<section>
-										<h2>Hookless-Rim</h2>
-										<h4>Too Cool</h4>
-										<img src="/images/hookless-rim.png" alt="Image of hookless wheel diagram">
+										<h2>Hooked Tubeless</h2>
+										<h4>Yeeeahaa!</h4>
+										<img src="/images/hooks-tubeless.png" alt="Image of Road bike">
 									</section>
 								</div>
 								<div class="swiper-slide">
 									<section>
-										<h2>Hook Tubeless</h2>
-										<h4>Look mom no tubes!</h4>
-										<img src="/images/hooks-tubeless.png" alt="Image of Hydrid bike">
+										<h2>Hookless Tubeless</h2>
+										<h4>Bring it!</h4>
+										<img src="/images/hookless-rim.png" alt="Image of Hydrid bike">
 									</section>
 								</div>
-								<!-- <section class="swiper-pagination"></section> -->
 							</div>
+							<section class="swiper-pagination"></section>
 						</section>
 					</div>
 				</form>
 			</section>
 			<div class="continue-button">
-					<input type="button" value="Continue" name="continue" id="saveRim" data-save-then-goto="/road-surface">
+				<input type="button" value="Continue" name="continue" id="saveBikeBtn"
+					data-save-then-goto="/road-surface">
 			</div>
 			<div class="user-instructions">
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, in consequuntur expedita at vitae,

@@ -753,13 +753,14 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 /* Center slide text vertically */
 .swiper-slide {
+  // width: 60%;
+  font-size: 18px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  width: 60%;
   display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,7 +768,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 18px;
 }
 
 .swiper-slide img {
