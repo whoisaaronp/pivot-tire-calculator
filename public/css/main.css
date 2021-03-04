@@ -259,20 +259,73 @@ input:focus {
   line-height: 2.75rem;
   margin-bottom: 4rem; }
 
-.equipment-suggestions-content {
-  width: 93%;
-  height: 50%;
-  border-radius: 5px;
-  background: white;
-  padding: 40px;
-  margin-top: 50px; }
-
 .equipment-suggestions-content p {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   line-height: 3.4375rem; }
+
+.pressure-suggestion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.suggestion-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.pressure-card {
+  width: 790px;
+  height: 240px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
+
+.rider-data {
+  width: 790px;
+  height: 240px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
+
+.card h3 {
+  font-size: 15px; }
+
+.card p {
+  font-size: 13px;
+  color: #65676b; }
+
+.card-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 12px; }
+
+.equipment-suggestions-content {
+  width: 90%;
+  height: 500px;
+  border-radius: 5px;
+  background: white;
+  padding: 40px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
 
 .continue-button input {
   cursor: pointer;
@@ -292,41 +345,6 @@ input:focus {
   text-decoration: none;
   transition: transform 80ms ease-in;
   user-select: none; }
-
-.pressure-suggestion-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.pressure-suggestion-content .suggestion-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center; }
-
-.pressure-card {
-  display: flex;
-  /* [1] */
-  flex-direction: row;
-  align-items: center;
-  /* [2] */
-  padding: 20px;
-  border-radius: 4px;
-  background: white; }
-
-.card h3 {
-  font-size: 15px; }
-
-.card p {
-  font-size: 13px;
-  color: #65676b; }
-
-.card-image {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  margin-right: 12px; }
 
 nav {
   z-index: 2; }
@@ -426,9 +444,6 @@ nav {
   border-radius: 5px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff; }
-
-footer {
-  margin-top: 200px; }
 
 .user-instructions {
   width: 50%;
@@ -668,6 +683,20 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   width: 33vw;
   margin-bottom: 4rem; }
 
+footer {
+  width: 90%;
+  height: auto;
+  border-top: 1px solid #dd8928;
+  margin: 0 auto; }
+
+footer span {
+  display: block;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 50px; }
+
 @media only screen and (max-width: 768px) {
   html,
   .custom-body-class {
@@ -745,17 +774,17 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .pressure-card {
     display: block;
     width: 100%;
-    height: 29vh;
-    background: green;
+    height: 240px;
+    background: #e0e0e0;
     border-radius: 4px;
     margin-bottom: 40px; }
 
   .rider-data {
-    width: 100%;
-    height: 29vh;
-    background: peru;
-    border-radius: 4px;
     display: block;
+    width: 100%;
+    height: 240px;
+    background: #e0e0e0;
+    border-radius: 4px;
     margin-bottom: 40px; }
 
   .info-box h3 {
@@ -766,8 +795,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     height: 50%;
     border-radius: 5px;
     background: white;
-    padding: 40px;
-    margin-top: 50px; }
+    padding: 40px; }
 
   .equipment-suggestions-content p {
     display: block;
