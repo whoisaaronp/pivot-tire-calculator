@@ -25,7 +25,7 @@ html {
 }
 
 // Sass Variables font size
-// $saira-h1: 5vw;
+$saira-h1: 3rem;
 $saira-h2: 2.441rem;
 $saira-h3: 3rem;
 $saira-h4: 2rem;
@@ -355,6 +355,7 @@ p {
   background: #e0e0e0;
   padding: 33px 0;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .info-box h3 {
@@ -367,22 +368,164 @@ p {
   margin-bottom: 4rem;
 }
 
-// equipment container
-.equipment-suggestions-content {
-  width: 93%;
-  height: 50%;
-  border-radius: 5px;
-  background: white;
-  padding: 40px;
-  margin-top: 50px;
-}
-
 .equipment-suggestions-content p {
   display: block;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-h4;
   font-weight: 400;
   line-height: $saira-message-line-height;
+}
+
+// pressure suggestion desktop, tablet
+
+.suggestion-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.pressure-card {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.user-profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.pressure-calculation {
+  display: flex;
+  flex-direction: row;
+}
+
+.pressure-card h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pressure-calculation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h4;
+  color: #3b3c43;
+  margin-top: 20px;
+}
+
+.pressure-calculation-one .pressure-calculation-two {
+  display: inline;
+  flex-direction: column;
+}
+
+.pressure-calculation-one p {
+  margin: 0px;
+}
+
+.pressure-calculation-two p {
+  margin: 0px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100px;
+  border-right: 1px solid #3b3c43;
+}
+
+.pressure-calculation-container span {
+  font-size: 4rem;
+}
+
+.rider-data {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.pressure-suggestion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.suggestion-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pressure-card {
+  width: 790px;
+  height: 240px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+}
+
+.rider-data {
+  width: 790px;
+  height: 240px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+}
+
+.card h3 {
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.card-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+// equipment container
+.equipment-suggestions-content {
+  width: 90%;
+  height: 500px;
+  border-radius: 5px;
+  background: white;
+  padding: 40px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
 .continue-button input {
@@ -403,21 +546,6 @@ p {
   text-decoration: none;
   transition: transform 80ms ease-in;
   user-select: none;
-}
-
-// pressure suggestion desktop, tablet
-// pressure suggestion
-.pressure-suggestion-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.pressure-suggestion-content .suggestion-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 nav {
@@ -535,10 +663,6 @@ nav {
   border-radius: 5px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 9px 9px 17px #bebebe, -9px -9px 17px #ffffff;
-}
-
-footer {
-  margin-top: 200px;
 }
 
 .user-instructions {
@@ -744,12 +868,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   height: 100%;
 }
 
-.swiper-wrapper
-{
-	margin-top: 10px;
-	padding-bottom: 50px;
+.swiper-wrapper {
+  margin-top: 10px;
+  padding-bottom: 50px;
 }
-
 
 /* Center slide text vertically */
 .swiper-slide {
@@ -789,47 +911,86 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 40px;
 }
 
-  // black logo container
-  .intro-logo-container {
-    width: 25vw;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
+// black logo container
+.intro-logo-container {
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
 
-  .intro-logo-container p {
-    width: 800px;
-    font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h4;
-    font-weight: 300;
-    text-align: center;
-    color: white;
-    margin-top: 30px;
-  }
+.intro-logo-container p {
+  width: 800px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h4;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
 
-  .logo-child {
-    margin-bottom: 75px
-  }
+.logo-child {
+  margin-bottom: 75px;
+}
 
-  .logo-child img{
-    // background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
+.logo-child img {
+  // background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
-  .slider-box h3{
-    margin-bottom: 1rem;
-  }
+.slider-box h3 {
+  margin-bottom: 1rem;
+}
 
-  .slider-weight-box
-  {
-    width: 33vw;
-    margin-bottom: 4rem;
-  }
+.slider-weight-box {
+  width: 33vw;
+  margin-bottom: 4rem;
+}
+
+// rim slider
+.rim-swiper-info-box {
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden;
+}
+
+.wheel-diameter-swiper {
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden;
+}
+
+footer {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-content: flex-end;
+  border-top: 1px solid #dd8928;
+  margin: 0 auto;
+}
+
+footer span {
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
 
 // *************************************
 // *************************************
@@ -921,37 +1082,89 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     align-items: center;
   }
 
-  .pressure-suggestion-content {
+  .suggestion-container {
+    width: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .pressure-card {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+
+  .user-profile-content {
+    display: flex;
     align-items: center;
   }
 
-  .info-box {
-    width: 90%;
+  .pressure-calculation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .pressure-card h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h3;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .pressure-calculation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-h4;
+    color: #3b3c43;
+    margin-top: 20px;
+  }
+
+  .pressure-calculation-one .pressure-calculation-two {
+    display: inline;
+    flex-direction: column;
+  }
+
+  .pressure-calculation-one p {
+    margin: 0px;
+  }
+
+  .pressure-calculation-two p {
+    margin: 0px;
+  }
+
+  .vertical-line {
+    width: 1px;
+    height: 100px;
+    border-right: 1px solid #3b3c43;
+  }
+
+  .pressure-calculation-container span {
+    font-size: 4rem;
+  }
+
+  .rider-data {
+    display: block;
+    width: 100%;
     height: auto;
-    border-radius: 5px;
     background: #e0e0e0;
-    padding: 23px;
-    margin: 0 auto;
+    border-radius: 4px;
+    margin-bottom: 40px;
   }
 
-
+  // info - box
   .info-box h3 {
-
-    margin-bottom: 2rem;
-  }
-
-
-  // equipment container
-  .equipment-suggestions-content {
-    width: 85%;
-    height: 50%;
-    border-radius: 5px;
-    background: white;
-    padding: 40px;
-    margin-top: 50px;
+    margin-bottom: 3rem;
   }
 
   .equipment-suggestions-content p {
@@ -1015,6 +1228,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   }
 
   .white-box {
+    width: 90%;
+    height: auto;
     background: white;
     padding: 25px;
   }
@@ -1074,13 +1289,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin-bottom: 20px;
     margin: 0 auto;
     padding: 23px 0;
+    overflow: hidden;
   }
-
 
   .swiper-slide {
     width: 60%;
   }
-  
+
   .sign-in-form .form-background .input-box p {
     font-size: $lato-small;
   }
@@ -1100,14 +1315,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     font-weight: 300;
     text-align: center;
     color: black;
-
   }
 
   // .logo-child {
   //   // background-color: red;
   // }
 
-  .logo-child img{
+  .logo-child img {
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -1120,6 +1334,35 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     cursor: grab;
     width: 90%;
     height: 100%;
+  }
+
+  // rim slider
+  .rim-swiper-info-box {
+    width: 76%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
+  }
+
+  //range slider
+  .slider-box {
+    width: 90%;
+  }
+
+  .wheel-diameter-swiper {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
+  }
+
+  .slider-weight-box {
+    width: 90%;
+    margin-bottom: 4rem;
   }
 }
 
@@ -1148,6 +1391,22 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     font-size: $lato-h4;
     font-weight: 400;
     line-height: 28px;
+  }
+
+  .pressure-card h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .swiper-info-box {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
   }
 }
 
