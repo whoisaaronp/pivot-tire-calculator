@@ -248,7 +248,8 @@ input:focus {
   border-radius: 5px;
   background: #e0e0e0;
   padding: 33px 0;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .info-box h3 {
   display: block;
@@ -265,6 +266,74 @@ input:focus {
   font-size: 2rem;
   font-weight: 400;
   line-height: 3.4375rem; }
+
+.suggestion-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+
+.pressure-card {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px; }
+
+.user-profile-content {
+  display: flex;
+  align-items: center; }
+
+.pressure-calculation {
+  display: flex;
+  flex-direction: row; }
+
+.pressure-card h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.pressure-calculation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 2rem;
+  color: #3b3c43;
+  margin-top: 20px; }
+
+.pressure-calculation-one .pressure-calculation-two {
+  display: inline;
+  flex-direction: column; }
+
+.pressure-calculation-one p {
+  margin: 0px; }
+
+.pressure-calculation-two p {
+  margin: 0px; }
+
+.vertical-line {
+  width: 1px;
+  height: 100px;
+  border-right: 1px solid #3b3c43; }
+
+.pressure-calculation-container span {
+  font-size: 4rem; }
+
+.rider-data {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px; }
 
 .pressure-suggestion-content {
   display: flex;
@@ -683,9 +752,29 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   width: 33vw;
   margin-bottom: 4rem; }
 
+.rim-swiper-info-box {
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden; }
+
+.wheel-diameter-swiper {
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden; }
+
 footer {
   width: 90%;
   height: auto;
+  display: flex;
+  justify-content: baseline;
   border-top: 1px solid #dd8928;
   margin: 0 auto; }
 
@@ -792,7 +881,7 @@ footer span {
 
   .pressure-card h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase; }
 
@@ -887,6 +976,8 @@ footer span {
     font-weight: 200; }
 
   .white-box {
+    width: 90%;
+    height: auto;
     background: white;
     padding: 25px; }
 
@@ -935,7 +1026,8 @@ footer span {
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
-    padding: 23px 0; }
+    padding: 23px 0;
+    overflow: hidden; }
 
   .swiper-slide {
     width: 60%; }
@@ -968,7 +1060,26 @@ footer span {
   .swiper-slide img {
     cursor: grab;
     width: 90%;
-    height: 100%; } }
+    height: 100%; }
+
+  .rim-swiper-info-box {
+    width: 76%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0; }
+
+  .slider-box {
+    width: 90%; }
+
+  .wheel-diameter-swiper {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0; } }
 @media only screen and (max-width: 375px) {
   .info-box {
     width: 90%;
@@ -986,9 +1097,17 @@ footer span {
 
   .pressure-card h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    text-transform: uppercase; } }
+    text-transform: uppercase; }
+
+  .swiper-info-box {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);

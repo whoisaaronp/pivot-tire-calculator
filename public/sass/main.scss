@@ -25,7 +25,7 @@ html {
 }
 
 // Sass Variables font size
-// $saira-h1: 5vw;
+$saira-h1: 3rem;
 $saira-h2: 2.441rem;
 $saira-h3: 3rem;
 $saira-h4: 2rem;
@@ -355,6 +355,8 @@ p {
   background: #e0e0e0;
   padding: 33px 0;
   margin: 0 auto;
+  overflow: hidden;
+
 }
 
 .info-box h3 {
@@ -376,6 +378,87 @@ p {
 }
 
 // pressure suggestion desktop, tablet
+
+.suggestion-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.pressure-card {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.user-profile-content {
+  display: flex;
+  align-items: center;
+}
+
+.pressure-calculation {
+  display: flex;
+  flex-direction: row;
+}
+
+.pressure-card h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pressure-calculation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-h4;
+  color: #3b3c43;
+  margin-top: 20px;
+}
+
+.pressure-calculation-one .pressure-calculation-two {
+  display: inline;
+  flex-direction: column;
+}
+
+.pressure-calculation-one p {
+  margin: 0px;
+}
+
+.pressure-calculation-two p {
+  margin: 0px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 100px;
+  border-right: 1px solid #3b3c43;
+}
+
+.pressure-calculation-container span {
+  font-size: 4rem;
+}
+
+.rider-data {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
 .pressure-suggestion-content {
   display: flex;
   flex-direction: column;
@@ -870,9 +953,35 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 4rem;
 }
 
+ // rim slider
+ .rim-swiper-info-box {
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden;
+}
+
+
+.wheel-diameter-swiper
+{
+  width: 30%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  padding: 23px 0;
+  overflow: hidden;
+  
+}
+
 footer {
   width: 90%;
   height: auto;
+  display: flex;
+  justify-content:baseline;
   border-top: 1px solid #dd8928;
   margin: 0 auto;
 }
@@ -1008,7 +1117,7 @@ footer span {
 
   .pressure-card h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 1.5rem;
+    font-size: $saira-h3;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -1029,17 +1138,15 @@ footer span {
     flex-direction: column;
   }
 
-  .pressure-calculation-one p 
-  {
+  .pressure-calculation-one p {
     margin: 0px;
   }
 
-  .pressure-calculation-two p{
+  .pressure-calculation-two p {
     margin: 0px;
   }
 
-  .vertical-line
-  {
+  .vertical-line {
     width: 1px;
     height: 100px;
     border-right: 1px solid #3b3c43;
@@ -1058,6 +1165,7 @@ footer span {
     margin-bottom: 40px;
   }
 
+  // info - box
   .info-box h3 {
     margin-bottom: 3rem;
   }
@@ -1123,6 +1231,8 @@ footer span {
   }
 
   .white-box {
+    width: 90%;
+    height: auto;
     background: white;
     padding: 25px;
   }
@@ -1182,6 +1292,7 @@ footer span {
     margin-bottom: 20px;
     margin: 0 auto;
     padding: 23px 0;
+    overflow: hidden;
   }
 
   .swiper-slide {
@@ -1227,6 +1338,31 @@ footer span {
     width: 90%;
     height: 100%;
   }
+
+  // rim slider
+  .rim-swiper-info-box {
+    width: 76%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
+  }
+
+    //range slider
+  .slider-box {
+    width: 90%;
+  }
+
+  .wheel-diameter-swiper
+  {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
+  }
 }
 
 // *************************************
@@ -1258,10 +1394,21 @@ footer span {
 
   .pressure-card h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h4;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
   }
+
+  .swiper-info-box {
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 23px 0;
+  }
+
+  
 }
 
 // menu animation
