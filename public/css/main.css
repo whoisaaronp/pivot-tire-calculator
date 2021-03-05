@@ -315,7 +315,7 @@ input:focus {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  margin-right: 12px; }
+  margin-right: 24px; }
 
 .equipment-suggestions-content {
   width: 90%;
@@ -772,30 +772,68 @@ footer span {
     margin-bottom: 40px; }
 
   .pressure-card {
-    display: block;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 240px;
+    height: auto;
     background: #e0e0e0;
     border-radius: 4px;
     margin-bottom: 40px; }
 
+  .user-profile-content {
+    display: flex;
+    align-items: center; }
+
+  .pressure-calculation {
+    display: flex;
+    flex-direction: row; }
+
+  .pressure-card h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+
+  .pressure-calculation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 2rem;
+    color: #3b3c43;
+    margin-top: 20px; }
+
+  .pressure-calculation-one .pressure-calculation-two {
+    display: inline;
+    flex-direction: column; }
+
+  .pressure-calculation-one p {
+    margin: 0px; }
+
+  .pressure-calculation-two p {
+    margin: 0px; }
+
+  .vertical-line {
+    width: 1px;
+    height: 100px;
+    border-right: 1px solid #3b3c43; }
+
+  .pressure-calculation-container span {
+    font-size: 4rem; }
+
   .rider-data {
     display: block;
     width: 100%;
-    height: 240px;
+    height: auto;
     background: #e0e0e0;
     border-radius: 4px;
     margin-bottom: 40px; }
 
   .info-box h3 {
     margin-bottom: 3rem; }
-
-  .equipment-suggestions-content {
-    width: 90%;
-    height: 50%;
-    border-radius: 5px;
-    background: white;
-    padding: 40px; }
 
   .equipment-suggestions-content p {
     display: block;
@@ -944,7 +982,13 @@ footer span {
     font-family: "Lato", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    line-height: 28px; } }
+    line-height: 28px; }
+
+  .pressure-card h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);
