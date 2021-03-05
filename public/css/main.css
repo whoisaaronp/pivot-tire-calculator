@@ -777,6 +777,15 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
 
+.slider-weight-box h3 {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2.75rem;
+  margin-bottom: 4rem; }
+
 .rim-swiper-info-box {
   width: 30%;
   height: 100%;
