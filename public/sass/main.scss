@@ -15,9 +15,9 @@
   display: none;
 }
 
-html,
-.custom-body-class {
+html, .custom-body-class {
   overflow-x: hidden;
+  position: relative;
 }
 
 html {
@@ -340,6 +340,7 @@ p {
 }
 
 .info-box {
+  width: 30%;
   border-radius: 5px;
   background: #e0e0e0;
   padding: 33px;
@@ -677,12 +678,17 @@ nav {
 }
 
 // welcome panel
-.white-box {
+.welcome-white-box {
   width: 45%;
   background: white;
+  border-radius: 5px;
+  padding: 33px;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
-.white-box h2 {
+.welcome-white-box h2 {
   font-size: $lato-h4;
   font-weight: 400;
   text-align: center;
@@ -1004,10 +1010,6 @@ footer span {
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
-  html,
-  .custom-body-class {
-    overflow-x: hidden;
-  }
 
   .logo-container {
     width: 20vw;
@@ -1227,11 +1229,12 @@ footer span {
     font-weight: 200;
   }
 
-  .white-box {
+  .welcome-white-box {
     width: 90%;
     height: auto;
     background: white;
     padding: 25px;
+    border-radius: 5px;
   }
 
   // FIREFOX
@@ -1408,6 +1411,18 @@ footer span {
     margin: 0 auto;
     padding: 23px 0;
   }
+
+    // background contours 
+  #background-contour {
+    background-image: url(../public/images/contours.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: 3;
+    // opacity: 0.5;
+  }
+
 }
 
 // menu animation
