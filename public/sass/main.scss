@@ -356,7 +356,6 @@ p {
   padding: 33px 0;
   margin: 0 auto;
   overflow: hidden;
-
 }
 
 .info-box h3 {
@@ -953,8 +952,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 4rem;
 }
 
- // rim slider
- .rim-swiper-info-box {
+// rim slider
+.rim-swiper-info-box {
   width: 30%;
   height: 100%;
   margin-top: 20px;
@@ -964,9 +963,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   overflow: hidden;
 }
 
-
-.wheel-diameter-swiper
-{
+.wheel-diameter-swiper {
   width: 30%;
   height: 100%;
   margin-top: 20px;
@@ -974,20 +971,20 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin: 0 auto;
   padding: 23px 0;
   overflow: hidden;
-  
 }
 
 footer {
   width: 90%;
   height: auto;
   display: flex;
-  justify-content:baseline;
+  align-content: flex-end;
   border-top: 1px solid #dd8928;
   margin: 0 auto;
 }
 
 footer span {
   display: block;
+  width: 100%;
   color: white;
   font-size: 0.75rem;
   letter-spacing: 1px;
@@ -1349,19 +1346,23 @@ footer span {
     padding: 23px 0;
   }
 
-    //range slider
+  //range slider
   .slider-box {
     width: 90%;
   }
 
-  .wheel-diameter-swiper
-  {
+  .wheel-diameter-swiper {
     width: 90%;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
     padding: 23px 0;
+  }
+
+  .slider-weight-box {
+    width: 90%;
+    margin-bottom: 4rem;
   }
 }
 
@@ -1407,8 +1408,6 @@ footer span {
     margin: 0 auto;
     padding: 23px 0;
   }
-
-  
 }
 
 // menu animation

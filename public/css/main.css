@@ -774,12 +774,13 @@ footer {
   width: 90%;
   height: auto;
   display: flex;
-  justify-content: baseline;
+  align-content: flex-end;
   border-top: 1px solid #dd8928;
   margin: 0 auto; }
 
 footer span {
   display: block;
+  width: 100%;
   color: white;
   font-size: 0.75rem;
   letter-spacing: 1px;
@@ -1079,7 +1080,11 @@ footer span {
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 0 auto;
-    padding: 23px 0; } }
+    padding: 23px 0; }
+
+  .slider-weight-box {
+    width: 90%;
+    margin-bottom: 4rem; } }
 @media only screen and (max-width: 375px) {
   .info-box {
     width: 90%;
