@@ -1002,6 +1002,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   overflow: hidden;
 }
 
+// wheel swiper
 .wheel-diameter-swiper {
   width: 30%;
   height: 100%;
@@ -1009,8 +1010,21 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 20px;
   margin: 0 auto;
   padding: 23px 0;
+  border-radius: 5px;
+  background: #e0e0e0;
   overflow: hidden;
 }
+
+.wheel-diameter-swiper h3 {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: $lato-h4;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2.75rem;
+  margin-bottom: 4rem;
+}
+
 
 .push-space
 { display: flex;
