@@ -834,7 +834,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 100vh;
   overflow: hidden; }
 
 footer {
