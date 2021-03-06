@@ -970,14 +970,14 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 75px;
 }
 
-// animated svg background here
+// sign up page white logo
 .logo-child img {
-  // background-image: url(../images/all-whitepivot-gradient-logo.svg) no-repeat center;
+  background-image: url(/images/all-whitepivot-gradient-logo.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   width: 160px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 
