@@ -829,17 +829,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   line-height: 2.75rem;
   margin-bottom: 4rem; }
 
-.push-space {
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  height: 50vh; }
-
-.push.space div {
-  width: 90%;
-  height: 100px;
-  background-color: red;
-  margin: 0 auto; }
+#background-contour {
+  background-image: url(/images/contour-bckgdcontour.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden; }
 
 footer {
   width: 90%;
@@ -1221,12 +1217,12 @@ footer span {
     padding: 23px 0; }
 
   #background-contour {
-    background-image: url(../public/images/contours.png);
+    background-image: url(/images/contour-bckgdcontour.svg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 100vh;
-    z-index: 3; } }
+    overflow: hidden; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);

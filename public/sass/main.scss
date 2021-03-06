@@ -1042,19 +1042,29 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 // more space
-.push-space {
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  height: 50vh;
-}
+// .push-space {
+//   display: flex;
+//   justify-content: center;
+//   align-content: flex-end;
+//   height: 50vh;
+// }
 
-.push.space div {
-  width: 90%;
-  height: 100px;
-  background-color: red;
-  margin: 0 auto;
-}
+// .push.space div {
+//   width: 90%;
+//   height: 100px;
+//   margin: 0 auto;
+// }
+
+
+  // background contours
+  #background-contour {
+    background-image: url(/images/contour-bckgdcontour.svg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+  }
 
 footer {
   width: 90%;
@@ -1534,15 +1544,14 @@ footer span {
 
   // background contours
   #background-contour {
-    background-image: url(../public/images/contours.png);
+    background-image: url(/images/contour-bckgdcontour.svg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 100vh;
-    z-index: 3;
-    // overflow: hidden;
-    // opacity: 0.5;
+    overflow: hidden;
   }
+
 }
 
 // menu animation
