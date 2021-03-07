@@ -26,7 +26,7 @@ function saveRadio() {
 function saveRange() {
   // console.log(form.elements.mass.value);
   const selectedRange = form.querySelector('input[type="range"]');
-    //when an slider knob is moved store the key and values -> then stringify
+  //when an slider knob is moved store the key and values -> then stringify
   console.log(selectedRange);
 
   if (selectedRange) {
@@ -99,23 +99,42 @@ if (range) {
   });
 }
 
-
-// funciton housiting 
-// 6. saving username * it's bad to store personal data in localstorage
-const submitButton = document.getElementById('submit');
-
-if(submitButton) {
-  submitButton.addEventListener('click', saveUser)
- 
+// 7. wheel diameter
+const wheelDiameter = document.getElementById('wheelDiameter');
+if (wheelDiameter) {
+  wheelDiameter.addEventListener('click', saveWheel);
 }
 
-function saveUser(){
-    //Saving the username from input field to the Local Storage
-  const username=document.getElementById("userName").value;
-  localStorage.setItem('user',username);
+function saveWheel() {
+  const wheelData = [
+    "650a",
+    "650b",
+    "700c"
+  ];
+
+  alert('Data saved!');
+
+  const selectedWheel = wheelData[swiper.activeIndex];
+  localStorage.setItem('wheel-diameter', selectedWheel);
+}
+
+
+// js function housiting 
+// 6. saving username * it's bad to store personal data in localstorage :(
+const submitButton = document.getElementById('submit');
+
+if (submitButton) {
+  submitButton.addEventListener('click', saveUser)
+
+}
+
+function saveUser() {
+  //Saving the username from input field to the Local Storage
+  const username = document.getElementById("userName").value;
+  localStorage.setItem('user', username);
   alert('Saved User!');
   // linked i
-  window.location.href="/welcome";
+  window.location.href = "/welcome";
 
 }
 
