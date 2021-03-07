@@ -4,7 +4,6 @@ console.log("local storage linked");
 
 const form = document.querySelector("form");
 const next = document.querySelector("#next-page");
-const submit = document.querySelector("#submit");
 
 // 1. selected buttons function
 function saveRadio() {
@@ -26,7 +25,7 @@ function saveRadio() {
 function saveRange() {
   // console.log(form.elements.mass.value);
   const selectedRange = form.querySelector('input[type="range"]');
-  //when an slider knob is moved store the key and values -> then stringify
+    //when an slider knob is moved store the key and values -> then stringify
   console.log(selectedRange);
 
   if (selectedRange) {
@@ -123,18 +122,18 @@ function saveWheel() {
 // 6. saving username * it's bad to store personal data in localstorage :(
 const submitButton = document.getElementById('submit');
 
-if (submitButton) {
+if(submitButton) {
   submitButton.addEventListener('click', saveUser)
-
+ 
 }
 
-function saveUser() {
-  //Saving the username from input field to the Local Storage
-  const username = document.getElementById("userName").value;
-  localStorage.setItem('user', username);
+function saveUser(){
+    //Saving the username from input field to the Local Storage
+  const username=document.getElementById("userName").value;
+  localStorage.setItem('user',username);
   alert('Saved User!');
   // linked i
-  window.location.href = "/welcome";
+  window.location.href="/welcome";
 
 }
 
