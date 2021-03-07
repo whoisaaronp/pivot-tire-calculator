@@ -111,7 +111,7 @@ p {
   height: 100%;
 }
 
-// gradient background
+// sign in gradient background
 .sign-in-form .image-background:before {
   content: "";
   position: absolute;
@@ -383,7 +383,6 @@ p {
   margin-bottom: 4rem;
 }
 
-
 // opitmal suggestions
 .equipment-suggestions-content h3 {
   font-family: "Saira Extra Condensed", sans-serif;
@@ -398,7 +397,7 @@ p {
   font-size: $lato-small;
   font-weight: 200;
   line-height: $saira-message-line-height;
-  color:#3b3c43;
+  color: #3b3c43;
 }
 
 // pressure suggestion desktop, tablet
@@ -1055,16 +1054,15 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 //   margin: 0 auto;
 // }
 
-
-  // background contours
-  #background-contour {
-    background-image: url(/images/contour-bckgdcontour.svg);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    // height: 100vh;
-    overflow: hidden;
-  }
+// background contours
+#background-contour {
+  background-image: url(/images/contour-bckgdcontour.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  // height: 100vh;
+  overflow: hidden;
+}
 
 footer {
   width: 90%;
@@ -1285,7 +1283,7 @@ footer span {
   .equipment-suggestions-content p {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h4;
+    font-size: $saira-small;
     font-weight: 400;
     line-height: $saira-message-line-height;
   }
@@ -1551,7 +1549,6 @@ footer span {
     height: 100vh;
     overflow: hidden;
   }
-
 }
 
 // menu animation
