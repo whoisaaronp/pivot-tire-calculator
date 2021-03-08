@@ -9,7 +9,7 @@ const next = document.querySelector("#next-page");
 function saveRadio() {
   // console.log(form.elements.mass.value);
   const selectedRadio = form.querySelector('input[type="radio"]:checked');
-  //change to range, for the sliders
+  //when an radio button is selected store the key and values -> then stringify
   console.log(selectedRadio);
 
   if (selectedRadio) {
@@ -25,7 +25,7 @@ function saveRadio() {
 function saveRange() {
   // console.log(form.elements.mass.value);
   const selectedRange = form.querySelector('input[type="range"]');
-  //for the sliders
+    //when an slider knob is moved store the key and values -> then stringify
   console.log(selectedRange);
 
   if (selectedRange) {
@@ -37,7 +37,7 @@ function saveRange() {
   }
 }
 
-// 3. Riding style selection
+// 3. Riding style selection when an option grab is selected store the(activeIndex# number) key and values -> then stringify
 const saveBikeBtn = document.getElementById('saveBikeBtn');
 if (saveBikeBtn) {
   saveBikeBtn.addEventListener('click', saveBike);
@@ -57,12 +57,10 @@ function saveBike() {
   localStorage.setItem('bike', selectedBike);
 }
 
-// 4. Rim type selection
+// 4. Rim type selection when an option grab is selected store the(activeIndex# number) key and values -> then stringify
 const saveRimTypeBtn = document.getElementById('saveRim');
 if (saveRimTypeBtn) {
   saveRimTypeBtn.addEventListener('click', saveRim);
-  alert('Data saved!');
-
 }
 
 function saveRim() {
@@ -73,10 +71,11 @@ function saveRim() {
     "Hookless-Tubeless"
   ];
 
-  const selectedRim = rimData[swiper.activeIndex];
-  localStorage.setItem('rim', selectedRim);
-}
+  alert('Data saved!');
 
+  const selectedRim = rimData[swiper.activeIndex];
+  localStorage.setItem('rim-type', selectedRim);
+}
 
 
 // 5. ranger slider indicator
@@ -98,6 +97,46 @@ if (range) {
     indicator.innerHTML = `${Math.floor(val)}`;
   });
 }
+
+// 7. wheel diameter
+const wheelDiameter = document.getElementById('wheelDiameter');
+if (wheelDiameter) {
+  wheelDiameter.addEventListener('click', saveWheel);
+}
+
+function saveWheel() {
+  const wheelData = [
+    "650a",
+    "650b",
+    "700c"
+  ];
+
+  alert('Data saved!');
+
+  const selectedWheel = wheelData[swiper.activeIndex];
+  localStorage.setItem('wheel-diameter', selectedWheel);
+}
+
+
+// js function housiting 
+// 6. saving username * it's bad to store personal data in localstorage :(
+const submitButton = document.getElementById('submit');
+
+if(submitButton) {
+  submitButton.addEventListener('click', saveUser)
+ 
+}
+
+function saveUser(){
+    //Saving the username from input field to the Local Storage
+  const username=document.getElementById("userName").value;
+  localStorage.setItem('user',username);
+  alert('Saved User!');
+  // linked i
+  window.location.href="/welcome";
+
+}
+
 
 
 // next.addEventListener("click", getData);

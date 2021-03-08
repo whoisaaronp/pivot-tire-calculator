@@ -10,7 +10,8 @@
 .hidden {
   display: none; }
 
-html, .custom-body-class {
+html,
+.custom-body-class {
   overflow-x: hidden;
   position: relative; }
 
@@ -273,12 +274,19 @@ input:focus {
   line-height: 2.75rem;
   margin-bottom: 4rem; }
 
+.equipment-suggestions-content h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 .equipment-suggestions-content p {
   display: block;
-  font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 3.4375rem; }
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 3.4375rem;
+  color: #3b3c43; }
 
 .suggestion-container {
   width: 90%;
@@ -348,6 +356,12 @@ input:focus {
   border-radius: 4px;
   margin-bottom: 40px; }
 
+.rider-data h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 .pressure-suggestion-content {
   display: flex;
   flex-direction: column;
@@ -404,7 +418,7 @@ input:focus {
   height: 500px;
   border-radius: 5px;
   background: white;
-  padding: 40px;
+  padding: 30px;
   -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
@@ -704,7 +718,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-top: 10px;
   padding-bottom: 50px; }
 
-/* Center slide text vertically */
+/* Center slide text vertically  safari solution maybe */
 .swiper-slide {
   font-size: 18px;
   -webkit-box-pack: center;
@@ -756,11 +770,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 75px; }
 
 .logo-child img {
+  background-image: url(/images/all-whitepivot-gradient-logo.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   width: 160px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto; }
 
 .slider-box h3 {
@@ -815,17 +830,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   line-height: 2.75rem;
   margin-bottom: 4rem; }
 
-.push-space {
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  height: 50vh; }
-
-.push.space div {
-  width: 90%;
-  height: 100px;
-  background-color: red;
-  margin: 0 auto; }
+#background-contour {
+  background-image: url(/images/contour-bckgdcontour.svg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden; }
 
 footer {
   width: 90%;
@@ -975,6 +985,12 @@ footer span {
     border-radius: 4px;
     margin-bottom: 40px; }
 
+  .rider-data h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+
   .radio-info-box {
     width: 90%;
     border-radius: 5px;
@@ -988,10 +1004,16 @@ footer span {
   .radio-info-box h3 {
     margin-bottom: 3rem; }
 
+  .equipment-suggestions-content h3 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+
   .equipment-suggestions-content p {
     display: block;
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 2rem;
+    font-size: 0.95rem;
     font-weight: 400;
     line-height: 3.4375rem; }
 
@@ -1195,12 +1217,12 @@ footer span {
     padding: 23px 0; }
 
   #background-contour {
-    background-image: url(../public/images/contours.png);
+    background-image: url(/images/contour-bckgdcontour.svg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 100vh;
-    z-index: 3; } }
+    overflow: hidden; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);
