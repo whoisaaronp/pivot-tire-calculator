@@ -15,14 +15,9 @@
   display: none;
 }
 
-html,
-.custom-body-class {
+html, .custom-body-class {
   overflow-x: hidden;
   position: relative;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 // Sass Variables font size
@@ -59,6 +54,11 @@ $lato-small: 1rem;
 // H4 Regular 21pt 400
 // P Regular 16pt 400
 // SMALL Regular 12pt 100
+
+
+main{
+  min-height: 100vh;
+}
 
 body {
   background: #2b2c31;
@@ -327,8 +327,8 @@ p {
 }
 
 .info-box-contain {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,7 +401,6 @@ p {
 }
 
 // pressure suggestion desktop, tablet
-
 .suggestion-container {
   width: 90%;
   height: 100%;
@@ -1040,46 +1039,32 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 4rem;
 }
 
-// more space
-// .push-space {
-//   display: flex;
-//   justify-content: center;
-//   align-content: flex-end;
-//   height: 50vh;
-// }
-
-// .push.space div {
-//   width: 90%;
-//   height: 100px;
-//   margin: 0 auto;
-// }
-
 // background contours
 #background-contour {
   background-image: url(/images/contour-bckgdcontour.svg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  // height: 100vh;
   overflow: hidden;
+  // height: 100vh;
 }
 
-footer {
-  width: 90%;
-  height: auto;
-  display: flex;
-  align-content: flex-end;
-  border-top: 1px solid #dd8928;
+footer{
+  position: absolute;
+  width: 100%;
+  height: 3.5rem;  
+  bottom: 0;
   margin: 0 auto;
+  border-top: 1px solid #dd8928;
 }
 
 footer span {
   display: block;
   width: 100%;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   letter-spacing: 1px;
-  margin-top: 20px;
+  padding: 20px;
   margin-bottom: 50px;
 }
 
@@ -1095,6 +1080,7 @@ footer span {
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
+  
   .logo-container {
     width: 20vw;
     height: auto;
@@ -1323,7 +1309,6 @@ footer span {
 
   // welcome
   .welcome-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1338,6 +1323,7 @@ footer span {
     font-size: $lato-small;
     color: white;
     font-weight: 200;
+    margin-bottom: 20rem;
   }
 
   .welcome-white-box {
@@ -1546,7 +1532,7 @@ footer span {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
   }
 }
