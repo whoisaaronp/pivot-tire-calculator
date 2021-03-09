@@ -416,6 +416,7 @@ input:focus {
   border-radius: 5px;
   background: white;
   padding: 30px;
+  margin-bottom: 20rem;
   -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
@@ -545,7 +546,8 @@ nav {
 .user-instructions p {
   font-size: 1rem;
   color: white;
-  font-weight: 200; }
+  font-weight: 200;
+  margin-bottom: 20rem; }
 
 .welcome-white-box {
   width: 45%;
@@ -845,9 +847,9 @@ footer {
 footer span {
   display: block;
   width: 100%;
-  color: white;
-  font-size: 0.55rem;
-  letter-spacing: 1px;
+  color: #cacaca;
+  font-size: 9px;
+  letter-spacing: 1.5px;
   padding: 20px;
   margin-bottom: 50px; }
 

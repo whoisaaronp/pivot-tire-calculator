@@ -30,9 +30,9 @@ export const OptimalSchema = new Schema({
         required: 'Select your weight'
         // repeating measurements
     },
-    rimWidth:{
+    tireWidth:{
         type: String,
-        required: 'Select your rim width'
+        required: 'Select your tire rim width'
     },
     innerRimWidth:{
         type: String,

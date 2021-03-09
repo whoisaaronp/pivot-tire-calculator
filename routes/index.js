@@ -40,8 +40,8 @@ router.get('/rider-weight', function (req, res, next) {
     res.render('rider-weight');
 });
 
-router.get('/rim-width', function (req, res, next) {
-    res.render('rim-width');
+router.get('/tire-width', function (req, res, next) {
+    res.render('tire-width');
 });
 
 router.get('/inner-rim-width', function (req, res, next) {
