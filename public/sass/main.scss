@@ -401,7 +401,6 @@ p {
 }
 
 // pressure suggestion desktop, tablet
-
 .suggestion-container {
   width: 90%;
   height: 100%;
@@ -1060,8 +1059,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  // height: 100vh;
   overflow: hidden;
+  // height: 100vh;
 }
 
 footer {
@@ -1095,6 +1094,7 @@ footer span {
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
+  
   .logo-container {
     width: 20vw;
     height: auto;
@@ -1323,7 +1323,6 @@ footer span {
 
   // welcome
   .welcome-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1546,7 +1545,7 @@ footer span {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
   }
 }
