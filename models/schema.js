@@ -22,18 +22,6 @@ export const OptimalSchema = new Schema({
         type: String,
         required: 'Select a bicycle type'
     },
-    // calculator structure as one thing as a array, inside would be an object
-    // measurements:[
-        // objects go in here
-    riderWeight:{
-        type: String,
-        required: 'Select your weight'
-        // repeating measurements
-    },
-    tireWidth:{
-        type: String,
-        required: 'Select your tire rim width'
-    },
     innerRimWidth:{
         type: String,
         required: 'Select your inner rim width'
@@ -45,6 +33,22 @@ export const OptimalSchema = new Schema({
     rimType:{
         type: String,
         required: 'Select your rim holding type'
+    },
+    // calculator structure as one thing as a array, inside would be an object
+    // measurements:[
+        // objects go in here
+    riderWeight:{
+        type: String,
+        required: 'Select your weight'
+    },
+    tireWidth:{
+        type: String,
+        required: 'Select your tire rim width'
+    },
+    
+    roadSurface:{
+        type: String,
+        required: 'Select your road surface'
     },
     created_date:{
         type: Date,

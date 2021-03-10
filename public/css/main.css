@@ -248,7 +248,7 @@ input:focus {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
-  line-height: 2.75rem;
+  line-height: 1.75rem;
   margin-bottom: 4rem; }
 
 .swiper-info-box {
@@ -377,7 +377,7 @@ input:focus {
 
 .pressure-card {
   width: 790px;
-  height: 240px;
+  height: auto;
   background: #e0e0e0;
   border-radius: 4px;
   margin-bottom: 40px;
@@ -562,7 +562,8 @@ nav {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
-  line-height: 2.5rem; }
+  line-height: 2rem;
+  letter-spacing: 0.05rem; }
 
 input[type="range"] range-thumb {
   width: 8%;
@@ -836,6 +837,14 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background-repeat: no-repeat;
   overflow: hidden; }
 
+.pressure-card-summary-container {
+  margin-top: 20px;
+  border-top: 1px solid #3b3c43; }
+
+.pressure-card-summary-container .summary p {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 0.95rem; }
+
 footer {
   position: absolute;
   width: 100%;
@@ -1067,6 +1076,13 @@ footer span {
     padding: 25px;
     border-radius: 5px; }
 
+  .welcome-white-box h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.05rem; }
+
   input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
     cursor: pointer;
@@ -1168,7 +1184,7 @@ footer span {
     padding: 23px 0; }
 
   .slider-weight-box {
-    width: 90%;
+    width: 70vw;
     margin-bottom: 4rem;
     border-radius: 5px;
     background: #e0e0e0;
@@ -1185,7 +1201,15 @@ footer span {
     font-weight: 400;
     text-align: center;
     line-height: 2.75rem;
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+
+  .pressure-card-summary-container {
+    margin-top: 20px;
+    border-top: 1px solid #3b3c43; }
+
+  .pressure-card-summary-container .summary p {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 0.95rem; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;

@@ -41,12 +41,14 @@ $saira-message-line-height: 3.4375rem;
 
 // Sass Variables font size
 // $lato-h1: 5vw;
-// $lato-h2: 4vw;
+$lato-h2: 1.5rem;
 $lato-h3: 1rem;
 $lato-h4: 1.5rem;
 // $lato-h5: 1vw;
 $lato-p: 1rem;
 $lato-small: 1rem;
+$lato-line-height: 1.75rem;
+$lato-spacing: 0.05rem;
 
 // Lato
 // H1 Extrabold 64pt 900
@@ -357,7 +359,7 @@ p {
   font-size: $lato-h4;
   font-weight: 400;
   text-align: center;
-  line-height: 2.75rem;
+  line-height: $lato-line-height;
   margin-bottom: 4rem;
 }
 
@@ -508,7 +510,7 @@ p {
 
 .pressure-card {
   width: 790px;
-  height: 240px;
+  height: auto;
   background: #e0e0e0;
   border-radius: 4px;
   margin-bottom: 40px;
@@ -721,10 +723,11 @@ nav {
 }
 
 .welcome-white-box h2 {
-  font-size: $lato-h4;
+  font-size: $lato-h2;
   font-weight: 400;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: $lato-spacing;
 }
 
 input[type="range"] range-thumb {
@@ -1052,6 +1055,19 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   // height: 100vh;
 }
 
+.pressure-card-summary-container
+{
+  margin-top: 20px;
+  border-top: 1px solid #3b3c43;
+}
+
+.pressure-card-summary-container .summary p
+{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: $saira-small;
+
+}
+
 footer{
   position: absolute;
   width: 100%;
@@ -1337,6 +1353,14 @@ footer span {
     border-radius: 5px;
   }
 
+  .welcome-white-box h2 {
+    font-size: $lato-h3;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: $lato-spacing;
+  }
+
   // FIREFOX
   input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
@@ -1464,7 +1488,7 @@ footer span {
   }
 
   .slider-weight-box {
-    width: 90%;
+    width: 70vw;
     margin-bottom: 4rem;
     border-radius: 5px;
     background: #e0e0e0;
@@ -1483,6 +1507,20 @@ footer span {
     text-align: center;
     line-height: 2.75rem;
     margin-bottom: 4rem;
+  }
+
+  .pressure-card-summary-container
+  {
+    margin-top: 20px;
+    border-top: 1px solid #3b3c43;
+  }
+
+  .pressure-card-summary-container .summary p
+  {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: $saira-small;
+
+
   }
 }
 
