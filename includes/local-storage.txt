@@ -9,7 +9,7 @@
 8. inner rim width
 9. wheel diameter
 10. rim type
-11. riding surface
+11. road surface
 
 
 Local Storage 
@@ -57,9 +57,9 @@ localStorage.setItem("Rim_Width", rim_width);
 
 
 // 8. "15", "17", "19", "20", "21"
-let inner_rim_width = "15";
-let str = JSON.stringify(inner_rim_width);
-localStorage.setItem("Inner_Rim_Width", inner_rim_width);
+let tire_width = "15";
+let str = JSON.stringify(tire_width);
+localStorage.setItem("Tire_Width", tire_width);
 
 
 // 9. "584", "599", 650A", "700"

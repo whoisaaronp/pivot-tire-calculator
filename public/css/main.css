@@ -124,7 +124,7 @@ p {
   width: 100%;
   padding: 12px 20px;
   border-style: none;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: 1rem;
   font-weight: 400;
@@ -134,13 +134,13 @@ p {
 .sign-in-form .content-background .form-background .remember .check-box {
   margin-right: 10px; }
 
-.sign-in-form .form-background .orange-lava-button input {
+.sign-in-form .form-background .orange-lava-button button {
   cursor: pointer;
   outline: none;
   width: 100%;
   border-style: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -150,7 +150,7 @@ p {
   background: #f5a851;
   transition: transform 80ms ease-in; }
 
-.sign-in-form .form-background .orange-lava-button input:hover {
+.sign-in-form .form-background .orange-lava-button button:hover {
   background: #dd8928; }
 
 .sign-in-form .orange-lava-button:active {
@@ -248,7 +248,7 @@ input:focus {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
-  line-height: 2.75rem;
+  line-height: 1.75rem;
   margin-bottom: 4rem; }
 
 .swiper-info-box {
@@ -377,7 +377,7 @@ input:focus {
 
 .pressure-card {
   width: 790px;
-  height: 240px;
+  height: auto;
   background: #e0e0e0;
   border-radius: 4px;
   margin-bottom: 40px;
@@ -416,6 +416,7 @@ input:focus {
   border-radius: 5px;
   background: white;
   padding: 30px;
+  margin-bottom: 20rem;
   -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
@@ -545,7 +546,8 @@ nav {
 .user-instructions p {
   font-size: 1rem;
   color: white;
-  font-weight: 200; }
+  font-weight: 200;
+  margin-bottom: 20rem; }
 
 .welcome-white-box {
   width: 45%;
@@ -560,7 +562,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
-  line-height: 2.5rem; }
+  line-height: 2rem; }
 
 input[type="range"] range-thumb {
   width: 8%;
@@ -834,6 +836,40 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background-repeat: no-repeat;
   overflow: hidden; }
 
+.pressure-card-summary-container {
+  margin-top: 20px;
+  border-top: 1px solid #3b3c43; }
+
+.summary {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.pressure-card-summary-container .summary p {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 0.95rem; }
+
+.slider-wheel-box {
+  width: 33vw;
+  margin-bottom: 4rem;
+  border-radius: 5px;
+  background: #e0e0e0;
+  padding: 33px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
+
+.slider-wheel-box h3 {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2.75rem; }
+
 footer {
   position: absolute;
   width: 100%;
@@ -845,9 +881,9 @@ footer {
 footer span {
   display: block;
   width: 100%;
-  color: white;
-  font-size: 0.55rem;
-  letter-spacing: 1px;
+  color: #cacaca;
+  font-size: 9px;
+  letter-spacing: 1.5px;
   padding: 20px;
   margin-bottom: 50px; }
 
@@ -876,10 +912,13 @@ footer span {
     z-index: 1; }
 
   .sign-in-form .content-background .form-background {
-    width: 100%;
+    width: 90%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin: 50px; }
+
+  .sign-in-form .content-background .form-background h2 {
+    color: #2b2c31; }
 
   .sign-in-form .content-background .form-background .input-background span {
     font-weight: 400;
@@ -887,7 +926,8 @@ footer span {
 
   .sign-in-form .content-background .form-background .input-background input {
     color: #2b2c31;
-    background: #ffe7cd; }
+    background: #fcf4ec;
+    border: 1px solid #f5a851; }
 
   .sign-in-form .content-background .form-background .remember {
     color: #2b2c31;
@@ -1065,6 +1105,13 @@ footer span {
     padding: 25px;
     border-radius: 5px; }
 
+  .welcome-white-box h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.05rem; }
+
   input[type="range"]::-moz-range-thumb {
     -webkit-appearance: none;
     cursor: pointer;
@@ -1105,7 +1152,7 @@ footer span {
     border-radius: 1.3px; }
 
   .swiper-info-box {
-    width: 60%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1126,12 +1173,15 @@ footer span {
     margin: 0 auto; }
 
   .intro-logo-container p {
-    width: 375px;
+    width: max-content;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
     color: black; }
+
+  .logo-child {
+    margin-bottom: 0px; }
 
   .logo-child img {
     width: 100px;
@@ -1158,7 +1208,7 @@ footer span {
     width: 90%; }
 
   .wheel-diameter-swiper {
-    width: 90%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1166,7 +1216,7 @@ footer span {
     padding: 23px 0; }
 
   .slider-weight-box {
-    width: 90%;
+    width: 90vw;
     margin-bottom: 4rem;
     border-radius: 5px;
     background: #e0e0e0;
@@ -1183,7 +1233,37 @@ footer span {
     font-weight: 400;
     text-align: center;
     line-height: 2.75rem;
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+
+  .slider-wheel-box {
+    width: 90vw; }
+
+  .slider-wheel-box h3 {
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2.75rem; }
+
+  .pressure-card-summary-container {
+    margin-top: 20px;
+    border-top: 1px solid #3b3c43; }
+
+  .summary {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+  .summary p span {
+    padding-left: 10px;
+    color: #65676b; }
+
+  .pressure-card-summary-container .summary p {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 0.95rem; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;
@@ -1206,7 +1286,7 @@ footer span {
     text-transform: uppercase; }
 
   .swiper-info-box {
-    width: 90%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
