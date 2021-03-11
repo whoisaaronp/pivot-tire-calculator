@@ -872,7 +872,6 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   line-height: 2.75rem; }
 
 .suggestion-tire-container {
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -883,12 +882,31 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 .wheel-library {
   display: inline-flex;
-  background: teal;
-  overflow: scroll; }
+  overflow: scroll;
+  margin-top: 50px; }
 
 .wheel-library img {
   width: 25vw;
+  padding: 10px;
   height: auto; }
+
+.wheel-library div {
+  justify-content: center;
+  text-align: center; }
+
+.wheel-library h3 {
+  text-transform: unset;
+  color: #3b3c43;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 10px; }
+
+.wheel-library h4 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: #65676b;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 1px; }
 
 footer {
   position: absolute;
