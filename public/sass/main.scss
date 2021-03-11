@@ -1099,6 +1099,35 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 }
 
+// wheel suggestions desktop
+
+.suggestion-tire-container
+{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.opt-suggestion-wheel-container{
+  display: flex;
+  justify-content: center;
+}
+
+.wheel-library
+{
+  display: inline-flex;
+  background: teal;
+  overflow: scroll;
+}
+
+.wheel-library img
+{
+  width: 25vw;
+  height: auto;
+}
+
 footer{
   position: absolute;
   width: 100%;
@@ -1594,8 +1623,8 @@ footer span {
 
   .suggestion-tire-container
   {
-    width: 100%;
     height: auto;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 
