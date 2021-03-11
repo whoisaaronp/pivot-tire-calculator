@@ -412,7 +412,7 @@ input:focus {
 
 .equipment-suggestions-content {
   width: 90%;
-  height: 500px;
+  height: auto;
   border-radius: 5px;
   background: white;
   padding: 30px;
@@ -1264,7 +1264,27 @@ footer span {
 
   .pressure-card-summary-container .summary p {
     font-family: 'Saira Extra Condensed', sans-serif;
-    font-size: 0.95rem; } }
+    font-size: 0.95rem; }
+
+  .suggestion-tire-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center; }
+
+  .opt-suggestion-wheel-container {
+    display: flex;
+    justify-content: center; }
+
+  .wheel-library {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+
+  .wheel-library div img {
+    width: 90vw;
+    background: red; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;

@@ -551,7 +551,7 @@ p {
 // equipment container
 .equipment-suggestions-content {
   width: 90%;
-  height: 500px;
+  height: auto;
   border-radius: 5px;
   background: white;
   padding: 30px;
@@ -1591,6 +1591,35 @@ footer span {
 
 
   }
+
+  .suggestion-tire-container
+  {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .opt-suggestion-wheel-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .wheel-library
+  {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wheel-library div img
+  {
+    width: 90vw;
+    background: red;
+  }
+
 }
 
 // *************************************
