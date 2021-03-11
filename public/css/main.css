@@ -1334,8 +1334,14 @@ footer span {
     font-size: 0.95rem;
     letter-spacing: 1px; }
 
+  .wheel-library div {
+    margin-top: 40px; }
+
   .wheel-library div img {
-    width: 90vw; } }
+    width: 90vw; }
+
+  .wheel-library {
+    overflow: visible; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;

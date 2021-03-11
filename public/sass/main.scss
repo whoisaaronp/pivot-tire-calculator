@@ -1656,8 +1656,16 @@ footer span {
     letter-spacing: 1px;
   }
 
+  .wheel-library div {
+    margin-top: 40px;
+  }
+
   .wheel-library div img {
     width: 90vw;
+  }
+
+  .wheel-library {
+    overflow: visible;
   }
 }
 
