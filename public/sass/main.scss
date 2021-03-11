@@ -15,7 +15,8 @@
   display: none;
 }
 
-html, .custom-body-class {
+html,
+.custom-body-class {
   overflow-x: hidden;
   position: relative;
 }
@@ -57,8 +58,7 @@ $lato-spacing: 0.05rem;
 // P Regular 16pt 400
 // SMALL Regular 12pt 100
 
-
-main{
+main {
   min-height: 100vh;
 }
 
@@ -708,7 +708,6 @@ nav {
   color: white;
   font-weight: 200;
   margin-bottom: 20rem;
-
 }
 
 // welcome panel
@@ -1056,12 +1055,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   // height: 100vh;
 }
 
-.pressure-card-summary-container
-{
+.pressure-card-summary-container {
   margin-top: 20px;
   border-top: 1px solid #3b3c43;
 }
-.summary{
+.summary {
   width: 100%;
   height: auto;
   display: inline-flex;
@@ -1069,11 +1067,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   justify-content: space-between;
 }
 
-.pressure-card-summary-container .summary p
-{
-  font-family: 'Saira Extra Condensed', sans-serif;
+.pressure-card-summary-container .summary p {
+  font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-small;
-
 }
 
 .slider-wheel-box {
@@ -1088,75 +1084,66 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
-.slider-wheel-box h3
-{
+.slider-wheel-box h3 {
   display: block;
   font-family: "Lato", sans-serif;
   font-size: $lato-h4;
   font-weight: 400;
   text-align: center;
   line-height: 2.75rem;
-
 }
 
 // wheel suggestions desktop
 
-.suggestion-tire-container
-{
+.suggestion-tire-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
-.opt-suggestion-wheel-container{
+.opt-suggestion-wheel-container {
   display: flex;
   justify-content: center;
 }
 
-.wheel-library
-{
+.wheel-library {
   display: inline-flex;
   // background: teal;
   overflow: scroll;
   margin-top: 50px;
 }
 
-.wheel-library img
-{
+.wheel-library img {
   width: 25vw;
   padding: 10px;
   height: auto;
 }
 
-.wheel-library div
-{
+.wheel-library div {
   justify-content: center;
   text-align: center;
 }
 
-.wheel-library h3
-{
-  text-transform:unset;
+.wheel-library h3 {
+  text-transform: unset;
   color: #3b3c43;
   font-size: $saira-h5;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
-.wheel-library h4
-{
-  font-family: 'Saira Extra Condensed', sans-serif;
+.wheel-library h4 {
+  font-family: "Saira Extra Condensed", sans-serif;
   color: #65676b;
   font-weight: 300;
   font-size: $saira-small;
   letter-spacing: 1px;
 }
 
-footer{
+footer {
   position: absolute;
   width: 100%;
-  height: 3.5rem;  
+  height: 3.5rem;
   bottom: 0;
   margin: 0 auto;
   border-top: 1px solid #dd8928;
@@ -1184,7 +1171,6 @@ footer span {
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
-  
   .logo-container {
     width: 20vw;
     height: auto;
@@ -1217,8 +1203,7 @@ footer span {
     margin: 50px;
   }
 
-  .sign-in-form .content-background .form-background h2
-  {
+  .sign-in-form .content-background .form-background h2 {
     color: #2b2c31;
   }
   .sign-in-form .content-background .form-background .input-background span {
@@ -1229,7 +1214,7 @@ footer span {
   .sign-in-form .content-background .form-background .input-background input {
     color: #2b2c31;
     background: #fcf4ec;
-    border:1px solid rgba(245, 168, 81, 1);
+    border: 1px solid rgba(245, 168, 81, 1);
   }
 
   .sign-in-form .content-background .form-background .remember {
@@ -1535,11 +1520,9 @@ footer span {
     color: black;
   }
 
-
   .logo-child {
     margin-bottom: 0px;
   }
-  
 
   .logo-child img {
     width: 100px;
@@ -1602,29 +1585,25 @@ footer span {
     margin-bottom: 4rem;
   }
 
-  .slider-wheel-box
-  {
+  .slider-wheel-box {
     width: 90vw;
   }
 
-  .slider-wheel-box h3
-  {
+  .slider-wheel-box h3 {
     display: block;
     font-family: "Lato", sans-serif;
     font-size: $lato-h4;
     font-weight: 400;
     text-align: center;
     line-height: 2.75rem;
-
   }
 
-  .pressure-card-summary-container
-  {
+  .pressure-card-summary-container {
     margin-top: 20px;
     border-top: 1px solid #3b3c43;
   }
 
-  .summary{
+  .summary {
     width: 100%;
     height: auto;
     display: inline-flex;
@@ -1632,48 +1611,54 @@ footer span {
     justify-content: space-between;
   }
 
-  .summary p span
-  {
+  .summary p span {
     padding-left: 10px;
     color: #65676b;
   }
 
-  .pressure-card-summary-container .summary p
-  {
-    font-family: 'Saira Extra Condensed', sans-serif;
+  .pressure-card-summary-container .summary p {
+    font-family: "Saira Extra Condensed", sans-serif;
     font-size: $saira-small;
-
-
   }
 
-  .suggestion-tire-container
-  {
+  .suggestion-tire-container {
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
 
-  .opt-suggestion-wheel-container{
+  .opt-suggestion-wheel-container {
     display: flex;
     justify-content: center;
   }
 
-  .wheel-library
-  {
+  .wheel-library {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
 
-  .wheel-library div img
-  {
-    width: 90vw;
-    background: red;
+  .wheel-library h3 {
+    text-transform: unset;
+    color: #3b3c43;
+    font-size: $saira-h5;
+    font-weight: 300;
+    margin-bottom: 10px;
   }
 
+  .wheel-library h4 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    color: #65676b;
+    font-weight: 300;
+    font-size: $saira-small;
+    letter-spacing: 1px;
+  }
+
+  .wheel-library div img {
+    width: 90vw;
+  }
 }
 
 // *************************************

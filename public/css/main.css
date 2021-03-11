@@ -10,7 +10,8 @@
 .hidden {
   display: none; }
 
-html, .custom-body-class {
+html,
+.custom-body-class {
   overflow-x: hidden;
   position: relative; }
 
@@ -849,7 +850,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   justify-content: space-between; }
 
 .pressure-card-summary-container .summary p {
-  font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: "Saira Extra Condensed", sans-serif;
   font-size: 0.95rem; }
 
 .slider-wheel-box {
@@ -902,7 +903,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 10px; }
 
 .wheel-library h4 {
-  font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: "Saira Extra Condensed", sans-serif;
   color: #65676b;
   font-weight: 300;
   font-size: 0.95rem;
@@ -1300,7 +1301,7 @@ footer span {
     color: #65676b; }
 
   .pressure-card-summary-container .summary p {
-    font-family: 'Saira Extra Condensed', sans-serif;
+    font-family: "Saira Extra Condensed", sans-serif;
     font-size: 0.95rem; }
 
   .suggestion-tire-container {
@@ -1319,9 +1320,22 @@ footer span {
     justify-content: space-between;
     align-items: center; }
 
+  .wheel-library h3 {
+    text-transform: unset;
+    color: #3b3c43;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px; }
+
+  .wheel-library h4 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    color: #65676b;
+    font-weight: 300;
+    font-size: 0.95rem;
+    letter-spacing: 1px; }
+
   .wheel-library div img {
-    width: 90vw;
-    background: red; } }
+    width: 90vw; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;
