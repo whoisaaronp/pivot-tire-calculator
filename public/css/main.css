@@ -124,7 +124,7 @@ p {
   width: 100%;
   padding: 12px 20px;
   border-style: none;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: 1rem;
   font-weight: 400;
@@ -134,13 +134,13 @@ p {
 .sign-in-form .content-background .form-background .remember .check-box {
   margin-right: 10px; }
 
-.sign-in-form .form-background .orange-lava-button input {
+.sign-in-form .form-background .orange-lava-button button {
   cursor: pointer;
   outline: none;
   width: 100%;
   border-style: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -150,7 +150,7 @@ p {
   background: #f5a851;
   transition: transform 80ms ease-in; }
 
-.sign-in-form .form-background .orange-lava-button input:hover {
+.sign-in-form .form-background .orange-lava-button button:hover {
   background: #dd8928; }
 
 .sign-in-form .orange-lava-button:active {
@@ -905,10 +905,13 @@ footer span {
     z-index: 1; }
 
   .sign-in-form .content-background .form-background {
-    width: 100%;
+    width: 90%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin: 50px; }
+
+  .sign-in-form .content-background .form-background h2 {
+    color: #2b2c31; }
 
   .sign-in-form .content-background .form-background .input-background span {
     font-weight: 400;
@@ -916,7 +919,8 @@ footer span {
 
   .sign-in-form .content-background .form-background .input-background input {
     color: #2b2c31;
-    background: #ffe7cd; }
+    background: #fcf4ec;
+    border: 1px solid #f5a851; }
 
   .sign-in-form .content-background .form-background .remember {
     color: #2b2c31;
@@ -1162,12 +1166,15 @@ footer span {
     margin: 0 auto; }
 
   .intro-logo-container p {
-    width: 375px;
+    width: max-content;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
     color: black; }
+
+  .logo-child {
+    margin-bottom: 0px; }
 
   .logo-child img {
     width: 100px;

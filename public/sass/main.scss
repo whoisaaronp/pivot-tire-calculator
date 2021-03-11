@@ -208,7 +208,7 @@ p {
   width: 100%;
   padding: 12px 20px;
   border-style: none;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: $lato-p;
   font-weight: 400;
@@ -222,13 +222,13 @@ p {
 }
 
 // orange button
-.sign-in-form .form-background .orange-lava-button input {
+.sign-in-form .form-background .orange-lava-button button {
   cursor: pointer;
   outline: none;
   width: 100%;
   border-style: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   font-size: $lato-h4;
   font-weight: 400;
@@ -240,7 +240,7 @@ p {
 }
 
 // hover
-.sign-in-form .form-background .orange-lava-button input:hover {
+.sign-in-form .form-background .orange-lava-button button:hover {
   background: #dd8928;
 }
 
@@ -1148,10 +1148,15 @@ footer span {
     z-index: 1;
   }
   .sign-in-form .content-background .form-background {
-    width: 100%;
+    width: 90%;
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
     margin: 50px;
+  }
+
+  .sign-in-form .content-background .form-background h2
+  {
+    color: #2b2c31;
   }
   .sign-in-form .content-background .form-background .input-background span {
     font-weight: 400;
@@ -1160,7 +1165,8 @@ footer span {
 
   .sign-in-form .content-background .form-background .input-background input {
     color: #2b2c31;
-    background: #ffe7cd;
+    background: #fcf4ec;
+    border:1px solid rgba(245, 168, 81, 1);
   }
 
   .sign-in-form .content-background .form-background .remember {
@@ -1458,17 +1464,19 @@ footer span {
   }
 
   .intro-logo-container p {
-    width: 375px;
+    width: max-content;
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-h5;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-align: center;
     color: black;
   }
 
-  // .logo-child {
-  //   // background-color: red;
-  // }
+
+  .logo-child {
+    margin-bottom: 0px;
+  }
+  
 
   .logo-child img {
     width: 100px;
