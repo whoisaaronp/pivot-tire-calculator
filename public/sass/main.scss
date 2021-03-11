@@ -1438,7 +1438,7 @@ footer span {
   }
 
   .swiper-info-box {
-    width: 60%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1509,7 +1509,7 @@ footer span {
   }
 
   .wheel-diameter-swiper {
-    width: 90%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1518,7 +1518,7 @@ footer span {
   }
 
   .slider-weight-box {
-    width: 70vw;
+    width: 90vw;
     margin-bottom: 4rem;
     border-radius: 5px;
     background: #e0e0e0;
@@ -1537,6 +1537,11 @@ footer span {
     text-align: center;
     line-height: 2.75rem;
     margin-bottom: 4rem;
+  }
+
+  .slider-wheel-box
+  {
+    width: 90vw;
   }
 
   .slider-wheel-box h3
@@ -1600,7 +1605,7 @@ footer span {
   }
 
   .swiper-info-box {
-    width: 90%;
+    width: 90vw;
     height: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
