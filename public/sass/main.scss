@@ -1041,7 +1041,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-weight: 400;
   text-align: center;
   line-height: 2.75rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 // background contours
@@ -1297,7 +1297,7 @@ footer span {
   }
 
   .radio-info-box {
-    width: 90%;
+    width: 90vw;
     border-radius: 5px;
     background: #e0e0e0;
     padding: 33px;
