@@ -840,6 +840,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-top: 20px;
   border-top: 1px solid #3b3c43; }
 
+.summary {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
 .pressure-card-summary-container .summary p {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 0.95rem; }
@@ -1242,6 +1249,17 @@ footer span {
   .pressure-card-summary-container {
     margin-top: 20px;
     border-top: 1px solid #3b3c43; }
+
+  .summary {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+  .summary p span {
+    padding-left: 10px;
+    color: #65676b; }
 
   .pressure-card-summary-container .summary p {
     font-family: 'Saira Extra Condensed', sans-serif;
