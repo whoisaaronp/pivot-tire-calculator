@@ -50,19 +50,19 @@
 				<div class="pressure-card">
 					<div class="user-profile-content">
 						<img class="card-image" src="/images/eddy-merckx.png" alt="Profile photo of Eddy" />
-								<h3>Eddy's optimal tire pressure</h3>
+						<h3>Eddy's optimal tire pressure</h3>
 					</div>
 					<div class="pressure-calculation-container">
 						<div class="pressure-calculation-one">
 							<!-- front and rear tire -->
 							<p>Front Tire</p>
-							<span>00.0</span>
+							<span id="front-pres">00.0</span>
 						</div>
 						<div class="vertical-line"></div>
 						<div class="pressure-calculation-two">
 							<!-- front and rear tire -->
 							<p>Rear Tire</p>
-							<span>00.0</span>
+							<span id="rear-pres">00.0</span>
 						</div>
 					</div>
 					<!-- summary -->
@@ -78,7 +78,7 @@
 					<!-- content -->
 					<div class="user-profile-content">
 						<img class="card-image" src="/images/dashboard-icon.svg" alt="Profile photo of Eddy" />
-								<h3>Optimal Data</h3>
+						<h3>Optimal Data</h3>
 					</div>
 				</div>
 			</section>
@@ -87,20 +87,47 @@
 				<!-- content -->
 				<div class="user-profile-content">
 					<img class="card-image" src="/images/star-icon.svg" alt="Profile photo of Eddy" />
-							<h3>Optimal Suggestions</h3>
+					<h3>Optimal Suggestions</h3>
 				</div>
 				<!-- tire suggestions panel -->
 				<section class="suggestion-tire-container">
 					<h2 class="hidden">Optimal Tire suggesstion options</h2>
-					<p>Based on your change in tire specifications or body mass</p>
-					<section>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
+					<!-- <p>Based on your change in tire specifications or body mass</p> -->
+
+					<section class="opt-suggestion-wheel-container" id="optimal-wheel-suggestion">
+						<section class="hidden">optimal wheel suggestions</section>
+						<!-- wheels -->
+						<div class="wheel-library">
+							<!-- top five wheels only -->
+							<div>
+								<h3>Tire: Vittoria Corsa Speed G+ 2.0 Tubeless</h3>
+								<h4>Wheel: Continental</h4>
+								<img src="/images/dt-swiss-prc-1400.png" alt="DT Swiss PRC 1400 Aero Wheels">
+							</div>
+							<div>
+								<h3>Tire: Vittoria Corsa Speed G+ 2.0 Tubeless</h3>
+								<h4>Wheel: Continental</h4>
+								<img src="/images/dt-swiss-prc-1400.png" alt="DT Swiss PRC 1400 Aero Wheels">
+							</div>
+							<div>
+								<h3>Tire: Vittoria Corsa Speed G+ 2.0 Tubeless</h3>
+								<h4>Wheel: Continental</h4>
+								<img src="/images/dt-swiss-prc-1400.png" alt="DT Swiss PRC 1400 Aero Wheels">
+							</div>
+							<div>
+								<h3>Tire: Vittoria Corsa Speed G+ 2.0 Tubeless</h3>
+								<h4>Wheel: Continental</h4>
+								<img src="/images/dt-swiss-prc-1400.png" alt="DT Swiss PRC 1400 Aero Wheels">
+							</div>
+							<div>
+								<h3>Tire: Vittoria Corsa Speed G+ 2.0 Tubeless</h3>
+								<h4>Wheel: Continental</h4>
+								<img src="/images/dt-swiss-prc-1400.png" alt="DT Swiss PRC 1400 Aero Wheels">
+							</div>
+						</div>
 					</section>
 				</section>
-				
+
 			</section>
 		</section>
 		<footer>

@@ -15,7 +15,8 @@
   display: none;
 }
 
-html, .custom-body-class {
+html,
+.custom-body-class {
   overflow-x: hidden;
   position: relative;
 }
@@ -26,7 +27,7 @@ $saira-h2: 2.441rem;
 $saira-h3: 3rem;
 $saira-h4: 2rem;
 $saira-h5: 1.5rem;
-// $saira-p: 1vw;
+$saira-p: 1rem;
 $saira-small: 0.95rem;
 $saira-message-line-height: 3.4375rem;
 
@@ -57,8 +58,7 @@ $lato-spacing: 0.05rem;
 // P Regular 16pt 400
 // SMALL Regular 12pt 100
 
-
-main{
+main {
   min-height: 100vh;
 }
 
@@ -551,7 +551,7 @@ p {
 // equipment container
 .equipment-suggestions-content {
   width: 90%;
-  height: 500px;
+  height: auto;
   border-radius: 5px;
   background: white;
   padding: 30px;
@@ -708,7 +708,6 @@ nav {
   color: white;
   font-weight: 200;
   margin-bottom: 20rem;
-
 }
 
 // welcome panel
@@ -781,6 +780,7 @@ input[type="range"] {
   -webkit-appearance: none;
   margin: 18px 0;
   width: 100%;
+  background: none;
 }
 
 // range slider track line
@@ -800,7 +800,8 @@ input[type="range"]::-ms-slider-runnable-track {
 // FIREFOX TRACK
 input[type="range"]::-moz-slider-runnable-track {
   border: none;
-  background: #b6b6b6;
+  // background: #b6b6b6;
+  background: red;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -1041,7 +1042,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-weight: 400;
   text-align: center;
   line-height: 2.75rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 // background contours
@@ -1054,12 +1055,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   // height: 100vh;
 }
 
-.pressure-card-summary-container
-{
+.pressure-card-summary-container {
   margin-top: 20px;
   border-top: 1px solid #3b3c43;
 }
-.summary{
+.summary {
   width: 100%;
   height: auto;
   display: inline-flex;
@@ -1067,6 +1067,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .summary p span
 {
   padding-left: 5px;
@@ -1077,6 +1078,11 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 1.5rem;
+=======
+.pressure-card-summary-container .summary p {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: $saira-small;
+>>>>>>> main
 }
 
 
@@ -1092,21 +1098,66 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
-.slider-wheel-box h3
-{
+.slider-wheel-box h3 {
   display: block;
   font-family: "Lato", sans-serif;
   font-size: $lato-h4;
   font-weight: 400;
   text-align: center;
   line-height: 2.75rem;
-
 }
 
-footer{
+// wheel suggestions desktop
+
+.suggestion-tire-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.opt-suggestion-wheel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wheel-library {
+  display: inline-flex;
+  // background: teal;
+  overflow: scroll;
+  margin-top: 50px;
+}
+
+.wheel-library img {
+  width: 25vw;
+  padding: 10px;
+  height: auto;
+}
+
+.wheel-library div {
+  justify-content: center;
+  text-align: center;
+}
+
+.wheel-library h3 {
+  text-transform: unset;
+  color: #3b3c43;
+  font-size: $saira-h5;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.wheel-library h4 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  color: #65676b;
+  font-weight: 300;
+  font-size: $saira-small;
+  letter-spacing: 1px;
+}
+
+footer {
   position: absolute;
   width: 100%;
-  height: 3.5rem;  
+  height: 3.5rem;
   bottom: 0;
   margin: 0 auto;
   border-top: 1px solid #dd8928;
@@ -1134,7 +1185,6 @@ footer span {
 // If the browser window is 768px or smaller, the background image would do this
 
 @media only screen and(max-width: 768px) {
-  
   .logo-container {
     width: 20vw;
     height: auto;
@@ -1167,8 +1217,7 @@ footer span {
     margin: 50px;
   }
 
-  .sign-in-form .content-background .form-background h2
-  {
+  .sign-in-form .content-background .form-background h2 {
     color: #2b2c31;
   }
   .sign-in-form .content-background .form-background .input-background span {
@@ -1179,7 +1228,7 @@ footer span {
   .sign-in-form .content-background .form-background .input-background input {
     color: #2b2c31;
     background: #fcf4ec;
-    border:1px solid rgba(245, 168, 81, 1);
+    border: 1px solid rgba(245, 168, 81, 1);
   }
 
   .sign-in-form .content-background .form-background .remember {
@@ -1303,7 +1352,7 @@ footer span {
   }
 
   .radio-info-box {
-    width: 90%;
+    width: 90vw;
     border-radius: 5px;
     background: #e0e0e0;
     padding: 33px;
@@ -1485,11 +1534,9 @@ footer span {
     color: black;
   }
 
-
   .logo-child {
     margin-bottom: 0px;
   }
-  
 
   .logo-child img {
     width: 100px;
@@ -1552,29 +1599,25 @@ footer span {
     margin-bottom: 4rem;
   }
 
-  .slider-wheel-box
-  {
+  .slider-wheel-box {
     width: 90vw;
   }
 
-  .slider-wheel-box h3
-  {
+  .slider-wheel-box h3 {
     display: block;
     font-family: "Lato", sans-serif;
     font-size: $lato-h4;
     font-weight: 400;
     text-align: center;
     line-height: 2.75rem;
-
   }
 
-  .pressure-card-summary-container
-  {
+  .pressure-card-summary-container {
     margin-top: 20px;
     border-top: 1px solid #3b3c43;
   }
 
-  .summary{
+  .summary {
     width: 100%;
     height: auto;
     display: inline-flex;
@@ -1582,6 +1625,7 @@ footer span {
     justify-content: space-between;
   }
 
+<<<<<<< HEAD
   .summary p span
   {
     padding-left: 5px;
@@ -1592,6 +1636,63 @@ footer span {
   {
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 1rem;
+=======
+  .summary p span {
+    padding-left: 10px;
+    color: #65676b;
+  }
+
+  .pressure-card-summary-container .summary p {
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: $saira-small;
+  }
+
+  .suggestion-tire-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .opt-suggestion-wheel-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wheel-library {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wheel-library h3 {
+    text-transform: unset;
+    color: #3b3c43;
+    font-size: $saira-h5;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .wheel-library h4 {
+    font-family: "Saira Extra Condensed", sans-serif;
+    color: #65676b;
+    font-weight: 300;
+    font-size: $saira-small;
+    letter-spacing: 1px;
+  }
+
+  .wheel-library div {
+    margin-top: 40px;
+  }
+
+  .wheel-library div img {
+    width: 90vw;
+  }
+
+  .wheel-library {
+    overflow: visible;
+>>>>>>> main
   }
 }
 
