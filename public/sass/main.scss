@@ -1069,14 +1069,15 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 .summary p span
 {
-  padding-left: 5px;
-  color: #65676b;
+  color: black;
+  padding-left: 5px;  
 }
 
 .pressure-card-summary-container .summary p
 {
   font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 1.5rem;
+  color: #65676b;
 }
 
 .pressure-card-summary-container .summary p {
@@ -1625,12 +1626,13 @@ footer span {
 
   .summary p span {
     padding-left: 5px;
-    color: #65676b;
+    color: black;
   }
 
   .pressure-card-summary-container .summary p {
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: $saira-small;
+    color: #65676b;
   }
 
   .suggestion-tire-container {
