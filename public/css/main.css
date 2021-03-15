@@ -1029,7 +1029,7 @@ footer span {
 
   .pressure-card h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase; }
 
@@ -1071,7 +1071,7 @@ footer span {
 
   .rider-data h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase; }
 
@@ -1090,7 +1090,7 @@ footer span {
 
   .equipment-suggestions-content h3 {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase; }
 
@@ -1305,7 +1305,7 @@ footer span {
     justify-content: space-between; }
 
   .summary p span {
-    padding-left: 10px;
+    padding-left: 5px;
     color: #65676b; }
 
   .pressure-card-summary-container .summary p {
@@ -1387,7 +1387,7 @@ footer span {
     overflow: hidden; }
 
   .summary p span {
-    padding-left: 5px;
+    padding-left: 3px;
     color: #65676b; }
 
   .pressure-card-summary-container .summary p {
