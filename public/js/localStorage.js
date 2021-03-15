@@ -138,8 +138,7 @@ function saveUser(){
 }
 
 
-
-// next.addEventListener("click", getData);
+// calculation with localstorage
 // On click event function
 const linkBtns = document.querySelectorAll('[data-save-then-goto]');
 
@@ -149,6 +148,46 @@ linkBtns.forEach((btn) => {
 
     saveRadio();
     saveRange();
+
+    // Make final calculations
+    if (href === '/pressure-suggestion') {
+      const wetGround = (localStorage.getItem('road-surface') === 'WET');
+      let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
+      const weightUnit = localStorage.getItem('weight-unit');
+      const pressureUnit = localStorage.getItem('pressure-unit');
+
+      // Convert to KG if using LBS
+      if (weightUnit === 'LBS') {
+        humanWeight *= 0.453592;
+      }
+      
+      const tireWidth = parseInt(localStorage.getItem('tire-width').replace(/"/g, ''), 10);
+      
+      let environmentalInfluences = 1;
+      environmentalInfluences = (wetGround ? environmentalInfluences * 0.93 : (environmentalInfluences * 1));
+      let optimumAirPressure = ((humanWeight/(2.55+humanWeight/10)*environmentalInfluences));
+
+      console.warn(humanWeight, environmentalInfluences);
+      
+      // 25mm -> as default
+      if (tireWidth === 23){
+        optimumAirPressure += 0.5;
+      }else if (tireWidth === 28){
+        optimumAirPressure -= 1;
+      }
+      
+      
+      if (pressureUnit === 'PSI') {
+        const psi = optimumAirPressure * 14.5038;
+        
+        localStorage.setItem('front_pressure', `${round(psi, 0)} PSI`);
+        localStorage.setItem('rear_pressure', `${round(psi, 0)} PSI`);
+      }
+      else {
+        localStorage.setItem('front_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
+        localStorage.setItem('rear_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
+      }
+    }
 
     window.location.href = href;
 
