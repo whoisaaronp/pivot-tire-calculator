@@ -38,6 +38,7 @@ function saveRange() {
 }
 
 // 3. Riding style selection when an option grab is selected store the(activeIndex# number) key and values -> then stringify
+// when the saveBikeBtn(contine button) is clicked, save then the selected bike will be stored in local storage
 const saveBikeBtn = document.getElementById('saveBikeBtn');
 if (saveBikeBtn) {
   saveBikeBtn.addEventListener('click', saveBike);
