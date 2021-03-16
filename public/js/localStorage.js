@@ -150,6 +150,8 @@ linkBtns.forEach((btn) => {
     saveRange();
 
     // Make final calculations
+    // jsut before you go to the pressure suggestion page, do this…
+    // calculate
     if (href === '/pressure-suggestion') {
       const wetGround = (localStorage.getItem('road-surface') === 'WET');
       let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
