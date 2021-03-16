@@ -393,13 +393,15 @@ p {
   text-transform: uppercase;
 }
 
-.equipment-suggestions-content p {
-  display: block;
+.profile-description
+{
   font-family: "Lato", sans-serif;
   font-size: $lato-small;
-  font-weight: 200;
-  line-height: $saira-message-line-height;
+  font-weight: 400;
   color: #3b3c43;
+  margin-left: 80px; 
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3b3c43; 
 }
 
 // pressure suggestion desktop, tablet
@@ -1374,13 +1376,17 @@ footer span {
     text-transform: uppercase;
   }
 
-  .equipment-suggestions-content p {
-    display: block;
-    font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-small;
+  .profile-description
+  {
+    font-family: "Lato", sans-serif;
+    font-size: $lato-small;
     font-weight: 400;
-    line-height: $saira-message-line-height;
+    color: #3b3c43;
+    margin-left: 80px; 
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3b3c43; 
   }
+  
 
   // hamburger
   .hamburger {
@@ -1631,8 +1637,9 @@ footer span {
 
   .pressure-card-summary-container .summary p {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: $saira-small;
+    font-size: 19px;
     color: #65676b;
+    line-height: 21px;
   }
 
   .suggestion-tire-container {
@@ -1681,6 +1688,18 @@ footer span {
   .wheel-library {
     overflow: visible;
   }
+
+  .profile-description
+{
+  font-family: "Lato", sans-serif;
+  font-size: $lato-small;
+  font-weight: 400;
+  color: #3b3c43;
+  margin-left: 80px; 
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3b3c43; 
+}
+
 }
 
 // *************************************

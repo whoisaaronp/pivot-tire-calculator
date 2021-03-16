@@ -128,12 +128,12 @@ if (submitButton) {
 
 }
 
+//Saving the username from input field to the Local Storage
 function saveUser() {
-	//Saving the username from input field to the Local Storage
 	const username = document.getElementById("userName").value;
 	localStorage.setItem('user', username);
 	alert('Saved User!');
-	// linked i
+
 	window.location.href = "/welcome";
 
 }

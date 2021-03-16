@@ -278,13 +278,14 @@ input:focus {
   font-weight: 600;
   text-transform: uppercase; }
 
-.equipment-suggestions-content p {
-  display: block;
+.profile-description {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 200;
-  line-height: 3.4375rem;
-  color: #3b3c43; }
+  font-weight: 400;
+  color: #3b3c43;
+  margin-left: 80px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3b3c43; }
 
 .suggestion-container {
   width: 90%;
@@ -1095,12 +1096,14 @@ footer span {
     font-weight: 600;
     text-transform: uppercase; }
 
-  .equipment-suggestions-content p {
-    display: block;
-    font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 0.95rem;
+  .profile-description {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 3.4375rem; }
+    color: #3b3c43;
+    margin-left: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3b3c43; }
 
   .hamburger {
     display: flex;
@@ -1311,8 +1314,9 @@ footer span {
 
   .pressure-card-summary-container .summary p {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 0.95rem;
-    color: #65676b; }
+    font-size: 19px;
+    color: #65676b;
+    line-height: 21px; }
 
   .suggestion-tire-container {
     height: auto;
@@ -1351,7 +1355,16 @@ footer span {
     width: 90vw; }
 
   .wheel-library {
-    overflow: visible; } }
+    overflow: visible; }
+
+  .profile-description {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3b3c43;
+    margin-left: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3b3c43; } }
 @media only screen and (max-width: 375px) {
   .radio-info-box {
     width: 90%;
