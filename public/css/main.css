@@ -925,8 +925,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   color: black; }
 
 #visualization {
-  display: block;
-  width: 100%;
+  width: auto;
   height: 310px; }
 
 footer {
@@ -1420,8 +1419,7 @@ footer span {
     font-size: 0.85rem; }
 
   #visualization {
-    display: block;
-    width: 100%;
+    width: auto;
     height: 310px; } }
 .nav-active {
   -o-transform: translateX(0%);

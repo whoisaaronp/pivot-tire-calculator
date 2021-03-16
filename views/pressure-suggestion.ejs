@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 		google.charts.load('current', {'packages':['corechart']});
 		google.charts.setOnLoadCallback(drawChart);
-  
+		// The Line Charts with Dynamic JSON 
 		function drawChart() {
 		  var data = google.visualization.arrayToDataTable([
 			['Year', 'Rider Weight', 'Tire Width'],
@@ -31,7 +31,11 @@
 			// title: 'Company Performance',
 			curveType: 'function',
 			legend: { position: 'bottom' },
-			
+			series: {
+				0: { color: '#f28e25' },
+				1: { color: '#3b3c43' }
+			  }
+
 		  };
   
 		  var chart = new google.visualization.LineChart(document.getElementById('visualization'));
@@ -108,7 +112,7 @@
 					<!-- content -->
 					<div class="user-profile-content">
 						<img class="card-image" src="/images/dashboard-icon.svg" alt="Profile photo of Eddy" />
-						<h3>Optimal Data</h3>
+						<h3>Optimal Data History</h3>
 					</div>
 					<div id="visualization"></div>
 				</div>
