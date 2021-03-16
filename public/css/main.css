@@ -1314,8 +1314,9 @@ footer span {
 
   .pressure-card-summary-container .summary p {
     font-family: "Saira Extra Condensed", sans-serif;
-    font-size: 0.95rem;
-    color: #65676b; }
+    font-size: 19px;
+    color: #65676b;
+    line-height: 21px; }
 
   .suggestion-tire-container {
     height: auto;
