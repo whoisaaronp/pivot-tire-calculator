@@ -12,6 +12,38 @@
 		rel="stylesheet" />
 	<link rel="shortcut icon" type="image/svg" href="/images/16-flaviconpivot-gradient-logo.svg" />
 	<title>Pivot Tire Calculator</title>
+	<!-- google chart -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.charts.load("current", {packages:["corechart"]});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+		  var data = google.visualization.arrayToDataTable
+			  ([['X', '1', '2', '3', '4', '5', '6'],
+				[1, 2, 3, 4, 5, 6, 7],
+				[2, 3, 4, 5, 6, 7, 8],
+				[3, 4, 5, 6, 7, 8, 9],
+				[4, 5, 6, 7, 8, 9, 10],
+				[5, 6, 7, 8, 9, 10, 11],
+				[6, 7, 8, 9, 10, 11, 12]
+		  ]);
+  
+		  var options = {
+			legend: 'none',
+			series: {
+			  0: { color: '#e2431e' },
+			  1: { color: '#e7711b' },
+			  2: { color: '#f1ca3a' },
+			  3: { color: '#6f9654' },
+			  4: { color: '#1c91c0' },
+			  5: { color: '#43459d' },
+			}
+		  };
+  
+		  var chart = new google.visualization.LineChart(document.getElementById('visulization'));
+		  chart.draw(data, options);
+		}
+	  </script>
 	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
 	<link href="/css/main.css" rel="stylesheet" type="text/css" />
 </head>
@@ -73,6 +105,9 @@
 							<p>Road Surface:<span>DRY</span></p>
 						</div>
 					</div>
+					<p class="disclaimer">
+						⚠ Disclaimer - This pressure guide is a starting point recommendation and further refinements are encouraged to find the right pressure for any given setup.
+					</p>
 				</div>
 				<div class="rider-data">
 					<!-- content -->
@@ -80,6 +115,7 @@
 						<img class="card-image" src="/images/dashboard-icon.svg" alt="Profile photo of Eddy" />
 						<h3>Optimal Data</h3>
 					</div>
+					<div id="visulization"></div>
 				</div>
 			</section>
 			<section class="equipment-suggestions-content slide-up-fade-in">
