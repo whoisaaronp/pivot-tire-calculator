@@ -64,6 +64,10 @@ router.get('/pressure-suggestion', function (req, res, next) {
     res.render('pressure-suggestion');
 });
 
+router.get('/about', function (req, res, next) {
+    res.render('about');
+});
+
 
 module.exports = router;
 
