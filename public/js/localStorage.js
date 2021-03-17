@@ -155,7 +155,7 @@ linkBtns.forEach((btn) => {
 		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
-			const wetGround = (localStorage.getItem('road-surface') === 'WET');
+			const wetGround = (JSON.parse(localStorage.getItem('road-surface')) === 'WET');
 			let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
 			const weightUnit = localStorage.getItem('weight-unit');
 			const pressureUnit = localStorage.getItem('pressure-unit');
@@ -184,12 +184,12 @@ linkBtns.forEach((btn) => {
 			if (pressureUnit === 'PSI') {
 				const psi = optimumAirPressure * 14.5038;
 
-				localStorage.setItem('front_pressure', `${round(psi, 0)} PSI`);
-				localStorage.setItem('rear_pressure', `${round(psi, 0)} PSI`);
+				localStorage.setItem('front_pressure', `${Math.round(psi, 0)} PSI`);
+				localStorage.setItem('rear_pressure', `${Math.round(psi, 0)} PSI`);
 			}
 			else {
-				localStorage.setItem('front_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
-				localStorage.setItem('rear_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
+				localStorage.setItem('front_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
+				localStorage.setItem('rear_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 			}
 		}
 
