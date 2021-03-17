@@ -139,7 +139,7 @@ function saveUser() {
 }
 
 
-// calculation with localstorage
+// 8. calculation with localstorage
 // On click event function
 const linkBtns = document.querySelectorAll('[data-save-then-goto]');
 
