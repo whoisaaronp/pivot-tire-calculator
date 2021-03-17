@@ -926,6 +926,18 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   width: auto;
   height: 310px; }
 
+.about-container {
+  max-width: 750px;
+  padding: 30px;
+  color: white;
+  margin: 0 auto; }
+
+.about-container h3 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 footer {
   position: absolute;
   width: 100%;

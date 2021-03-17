@@ -152,6 +152,7 @@ linkBtns.forEach((btn) => {
 
 		// Make final calculations
 		// jsut before you go to the pressure suggestion page, do this…
+		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
 			const wetGround = (localStorage.getItem('road-surface') === 'WET');
