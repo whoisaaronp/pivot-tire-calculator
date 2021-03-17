@@ -955,34 +955,31 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 // black logo container
 .intro-logo-container {
-  width: 25vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
 }
 
 .intro-logo-container p {
   width: 800px;
+  height: 100%;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-h4;
   font-weight: 300;
   text-align: center;
   color: white;
   margin-top: 30px;
-}
-
-.logo-child {
-  margin-bottom: 75px;
+  margin: 0 auto;
 }
 
 // sign up page white logo
-.logo-child img {
+.logo-child {
+  width: 150px;
+  height: 200px;
   background-image: url(/images/all-whitepivot-gradient-logo.svg);
-  background-size: cover;
-  background-position: top center;
+  background-size: contain;
+  background-position: top;
   background-repeat: no-repeat;
-  width: 160px;
-  display: flex;
   margin: 0 auto;
 }
 
@@ -1531,14 +1528,16 @@ footer span {
 
   // black logo container
   .intro-logo-container {
-    width: 25vw;
+    width: 100%;
+    height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin-top: 50px;
   }
 
   .intro-logo-container p {
-    width: max-content;
+    width: 100%;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -1547,16 +1546,13 @@ footer span {
   }
 
   .logo-child {
-    margin-bottom: 0px;
-  }
-
-  .logo-child img {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    width: 160px;
+    height: 240px;
+    background-image: url(/images/black-pivot-gradient-logo.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 25px;
   }
 
   .swiper-slide img {
@@ -1749,7 +1745,7 @@ footer span {
     margin: 0 auto;
     padding: 23px 0;
   }
-
+  
   // background contours
   #background-contour {
     background-image: url(/images/contour-bckgdcontour.svg);
@@ -1769,11 +1765,21 @@ footer span {
     font-size: 0.85rem;
   }
 
-  // scale 375 mobile 
+  // scale 375 mobile
   #visualization {
     width: auto;
     height: 310px;
   }
+
+  .intro-logo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
 }
 
 // menu animation

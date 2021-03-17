@@ -754,30 +754,28 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-bottom: 40px; }
 
 .intro-logo-container {
-  width: 25vw;
   display: flex;
-  justify-content: center;
-  margin: 0 auto; }
+  flex-direction: column;
+  justify-content: center; }
 
 .intro-logo-container p {
   width: 800px;
+  height: 100%;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
   color: white;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin: 0 auto; }
 
 .logo-child {
-  margin-bottom: 75px; }
-
-.logo-child img {
+  width: 150px;
+  height: 200px;
   background-image: url(/images/all-whitepivot-gradient-logo.svg);
-  background-size: cover;
-  background-position: top center;
+  background-size: contain;
+  background-position: top;
   background-repeat: no-repeat;
-  width: 160px;
-  display: flex;
   margin: 0 auto; }
 
 .slider-box h3 {
@@ -1227,13 +1225,15 @@ footer span {
     font-size: 1rem; }
 
   .intro-logo-container {
-    width: 25vw;
+    width: 100%;
+    height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 0 auto; }
+    margin-top: 50px; }
 
   .intro-logo-container p {
-    width: max-content;
+    width: 100%;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -1241,15 +1241,13 @@ footer span {
     color: black; }
 
   .logo-child {
-    margin-bottom: 0px; }
-
-  .logo-child img {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; }
+    width: 160px;
+    height: 240px;
+    background-image: url(/images/black-pivot-gradient-logo.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 25px; }
 
   .swiper-slide img {
     cursor: grab;
@@ -1420,7 +1418,15 @@ footer span {
 
   #visualization {
     width: auto;
-    height: 310px; } }
+    height: 310px; }
+
+  .intro-logo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px; } }
 .nav-active {
   -o-transform: translateX(0%);
   -webkit-transform: translateX(0%);
