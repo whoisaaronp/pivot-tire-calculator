@@ -301,7 +301,7 @@ input:focus {
   align-items: center;
   width: 100%;
   height: auto;
-  background: #e0e0e0;
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px; }
 
@@ -380,7 +380,7 @@ input:focus {
 .pressure-card {
   width: 790px;
   height: auto;
-  background: #e0e0e0;
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px;
   padding: 30px;
@@ -1024,7 +1024,7 @@ footer span {
     align-items: center;
     width: 100%;
     height: auto;
-    background: #e0e0e0;
+    background: white;
     border-radius: 4px;
     margin-bottom: 40px; }
 
