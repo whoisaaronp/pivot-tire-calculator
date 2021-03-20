@@ -959,6 +959,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .intro-logo-container p {
@@ -976,7 +977,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 // sign up page white logo
 .logo-child {
   width: 150px;
-  height: 200px;
+  // height: 100px;
+  padding: 50px;
   background-image: url(/images/all-whitepivot-gradient-logo.svg);
   background-size: contain;
   background-position: top;

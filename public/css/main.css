@@ -756,7 +756,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 .intro-logo-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 60px; }
 
 .intro-logo-container p {
   width: 800px;
@@ -771,7 +772,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 .logo-child {
   width: 150px;
-  height: 200px;
+  padding: 50px;
   background-image: url(/images/all-whitepivot-gradient-logo.svg);
   background-size: contain;
   background-position: top;
