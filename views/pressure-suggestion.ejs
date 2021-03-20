@@ -12,6 +12,37 @@
 		rel="stylesheet" />
 	<link rel="shortcut icon" type="image/svg" href="/images/16-flaviconpivot-gradient-logo.svg" />
 	<title>Pivot Tire Calculator</title>
+	<!-- google chart -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		// The Line Charts with Dynamic JSON 
+		function drawChart() {
+		  var data = google.visualization.arrayToDataTable([
+			['Year', 'Rider Weight', 'Tire Width'],
+			['2004',  1000,      400],
+			['2005',  1170,      460],
+			['2006',  660,       1120],
+			['2007',  1030,      540]
+		  ]);
+  
+		  var options = {
+			// title: 'Company Performance',
+			curveType: 'function',
+			legend: { position: 'bottom' },
+			series: {
+				0: { color: '#f28e25' },
+				1: { color: '#3b3c43' }
+			  }
+
+		  };
+  
+		  var chart = new google.visualization.LineChart(document.getElementById('visualization'));
+  
+		  chart.draw(data, options);
+		}
+	  </script>
 	<link href="/css/reset.css" rel="stylesheet" type="text/css" />
 	<link href="/css/main.css" rel="stylesheet" type="text/css" />
 </head>
@@ -34,6 +65,7 @@
 				<ul class="nav-links">
 					<li class="nav-link"><a href="#">Dashboard</a></li>
 					<li class="nav-link"><a href="#">Settings</a></li>
+					<li class="nav-link"><a href="/about">About</a></li>
 				</ul>
 
 				<button class="hamburger hamburger--elastic" type="button">
@@ -73,13 +105,17 @@
 							<p>Road Surface:<span>DRY</span></p>
 						</div>
 					</div>
+					<p class="disclaimer">
+						⚠ Disclaimer - This pressure guide is a starting point recommendation and further refinements are encouraged to find the right pressure for any given setup.
+					</p>
 				</div>
 				<div class="rider-data">
 					<!-- content -->
 					<div class="user-profile-content">
 						<img class="card-image" src="/images/dashboard-icon.svg" alt="Profile photo of Eddy" />
-						<h3>Optimal Data</h3>
+						<h3>Optimal Data History</h3>
 					</div>
+					<div id="visualization"></div>
 				</div>
 			</section>
 			<section class="equipment-suggestions-content slide-up-fade-in">
@@ -90,8 +126,7 @@
 					<h3>Optimal Suggestions</h3>
 				</div>
 				<p class="profile-description">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempora autem eos mollitia ipsam recusandae? Nemo vel eligendi labore, quis nesciunt repellat dolor sint doloremque delectus, molestias aliquid autem impedit.
-				</p>
+					Optimal suggestion uses your current tires/wheel choices and offers you similar options for an even better riding experience.
 				<!-- tire suggestions panel -->
 				<section class="suggestion-tire-container">
 					<h2 class="hidden">Optimal Tire suggesstion options</h2>

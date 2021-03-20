@@ -104,7 +104,8 @@ p {
 .logo-container {
   width: 10vw;
   height: auto;
-  margin-left: 165px;
+  // margin-left: 165px;
+  margin-left: 325px;
 }
 
 .sign-in-form .image-background {
@@ -393,15 +394,14 @@ p {
   text-transform: uppercase;
 }
 
-.profile-description
-{
+.profile-description {
   font-family: "Lato", sans-serif;
   font-size: $lato-small;
   font-weight: 400;
   color: #3b3c43;
-  margin-left: 80px; 
+  margin-left: 80px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #3b3c43; 
+  border-bottom: 1px solid #3b3c43;
 }
 
 // pressure suggestion desktop, tablet
@@ -420,7 +420,7 @@ p {
   align-items: center;
   width: 100%;
   height: auto;
-  background: #e0e0e0;
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px;
 }
@@ -513,7 +513,7 @@ p {
 .pressure-card {
   width: 790px;
   height: auto;
-  background: #e0e0e0;
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px;
   padding: 30px;
@@ -524,8 +524,8 @@ p {
 
 .rider-data {
   width: 790px;
-  height: 240px;
-  background: #e0e0e0;
+  height: auto;
+  background: white;
   border-radius: 4px;
   margin-bottom: 40px;
   padding: 30px;
@@ -956,34 +956,32 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
 // black logo container
 .intro-logo-container {
-  width: 25vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 .intro-logo-container p {
   width: 800px;
+  height: 100%;
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: $saira-h4;
   font-weight: 300;
   text-align: center;
   color: white;
   margin-top: 30px;
-}
-
-.logo-child {
-  margin-bottom: 75px;
+  margin: 0 auto;
 }
 
 // sign up page white logo
-.logo-child img {
+.logo-child {
+  width: 150px;
+  padding: 50px;
   background-image: url(/images/all-whitepivot-gradient-logo.svg);
-  background-size: cover;
-  background-position: top center;
+  background-size: contain;
+  background-position: top;
   background-repeat: no-repeat;
-  width: 160px;
-  display: flex;
   margin: 0 auto;
 }
 
@@ -1069,15 +1067,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   justify-content: space-between;
 }
 
-.summary p span
-{
+.summary p span {
   color: black;
-  padding-left: 5px;  
+  padding-left: 5px;
 }
 
-.pressure-card-summary-container .summary p
-{
-  font-family: 'Saira Extra Condensed', sans-serif;
+.pressure-card-summary-container .summary p {
+  font-family: "Saira Extra Condensed", sans-serif;
   font-size: 1.5rem;
   color: #65676b;
 }
@@ -1153,6 +1149,35 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-weight: 300;
   font-size: $saira-small;
   letter-spacing: 1px;
+}
+
+.disclaimer {
+  font-size: 13px;
+  font-weight: 300;
+  color: black;
+}
+
+// google chart connected scatter plot // maybe height auto later
+#visualization {
+  width: auto;
+  height: 310px;
+}
+
+// obout page
+.about-container
+{
+  max-width: 750px;
+  padding: 30px;
+  color: white;
+  margin: 0 auto;
+}
+
+.about-container h3
+{
+  font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 footer {
@@ -1279,7 +1304,7 @@ footer span {
     align-items: center;
     width: 100%;
     height: auto;
-    background: #e0e0e0;
+    background: white;
     border-radius: 4px;
     margin-bottom: 40px;
   }
@@ -1340,7 +1365,7 @@ footer span {
     display: block;
     width: 100%;
     height: auto;
-    background: #e0e0e0;
+    background: white;
     border-radius: 4px;
     margin-bottom: 40px;
   }
@@ -1376,17 +1401,15 @@ footer span {
     text-transform: uppercase;
   }
 
-  .profile-description
-  {
+  .profile-description {
     font-family: "Lato", sans-serif;
     font-size: $lato-small;
     font-weight: 400;
     color: #3b3c43;
-    margin-left: 80px; 
+    margin-left: 80px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #3b3c43; 
+    border-bottom: 1px solid #3b3c43;
   }
-  
 
   // hamburger
   .hamburger {
@@ -1524,14 +1547,16 @@ footer span {
 
   // black logo container
   .intro-logo-container {
-    width: 25vw;
+    width: 100%;
+    height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin-top: 50px;
   }
 
   .intro-logo-container p {
-    width: max-content;
+    width: 100%;
     font-family: "Saira Extra Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
@@ -1540,16 +1565,13 @@ footer span {
   }
 
   .logo-child {
-    margin-bottom: 0px;
-  }
-
-  .logo-child img {
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    width: 160px;
+    height: 240px;
+    background-image: url(/images/black-pivot-gradient-logo.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 25px;
   }
 
   .swiper-slide img {
@@ -1689,17 +1711,15 @@ footer span {
     overflow: visible;
   }
 
-  .profile-description
-{
-  font-family: "Lato", sans-serif;
-  font-size: $lato-small;
-  font-weight: 400;
-  color: #3b3c43;
-  margin-left: 80px; 
-  padding-bottom: 20px;
-  border-bottom: 1px solid #3b3c43; 
-}
-
+  .profile-description {
+    font-family: "Lato", sans-serif;
+    font-size: $lato-small;
+    font-weight: 400;
+    color: #3b3c43;
+    margin-left: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3b3c43;
+  }
 }
 
 // *************************************
@@ -1744,7 +1764,7 @@ footer span {
     margin: 0 auto;
     padding: 23px 0;
   }
-
+  
   // background contours
   #background-contour {
     background-image: url(/images/contour-bckgdcontour.svg);
@@ -1754,20 +1774,31 @@ footer span {
     overflow: hidden;
   }
 
-  .summary p span
-  {
+  .summary p span {
     padding-left: 3px;
     color: #65676b;
   }
 
-
-  .pressure-card-summary-container .summary p
-  {
-    font-family: 'Saira Extra Condensed', sans-serif;
+  .pressure-card-summary-container .summary p {
+    font-family: "Saira Extra Condensed", sans-serif;
     font-size: 0.85rem;
-
-
   }
+
+  // scale 375 mobile
+  #visualization {
+    width: auto;
+    height: 310px;
+  }
+
+  .intro-logo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
 }
 
 // menu animation
@@ -1798,89 +1829,84 @@ footer span {
   }
 }
 
-
 // slider up fade-in
-.slide-up-fade-in{
+.slide-up-fade-in {
   animation: slide-up-fade-in ease 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
-  animation-fill-mode:forwards; /*when the spec is finished*/
+  animation-fill-mode: forwards; /*when the spec is finished*/
   -webkit-animation: slide-up-fade-in ease 1s;
   -webkit-animation-iteration-count: 1;
   -webkit-transform-origin: 50% 50%;
-  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
   -moz-animation: slide-up-fade-in ease 1s;
   -moz-animation-iteration-count: 1;
   -moz-transform-origin: 50% 50%;
-  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -moz-animation-fill-mode: forwards; /*FF 5+*/
   -o-animation: slide-up-fade-in ease 1s;
   -o-animation-iteration-count: 1;
   -o-transform-origin: 50% 50%;
-  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -o-animation-fill-mode: forwards; /*Not implemented yet*/
   -ms-animation: slide-up-fade-in ease 1s;
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
-  -ms-animation-fill-mode:forwards; /*IE 10+*/
+  -ms-animation-fill-mode: forwards; /*IE 10+*/
 
-  opacity:0;
+  opacity: 0;
   opacity: 1\9;
-
 }
 
-
-
-
-@keyframes slide-up-fade-in{
+@keyframes slide-up-fade-in {
   0% {
-      opacity:0;
-      transform:  translate(0px,40px)  ;
+    opacity: 0;
+    transform: translate(0px, 40px);
   }
   100% {
-      opacity:1;
-      transform:  translate(0px,0px)  ;
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }
 
-@-moz-keyframes slide-up-fade-in{
+@-moz-keyframes slide-up-fade-in {
   0% {
-      opacity:0;
-      -moz-transform:  translate(0px,40px)  ;
+    opacity: 0;
+    -moz-transform: translate(0px, 40px);
   }
   100% {
-      opacity:1;
-      -moz-transform:  translate(0px,0px)  ;
+    opacity: 1;
+    -moz-transform: translate(0px, 0px);
   }
 }
 
 @-webkit-keyframes slide-up-fade-in {
   0% {
-      opacity:0;
-      -webkit-transform:  translate(0px,40px)  ;
+    opacity: 0;
+    -webkit-transform: translate(0px, 40px);
   }
   100% {
-      opacity:1;
-      -webkit-transform:  translate(0px,0px)  ;
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
   }
 }
 
 @-o-keyframes slide-up-fade-in {
   0% {
-      opacity:0;
-      -o-transform:  translate(0px,40px)  ;
+    opacity: 0;
+    -o-transform: translate(0px, 40px);
   }
   100% {
-      opacity:1;
-      -o-transform:  translate(0px,0px)  ;
+    opacity: 1;
+    -o-transform: translate(0px, 0px);
   }
 }
 
 @-ms-keyframes slide-up-fade-in {
   0% {
-      opacity:0;
-      -ms-transform:  translate(0px,40px)  ;
+    opacity: 0;
+    -ms-transform: translate(0px, 40px);
   }
   100% {
-      opacity:1;
-      -ms-transform:  translate(0px,0px)  ;
+    opacity: 1;
+    -ms-transform: translate(0px, 0px);
   }
-} 
+}

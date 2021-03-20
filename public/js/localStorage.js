@@ -139,7 +139,7 @@ function saveUser() {
 }
 
 
-// calculation with localstorage
+// 8. calculation with localstorage
 // On click event function
 const linkBtns = document.querySelectorAll('[data-save-then-goto]');
 
@@ -152,12 +152,13 @@ linkBtns.forEach((btn) => {
 
 		// Make final calculations
 		// jsut before you go to the pressure suggestion page, do this…
+		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
-			const wetGround = (localStorage.getItem('road-surface') === 'WET');
+			const wetGround = (JSON.parse(localStorage.getItem('road-surface')) === 'WET');
 			let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
-			const weightUnit = localStorage.getItem('weight-unit');
-			const pressureUnit = localStorage.getItem('pressure-unit');
+			const weightUnit = (JSON.parse(localStorage.getItem('weight-unit')));
+			const pressureUnit = (JSON.parse(localStorage.getItem('pressure-unit')));
 
 			// Convert to KG if using LBS
 			if (weightUnit === 'LBS') {
@@ -182,14 +183,15 @@ linkBtns.forEach((btn) => {
 
 			if (pressureUnit === 'PSI') {
 				const psi = optimumAirPressure * 14.5038;
-
-				localStorage.setItem('front_pressure', `${round(psi, 0)} PSI`);
-				localStorage.setItem('rear_pressure', `${round(psi, 0)} PSI`);
+				// returns the value of a number rounded to the nearest integer.
+				localStorage.setItem('front_pressure', `${Math.round(psi, 0)} PSI`);
+				localStorage.setItem('rear_pressure', `${Math.round(psi, 0)} PSI`);
 			}
 			else {
-				localStorage.setItem('front_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
-				localStorage.setItem('rear_pressure', `${round(optimumAirPressure, 1).toFixed(1)} BAR`);
+				localStorage.setItem('front_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
+				localStorage.setItem('rear_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 			}
+			console.log(pressureUnit);
 		}
 
 		window.location.href = href;
