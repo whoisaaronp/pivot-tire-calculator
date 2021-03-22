@@ -223,6 +223,6 @@ if (yourName) {
 const currentweightDOM = document.getElementById('currentWeight');
 
 if(currentweightDOM){
-	// ket value
+	// ket values 
 	currentweightDOM.innerHTML = localStorage.getItem('rider-weight');
 }
