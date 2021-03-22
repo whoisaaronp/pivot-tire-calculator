@@ -5,7 +5,8 @@ console.log("local storage linked");
 const form = document.querySelector("form");
 const next = document.querySelector("#next-page");
 
-// 1. selected buttons function
+// 1. selected buttons input function
+// if the radio is checked that the data and store the 'key' and 'value' as a string
 function saveRadio() {
 	// console.log(form.elements.mass.value);
 	const selectedRadio = form.querySelector('input[type="radio"]:checked');
@@ -21,7 +22,8 @@ function saveRadio() {
 	}
 }
 
-// 2. selected range function
+// 2. selected range input function 
+// if the range input is checked that the data and store the 'key' and 'value' as a string
 function saveRange() {
 	// console.log(form.elements.mass.value);
 	const selectedRange = form.querySelector('input[type="range"]');
@@ -128,7 +130,7 @@ if (submitButton) {
 
 }
 
-//Saving the username from input field to the Local Storage
+//Saving the username from input field to the Local Storage - key is user
 function saveUser() {
 	const username = document.getElementById("userName").value;
 	localStorage.setItem('user', username);
@@ -156,7 +158,7 @@ linkBtns.forEach((btn) => {
 		// calculate
 		if (href === '/pressure-suggestion') {
 			const wetGround = (JSON.parse(localStorage.getItem('road-surface')) === 'WET');
-			let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
+			let humanWeight = parseInt(JSON.parse(localStorage.getItem('rider-weight')), 10);
 			const weightUnit = (JSON.parse(localStorage.getItem('weight-unit')));
 			const pressureUnit = (JSON.parse(localStorage.getItem('pressure-unit')));
 
@@ -165,7 +167,7 @@ linkBtns.forEach((btn) => {
 				humanWeight *= 0.453592;
 			}
 
-			const tireWidth = parseInt(localStorage.getItem('tire-width').replace(/"/g, ''), 10);
+			const tireWidth = parseInt(JSON.parse(localStorage.getItem('tire-width')), 10);
 
 			let environmentalInfluences = 1;
 			environmentalInfluences = (wetGround ? environmentalInfluences * 0.93 : (environmentalInfluences * 1));
@@ -198,3 +200,29 @@ linkBtns.forEach((btn) => {
 
 	});
 });
+
+// 9. If pressure displays are on page, render data
+const frontPresDOM = document.getElementById('front-pres');
+const rearPresDOM = document.getElementById('rear-pres');
+
+if (frontPresDOM && rearPresDOM) {
+	frontPresDOM.innerHTML = localStorage.getItem('front_pressure');
+	rearPresDOM.innerHTML = localStorage.getItem('rear_pressure');
+}
+
+//10. save the user name upon login to the welcome page
+const yourName = document.getElementById('yourName');
+
+if (yourName) {
+	yourName.innerHTML = localStorage.getItem('user');
+}
+
+
+//11. let's leverage the current weight, tire width and road surface data for the user
+
+const currentweightDOM = document.getElementById('currentWeight');
+
+if(currentweightDOM){
+	// ket value
+	currentweightDOM.innerHTML = localStorage.getItem('rider-weight');
+}
