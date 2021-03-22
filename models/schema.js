@@ -6,54 +6,48 @@ export const OptimalSchema = new Schema({
         type: String,
         required: 'Enter a first name'
     },
-    passWord:{
+    passWord: {
         type: Number,
         required: 'Enter numbers 1 to 4'
     },
-    massMeasurement:{
+    massMeasurement: {
         type: String,
         required: 'Select a unit of mass'
     },
-    pressureMeasurement:{
+    pressureMeasurement: {
         type: String,
         required: 'Select a unit of pressure'
     },
-    ridingStyle:{
+    ridingStyle: {
         type: String,
         required: 'Select a bicycle type'
     },
-    innerRimWidth:{
+    innerRimWidth: {
         type: String,
         required: 'Select your inner rim width'
     },
-    wheelDiameter:{
+    wheelDiameter: {
         type: String,
         required: 'Select a unit of mass'
     },
-    rimType:{
+    rimType: {
         type: String,
         required: 'Select your rim holding type'
     },
-    // calculator structure as one thing as a array, inside would be an object
-    // measurements:[
-        // objects go in here
-    riderWeight:{
+    riderWeight: {
         type: String,
         required: 'Select your weight'
     },
-    tireWidth:{
+    tireWidth: {
         type: String,
         required: 'Select your tire rim width'
     },
-    
-    roadSurface:{
+    roadSurface: {
         type: String,
         required: 'Select your road surface'
     },
-    created_date:{
+    created_date: {
         type: Date,
         default: Date.now
     }
-// ]
-
 });
