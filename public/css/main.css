@@ -939,6 +939,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-weight: 600;
   text-transform: uppercase; }
 
+#yourName {
+  color: #f28e25;
+  font-weight: 600; }
+
 footer {
   position: absolute;
   width: 100%;
