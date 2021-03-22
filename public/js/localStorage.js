@@ -217,4 +217,12 @@ if (yourName) {
 	yourName.innerHTML = localStorage.getItem('user');
 }
 
-console.log(yourName);
+
+//11. let's leverage the current weight, tire width and road surface data for the user
+
+const currentweightDOM = document.getElementById('currentWeight');
+
+if(currentweightDOM){
+	// ket value
+	currentweightDOM.innerHTML = localStorage.getItem('rider-weight');
+}
