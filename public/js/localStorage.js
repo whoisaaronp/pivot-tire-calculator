@@ -130,7 +130,7 @@ if (submitButton) {
 
 }
 
-//Saving the username from input field to the Local Storage
+//Saving the username from input field to the Local Storage - key is user
 function saveUser() {
 	const username = document.getElementById("userName").value;
 	localStorage.setItem('user', username);
@@ -201,7 +201,7 @@ linkBtns.forEach((btn) => {
 	});
 });
 
-// If pressure displays are on page, render data
+// 9. If pressure displays are on page, render data
 const frontPresDOM = document.getElementById('front-pres');
 const rearPresDOM = document.getElementById('rear-pres');
 
@@ -209,3 +209,12 @@ if (frontPresDOM && rearPresDOM) {
 	frontPresDOM.innerHTML = localStorage.getItem('front_pressure');
 	rearPresDOM.innerHTML = localStorage.getItem('rear_pressure');
 }
+
+//10. save the user name upon login to the welcome page
+const yourName = document.getElementById('yourName');
+
+if (yourName) {
+	yourName.innerHTML = localStorage.getItem('user');
+}
+
+console.log(yourName);
