@@ -158,7 +158,7 @@ linkBtns.forEach((btn) => {
 		// calculate
 		if (href === '/pressure-suggestion') {
 			const wetGround = (JSON.parse(localStorage.getItem('road-surface')) === 'WET');
-			let humanWeight = parseInt(localStorage.getItem('rider-weight').replace(/"/g, ''), 10);
+			let humanWeight = parseInt(JSON.parse(localStorage.getItem('rider-weight')), 10);
 			const weightUnit = (JSON.parse(localStorage.getItem('weight-unit')));
 			const pressureUnit = (JSON.parse(localStorage.getItem('pressure-unit')));
 
@@ -167,7 +167,7 @@ linkBtns.forEach((btn) => {
 				humanWeight *= 0.453592;
 			}
 
-			const tireWidth = parseInt(localStorage.getItem('tire-width').replace(/"/g, ''), 10);
+			const tireWidth = parseInt(JSON.parse(localStorage.getItem('tire-width')), 10);
 
 			let environmentalInfluences = 1;
 			environmentalInfluences = (wetGround ? environmentalInfluences * 0.93 : (environmentalInfluences * 1));
@@ -200,3 +200,12 @@ linkBtns.forEach((btn) => {
 
 	});
 });
+
+// If pressure displays are on page, render data
+const frontPresDOM = document.getElementById('front-pres');
+const rearPresDOM = document.getElementById('rear-pres');
+
+if (frontPresDOM && rearPresDOM) {
+	frontPresDOM.innerHTML = localStorage.getItem('front_pressure');
+	rearPresDOM.innerHTML = localStorage.getItem('rear_pressure');
+}
