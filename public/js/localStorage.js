@@ -5,7 +5,8 @@ console.log("local storage linked");
 const form = document.querySelector("form");
 const next = document.querySelector("#next-page");
 
-// 1. selected buttons function
+// 1. selected buttons input function
+// if the radio is checked that the data and store the 'key' and 'value' as a string
 function saveRadio() {
 	// console.log(form.elements.mass.value);
 	const selectedRadio = form.querySelector('input[type="radio"]:checked');
@@ -21,7 +22,8 @@ function saveRadio() {
 	}
 }
 
-// 2. selected range function
+// 2. selected range input function 
+// if the range input is checked that the data and store the 'key' and 'value' as a string
 function saveRange() {
 	// console.log(form.elements.mass.value);
 	const selectedRange = form.querySelector('input[type="range"]');
