@@ -2,4 +2,4 @@
 Optimal tire pressure calculator
 
 # capstone application 
-# Aaron Paterson
+## Aaron Paterson
