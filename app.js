@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://apaterson:Fq3FIdFYIuICGyj7@capstone.5wnns.mongod
   if(err) {
     console.log('error connecting', err);
   }else{
-    console.log('connected');
+    console.log('pivot app connected');
   }
   });
 
