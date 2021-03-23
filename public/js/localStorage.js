@@ -218,7 +218,7 @@ if (yourName) {
 }
 
 
-//11. let's leverage the current weight, tire width and road surface data for the user
+//11. let's leverage the current weight, tire width and road surface data for the user to view
 
 const currentweightDOM = document.getElementById('currentWeight');
 
