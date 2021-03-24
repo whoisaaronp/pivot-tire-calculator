@@ -153,7 +153,7 @@ linkBtns.forEach((btn) => {
 		saveRange();
 
 		// Make final calculations
-		// jsut before you go to the pressure suggestion page, do this…
+		// just before you go to the pressure suggestion page, do this…
 		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
@@ -210,7 +210,7 @@ if (frontPresDOM && rearPresDOM) {
 	rearPresDOM.innerHTML = localStorage.getItem('rear_pressure');
 }
 
-//10. save the user name upon login to the welcome page
+// 10. save the user name from login to the welcome page
 const yourName = document.getElementById('yourName');
 
 if (yourName) {
@@ -218,8 +218,7 @@ if (yourName) {
 }
 
 
-//11. let's leverage the current weight, tire width and road surface data for the user to view
-
+// 11. let's leverage the current weight, tire width and road surface data for the user to view
 const currentweightDOM = document.getElementById('currentWeight');
 
 if(currentweightDOM){
