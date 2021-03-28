@@ -223,5 +223,6 @@ const currentweightDOM = document.getElementById('currentWeight');
 
 if(currentweightDOM){
 	// ket values 
-	currentweightDOM.innerHTML = localStorage.getItem('rider-weight');
+	// parse strign again
+	currentweightDOM.innerHTML = JSON.parse(localStorage.getItem('rider-weight'));
 }

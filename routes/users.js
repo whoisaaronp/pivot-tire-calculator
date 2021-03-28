@@ -36,3 +36,8 @@ module.exports = router;
 // const users = db.get('users').then((docs) => {
 
 // });
+
+
+// nodejs writing into mongoose
+// using localstorage 
+//transfer data in to mongoBD using steps 1 code*
