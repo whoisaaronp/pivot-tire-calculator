@@ -223,6 +223,16 @@ const currentweightDOM = document.getElementById('currentWeight');
 
 if(currentweightDOM){
 	// ket values 
-	// parse strign again
+	// parse string again
 	currentweightDOM.innerHTML = JSON.parse(localStorage.getItem('rider-weight'));
+}
+
+
+const currentTireWidthDOM = document.getElementById('currentTireWidth');
+
+if(currentTireWidthDOM){
+	// ket values
+	// parse string
+	currentTireWidthDOM.innerHTML = JSON.parse(localStorage.getItem('currentTireWidth'));
+	console.log(currentTireWidthDOM);
 }
