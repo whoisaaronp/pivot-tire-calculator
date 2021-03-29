@@ -221,18 +221,22 @@ if (yourName) {
 // 11. let's leverage the current weight, tire width and road surface data for the user to view
 const currentweightDOM = document.getElementById('currentWeight');
 
-if(currentweightDOM){
+if (currentweightDOM) {
 	// ket values 
 	// parse string again
 	currentweightDOM.innerHTML = JSON.parse(localStorage.getItem('rider-weight'));
 }
 
-
+// 12. Display Value amount
 const currentTireWidthDOM = document.getElementById('currentTireWidth');
 
-if(currentTireWidthDOM){
-	// ket values
-	// parse string
-	currentTireWidthDOM.innerHTML = JSON.parse(localStorage.getItem('currentTireWidth'));
-	console.log(currentTireWidthDOM);
+if (currentTireWidthDOM) {
+	currentTireWidthDOM.innerHTML = JSON.parse(localStorage.getItem('tire-width'));
+}
+
+// 13. Display value amount
+const currentsurfaceDOM = document.getElementById('currentSurface');
+
+if (currentsurfaceDOM) {
+	currentsurfaceDOM.innerHTML = JSON.parse(localStorage.getItem('road-surface'));
 }
