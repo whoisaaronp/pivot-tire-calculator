@@ -38,6 +38,22 @@ module.exports = router;
 // });
 
 
-// nodejs writing into mongoose
-// using localstorage 
+// nodejs writing into mongoose using localstorage 
 //transfer data in to mongoBD using steps 1 code*
+// 1. pull from localstorage using 'getitem'
+// 2. turn the key string into a json object in a single variable hten monogodb insert
+
+// let theUser = localStorage.getItem('user'),
+// let pressureUnit = localStorage.getItem('pressure-unit'),
+// let massUnit = localStorage.getItem('weight-unit'),
+// let riderStyle = localStorage.getItem('bike'),
+// let humanWeight = localStorage.getItem('rider-weight'),
+// let rimWidth = localStorage.getItem('rim-width'),
+// let rimType = localStorage.getItem('rim-type'),
+// let roadSurface = localStorage.getItem('road-surface'),
+// let wheelDiameter = localStorage.getItem('wheel-diameter'),
+// let frontPressure = localStorage.getItem('front_pressure'),
+// let rearPressure = localStorage.getItem('rear_pressure')
+
+// put everything in a json object
+let myCompass = "{user:"+theUser+"tirePressure,:"+tp...
