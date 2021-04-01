@@ -193,10 +193,51 @@ linkBtns.forEach((btn) => {
 				localStorage.setItem('front_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 				localStorage.setItem('rear_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 			}
-			console.log(pressureUnit);
-		}
 
-		window.location.href = href;
+			// console.log(pressureUnit);
+			let theUser = localStorage.getItem('user');
+			let pressureUnit2 = localStorage.getItem('pressure-unit');
+			let massUnit = localStorage.getItem('weight-unit');
+			let riderStyle = localStorage.getItem('bike');
+			let humanWeight2 = localStorage.getItem('rider-weight');
+			let rimWidth = localStorage.getItem('rim-width');
+			let rimType = localStorage.getItem('rim-type');
+			let roadSurface = localStorage.getItem('road-surface');
+			let wheelDiameter = localStorage.getItem('wheel-diameter');
+			let frontPressure = localStorage.getItem('front_pressure');
+			let rearPressure = localStorage.getItem('rear_pressure');
+
+			// put everything in a json object concatitnate
+			const data = JSON.stringify({
+				'user': theUser,
+				'pressure-unit': pressureUnit2,
+				'weight-unit': massUnit,
+				'bike': riderStyle,
+				'rider-weight': humanWeight2,
+				'rim-width': rimWidth,
+				'rim-type': rimType,
+				'road-surface': roadSurface,
+				'wheel-diameter': wheelDiameter,
+				'front-pressure': frontPressure,
+				'rear-pressure': rearPressure
+			});
+
+			fetch('/users/add_input', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: data
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log('response!', data);
+					window.location.href = href;
+				});
+		}
+		else {
+			window.location.href = href;
+		}
 
 	});
 });

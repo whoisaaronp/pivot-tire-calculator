@@ -32,31 +32,9 @@ router.get('/', function (req, res, next) {
 });
 module.exports = router;
 
-// FRONTEND
-// const users = db.get('users').then((docs) => {
-
-// });
-
-
-// nodejs writing into mongoose using localstorage 
-// transfer data in to mongoBD using steps 1 code*
-// 1. pull from localstorage using 'getitem'
-// 2. turn the key string into a json object in a single variable then monogodb insert
-
-// let theUser = localStorage.getItem('user'),
-// let pressureUnit = localStorage.getItem('pressure-unit'),
-// let massUnit = localStorage.getItem('weight-unit'),
-// let riderStyle = localStorage.getItem('bike'),
-// let humanWeight = localStorage.getItem('rider-weight'),
-// let rimWidth = localStorage.getItem('rim-width'),
-// let rimType = localStorage.getItem('rim-type'),
-// let roadSurface = localStorage.getItem('road-surface'),
-// let wheelDiameter = localStorage.getItem('wheel-diameter'),
-// let frontPressure = localStorage.getItem('front_pressure'),
-// let rearPressure = localStorage.getItem('rear_pressure')
-
-// put everything in a json object concatitnate
-// let storeLocal = "{user:" + theUser + ",pressure-unit:" + pressureUnit + ",weight-unit:" + massUnit + ",bike:" + riderStyle + ",rider-weight:" + humanWeight + ",rim-width:" + rimWidth + ",rim-type:" + rimType + ", road-surface:" + roadSurface + ", wheel-diameter:" + wheelDiameter + ", front_pressure:" + frontPressure + ",rear_pressure:" + rearPressure + "}";
-
-// the send it
-// Mongoosemodel.insertOne(storeLocal);
+router.post('/add_input', function(req, res) {
+  mongoose.connection.db.collection('users').insertOne(req.body);
+  res.send(JSON.stringify({
+    status: 'success'
+  }));
+});
