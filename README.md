@@ -13,6 +13,10 @@ Help users understand why cycling with the correct tire pressures makes for a fa
 * CSS3
 * Javascript
 
+# Inspiration
+[SRAM Tire Calculator](https://www.notion.so/Capstone-637a6c9d91844f809c5004440d3ddf3e#327ef58368aa442996009b7f1c624925)
+The app is based on SRAM Tire Caculator,[] but with more story telling to help riders of all styles to understand the confusion behind finding 'that' optimal tire pressure.
+
 # Setup
 To run this project, install it locally using npm:
 
