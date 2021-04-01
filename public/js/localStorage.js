@@ -200,7 +200,7 @@ linkBtns.forEach((btn) => {
 			let massUnit = localStorage.getItem('weight-unit');
 			let riderStyle = localStorage.getItem('bike');
 			let humanWeight2 = localStorage.getItem('rider-weight');
-			let rimWidth = localStorage.getItem('rim-width');
+			let tireWidth2 = localStorage.getItem('tire-width');
 			let rimType = localStorage.getItem('rim-type');
 			let roadSurface = localStorage.getItem('road-surface');
 			let wheelDiameter = localStorage.getItem('wheel-diameter');
@@ -214,7 +214,7 @@ linkBtns.forEach((btn) => {
 				'weight-unit': massUnit,
 				'bike': riderStyle,
 				'rider-weight': humanWeight2,
-				'rim-width': rimWidth,
+				'tire-width': tireWidth2,
 				'rim-type': rimType,
 				'road-surface': roadSurface,
 				'wheel-diameter': wheelDiameter,
