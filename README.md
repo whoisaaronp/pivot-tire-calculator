@@ -17,7 +17,7 @@ Help users understand why cycling with the correct tire pressures makes for a fa
 
 # Inspiration
 
-[SRAM Tire Calculator](https://www.notion.so/Capstone-637a6c9d91844f809c5004440d3ddf3e#327ef58368aa442996009b7f1c624925)
+[SRAM Tire Calculator](https://axs.sram.com/guides/tire/pressure)
 The app is based on SRAM Tire Caculator,[] but with more story telling to help riders of all styles to understand the confusion behind finding 'that' optimal tire pressure.
 
 # Setup
@@ -34,4 +34,4 @@ $ then in your browser and type: localhost:3000 and press enter.
 # Launch
 
 Let's make you fast!
-:+1: :bicycle: :dash: :boom: :octocat:
+:+1: :bicyclist: :dash: :octocat:
