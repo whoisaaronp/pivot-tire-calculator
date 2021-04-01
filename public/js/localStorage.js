@@ -207,8 +207,8 @@ linkBtns.forEach((btn) => {
 			let frontPressure = localStorage.getItem('front_pressure');
 			let rearPressure = localStorage.getItem('rear_pressure');
 
-			// In the local storage we strongly the data and wrote a fetch request to the route if successful rewrite it .
-			// And all the data were saving is from local storage. 
+			// In the local storage listed the data and wrote a fetch request to the route if successful, rewrite it .
+			// after the calculation sends the to the compass all the data we be saved in from local storage then displayed 
 			// Saves it as a json format
 			const data = JSON.stringify({
 				'user': theUser,
