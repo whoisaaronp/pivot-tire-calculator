@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://apaterson:Fq3FIdFYIuICGyj7@capstone.5wnns.mongod
   if (err) {
     console.log('error connecting', err);
   } else {
-    console.log('connected');
+    console.log('Pivot App connected');
   }
 });
 
@@ -32,6 +32,7 @@ router.get('/', function (req, res, next) {
 });
 module.exports = router;
 
+// 1. New router To receive data and save to the DB
 router.post('/add_input', function(req, res) {
   mongoose.connection.db.collection('users').insertOne(req.body);
   res.send(JSON.stringify({

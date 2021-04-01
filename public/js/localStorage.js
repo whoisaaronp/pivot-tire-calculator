@@ -207,7 +207,9 @@ linkBtns.forEach((btn) => {
 			let frontPressure = localStorage.getItem('front_pressure');
 			let rearPressure = localStorage.getItem('rear_pressure');
 
-			// put everything in a json object concatitnate
+			// In the local storage we strongly the data and wrote a fetch request to the route if successful rewrite it .
+			// And all the data were saving is from local storage. 
+			// Saves it as a json format
 			const data = JSON.stringify({
 				'user': theUser,
 				'pressure-unit': pressureUnit2,
