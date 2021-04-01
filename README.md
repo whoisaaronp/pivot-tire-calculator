@@ -30,4 +30,4 @@ $ then in your browser and type: localhost:3000 and press enter.
 # Launch
 
 Let's make you fast!
-:+1: :man biking: :dashing away: :boom: :octocat:
+:+1: :cyclist: :dash: :boom: :octocat:
