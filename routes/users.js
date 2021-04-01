@@ -22,7 +22,6 @@ function find(name, query, cb) {
   });
 }
 
-/* GET users listing. */
 // BACKEND
 // Received documents as an argument and sends to the browser…
 router.get('/', function (req, res, next) {
@@ -32,7 +31,7 @@ router.get('/', function (req, res, next) {
 });
 module.exports = router;
 
-// 1. New router To receive data and save to the DB
+// made a new router to receive data and save to the DB
 router.post('/add_input', function(req, res) {
   mongoose.connection.db.collection('users').insertOne(req.body);
   res.send(JSON.stringify({

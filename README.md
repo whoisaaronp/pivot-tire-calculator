@@ -28,7 +28,7 @@ To run this project, install it locally using npm:
 $ cd ../pivot-tire-calculator
 $ npm install
 $ npm start
-$ then in your browser and type: localhost:3000 and press enter.
+$ then in your browser type: localhost:3000 and press enter.
 ```
 
 # Launch
