@@ -193,10 +193,53 @@ linkBtns.forEach((btn) => {
 				localStorage.setItem('front_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 				localStorage.setItem('rear_pressure', `${Math.round(optimumAirPressure, 1).toFixed(1)} BAR`);
 			}
-			console.log(pressureUnit);
-		}
 
-		window.location.href = href;
+			// console.log(pressureUnit);
+			let theUser = localStorage.getItem('user');
+			let pressureUnit2 = localStorage.getItem('pressure-unit');
+			let massUnit = localStorage.getItem('weight-unit');
+			let riderStyle = localStorage.getItem('bike');
+			let humanWeight2 = localStorage.getItem('rider-weight');
+			let tireWidth2 = localStorage.getItem('tire-width');
+			let rimType = localStorage.getItem('rim-type');
+			let roadSurface = localStorage.getItem('road-surface');
+			let wheelDiameter = localStorage.getItem('wheel-diameter');
+			let frontPressure = localStorage.getItem('front_pressure');
+			let rearPressure = localStorage.getItem('rear_pressure');
+
+			// In the local storage we strongly the data and wrote a fetch request to the route if successful rewrite it .
+			// And all the data were saving is from local storage. 
+			// Saves it as a json format
+			const data = JSON.stringify({
+				'user': theUser,
+				'pressure-unit': pressureUnit2,
+				'weight-unit': massUnit,
+				'bike': riderStyle,
+				'rider-weight': humanWeight2,
+				'tire-width': tireWidth2,
+				'rim-type': rimType,
+				'road-surface': roadSurface,
+				'wheel-diameter': wheelDiameter,
+				'front-pressure': frontPressure,
+				'rear-pressure': rearPressure
+			});
+
+			fetch('/users/add_input', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: data
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log('response!', data);
+					window.location.href = href;
+				});
+		}
+		else {
+			window.location.href = href;
+		}
 
 	});
 });
@@ -221,8 +264,22 @@ if (yourName) {
 // 11. let's leverage the current weight, tire width and road surface data for the user to view
 const currentweightDOM = document.getElementById('currentWeight');
 
-if(currentweightDOM){
+if (currentweightDOM) {
 	// ket values 
-	// parse strign again
+	// parse string again
 	currentweightDOM.innerHTML = JSON.parse(localStorage.getItem('rider-weight'));
+}
+
+// 12. Display Value amount
+const currentTireWidthDOM = document.getElementById('currentTireWidth');
+
+if (currentTireWidthDOM) {
+	currentTireWidthDOM.innerHTML = JSON.parse(localStorage.getItem('tire-width'));
+}
+
+// 13. Display value amount
+const currentsurfaceDOM = document.getElementById('currentSurface');
+
+if (currentsurfaceDOM) {
+	currentsurfaceDOM.innerHTML = JSON.parse(localStorage.getItem('road-surface'));
 }

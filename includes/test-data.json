@@ -1,0 +1,28 @@
+[{
+  "user": "Mike",
+  "pressure-unit": "PSI",
+  "weight-unit": "KG",
+  "bike": "Mountain Bike",
+  "rider-weight": "143",
+  "rim-width": "23",
+  "rim-type": "Inner Tube",
+  "road_surface": "DRY",
+  "wheel-diameter": "650a",
+  "front_pressure": "130 PSI",
+  "rear_pressure": "130 PSI"
+  
+},
+{
+  "user": "Paul",
+  "pressure-unit": "BAR",
+  "weight-unit": "LBS",
+  "bike": "Road Bike",
+  "rider-weight": "143",
+  "rim-width": "28",
+  "rim-type": "Inner Tube",
+  "road_surface": "DRY",
+  "wheel-diameter": "700",
+  "front_pressure": "130 PSI",
+  "rear_pressure": "130 PSI"
+}
+]
