@@ -17,13 +17,13 @@ function saveRadio() {
 		alert('Data saved!');
 		const value = selectedRadio.getAttribute('value');
 		const propertyName = selectedRadio.getAttribute('name');
-		let str = JSON.stringify(value);
-		localStorage.setItem(propertyName, str);
+		// let str = JSON.stringify(value);
+		localStorage.setItem(propertyName, value);
 	}
 }
 
 // 2. selected range input function 
-// if the range input is checked that the data and store the 'key' and 'value' as a string
+// if the range input is checked that the data and store the 'key' and 'value' as a valueing
 function saveRange() {
 	// console.log(form.elements.mass.value);
 	const selectedRange = form.querySelector('input[type="range"]');
@@ -34,8 +34,8 @@ function saveRange() {
 		alert('Data saved!');
 		const value = selectedRange.value;
 		const propertyName = selectedRange.getAttribute('name');
-		let str = JSON.stringify(value);
-		localStorage.setItem(propertyName, str);
+		// let str = JSON.stringify(value);
+		localStorage.setItem(propertyName, value);
 	}
 }
 
@@ -157,10 +157,10 @@ linkBtns.forEach((btn) => {
 		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
-			const wetGround = (JSON.parse(localStorage.getItem('road-surface')) === 'WET');
-			let humanWeight = parseInt(JSON.parse(localStorage.getItem('rider-weight')), 10);
-			const weightUnit = (JSON.parse(localStorage.getItem('weight-unit')));
-			const pressureUnit = (JSON.parse(localStorage.getItem('pressure-unit')));
+			const wetGround = localStorage.getItem('road-surface') === 'WET';
+			let humanWeight = parseInt(localStorage.getItem('rider-weight'), 10);
+			const weightUnit = localStorage.getItem('weight-unit');
+			const pressureUnit = localStorage.getItem('pressure-unit');
 
 			// Convert to KG if using LBS
 			if (weightUnit === 'LBS') {
@@ -195,6 +195,8 @@ linkBtns.forEach((btn) => {
 			}
 
 			// console.log(pressureUnit);
+
+			// after calculation 
 			let theUser = localStorage.getItem('user');
 			let pressureUnit2 = localStorage.getItem('pressure-unit');
 			let massUnit = localStorage.getItem('weight-unit');
@@ -281,5 +283,7 @@ if (currentTireWidthDOM) {
 const currentsurfaceDOM = document.getElementById('currentSurface');
 
 if (currentsurfaceDOM) {
-	currentsurfaceDOM.innerHTML = JSON.parse(localStorage.getItem('road-surface'));
+	currentsurfaceDOM.innerHTML = localStorage.getItem('road-surface');
 }
+
+// don't over stringify
