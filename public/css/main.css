@@ -543,13 +543,14 @@ nav {
 
 .user-instructions {
   width: 50%;
-  padding: 40px; }
+  padding: 40px;
+  margin-bottom: 20rem; }
 
 .user-instructions p {
   font-size: 1rem;
   color: white;
   font-weight: 200;
-  margin-bottom: 20rem; }
+  margin-bottom: 10px; }
 
 .welcome-white-box {
   width: 45%;
@@ -1164,13 +1165,14 @@ footer span {
 
   .user-instructions {
     width: 90%;
-    padding: 40px; }
+    padding: 40px;
+    margin-bottom: 20rem; }
 
   .user-instructions p {
     font-size: 1rem;
     color: white;
     font-weight: 200;
-    margin-bottom: 20rem; }
+    margin-bottom: 10px; }
 
   .welcome-white-box {
     width: 90%;

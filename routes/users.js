@@ -39,9 +39,9 @@ module.exports = router;
 
 
 // nodejs writing into mongoose using localstorage 
-//transfer data in to mongoBD using steps 1 code*
+// transfer data in to mongoBD using steps 1 code*
 // 1. pull from localstorage using 'getitem'
-// 2. turn the key string into a json object in a single variable hten monogodb insert
+// 2. turn the key string into a json object in a single variable then monogodb insert
 
 // let theUser = localStorage.getItem('user'),
 // let pressureUnit = localStorage.getItem('pressure-unit'),
