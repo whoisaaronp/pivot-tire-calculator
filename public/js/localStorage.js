@@ -24,19 +24,22 @@ function saveRadio() {
 
 // 2. selected range input function 
 // if the range input is checked that the data and store the 'key' and 'value' as a valueing
-function saveRange() {
+function saveRanges() {
 	// console.log(form.elements.mass.value);
-	const selectedRange = form.querySelector('input[type="range"]');
+	const selectedRanges = form.querySelector('input[type="range"]');
 	//when an slider knob is moved store the key and values -> then stringify
-	console.log(selectedRange);
+	
+	
+	selectedRanges.forEach((selectedRange) => {
+		if (selectedRange) {
+			alert('Data saved!');
+			const value = selectedRange.value;
+			const propertyName = selectedRange.getAttribute('name');
+			// let str = JSON.stringify(value);
+			localStorage.setItem(propertyName, value);
+		}
+	});
 
-	if (selectedRange) {
-		alert('Data saved!');
-		const value = selectedRange.value;
-		const propertyName = selectedRange.getAttribute('name');
-		// let str = JSON.stringify(value);
-		localStorage.setItem(propertyName, value);
-	}
 }
 
 // 3. Riding style selection when an option grab is selected store the(activeIndex# number) key and values -> then stringify
@@ -84,22 +87,25 @@ function saveRim() {
 // 5. ranger slider indicator
 // checking the range to see if it exist and add an event listener to it, it not then skip it.
 // add an event listener when you have a range
-const indicator = document.getElementById('slider-input-content');
-const range = document.querySelector('input[type="range"]');
+const ranges = document.querySelectorAll('input[type="range"]');
 
-if (range) {
-	range.addEventListener('input', (e) => {
-		const slider = e.target;
-		const min = parseInt(slider.getAttribute('min'), 10);
-		const max = parseInt(slider.getAttribute('max'), 10);
-		const val = parseInt(slider.value, 10);
-
-		const scalar = (((val - min) / (max - min)) * 100);
-
-		indicator.style.left = `${scalar}%`;
-		indicator.innerHTML = `${Math.floor(val)}`;
-	});
-}
+// forloop 
+ranges.forEach((range) => {
+	const indicator = range.parentNode.querySelector('.indicator');
+	if (range) {
+		range.addEventListener('input', (e) => {
+			const slider = e.target;
+			const min = parseInt(slider.getAttribute('min'), 10);
+			const max = parseInt(slider.getAttribute('max'), 10);
+			const val = parseInt(slider.value, 10);
+	
+			const scalar = (((val - min) / (max - min)) * 100);
+	
+			indicator.style.left = `${scalar}%`;
+			indicator.innerHTML = `${Math.floor(val)}`;
+		});
+	}
+});
 
 // 7. wheel diameter
 const wheelDiameter = document.getElementById('wheelDiameter');
@@ -150,7 +156,7 @@ linkBtns.forEach((btn) => {
 		const href = e.target.getAttribute('data-save-then-goto');
 
 		saveRadio();
-		saveRange();
+		saveRanges();
 
 		// Make final calculations
 		// just before you go to the pressure suggestion page, do this…

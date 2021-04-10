@@ -33,3 +33,5 @@ router.get('/user/:id', function(req, res, next) {
     res.json(user);
    });
  });
+
+ // user has to make a unique name from the start else error!
