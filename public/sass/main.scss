@@ -1189,6 +1189,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-weight: 600;
 }
 
+.back-to-dashboard
+{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 500px;
+}
+
 footer {
   position: absolute;
   width: 100%;
@@ -1730,6 +1737,13 @@ footer span {
     margin-left: 80px;
     padding-bottom: 20px;
     border-bottom: 1px solid #3b3c43;
+  }
+
+  .back-to-dashboard
+  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 400px;
   }
 }
 

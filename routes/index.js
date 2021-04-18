@@ -11,9 +11,9 @@ router.get('/index', function (req, res) {
     res.render('index');
 })
 
-// go to welcome page from sign in
+// go to pressure-suggestion page from login
 router.post('/submit', function (req, res, next) {
-    res.render('welcome');
+    res.render('pressure-suggestion');
 });
 
 // go to welcome page 
@@ -21,7 +21,7 @@ router.get('/welcome', function (req, res, next) {
     res.render('welcome');
 });
 
-// go to mass-measurement from welcomek
+// go to mass-measurement from welcome
 router.get('/mass-measurement', function (req, res, next) {
     res.render('mass-measurement');
 });
@@ -66,6 +66,21 @@ router.get('/pressure-suggestion', function (req, res, next) {
 
 router.get('/about', function (req, res, next) {
     res.render('about');
+});
+
+router.get('/settings', function (req, res, next) {
+    res.render('settings');
+});
+
+router.get('/register', function (req, res, next) {
+    res.render('register');
+});
+
+router.get('/users/:id', function (req, res, next) {
+    User.findById(req.params.id, function (err, users) {
+        if (err) return next(err);
+        res.json(users);
+    });
 });
 
 
