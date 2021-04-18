@@ -368,7 +368,7 @@ if (login_form) {
 	});
 }
 
-// to collect user id data
+// to collect user id data from DBMonogo
 fetch('/users/get_user_chart', {
 	method: 'POST',
 	headers: {
@@ -383,20 +383,21 @@ fetch('/users/get_user_chart', {
 
 		console.log(localStorage.getItem('userID'))
 
-		// Check if Google charts is NOT undefined, then proceed
+		//1. Check if Google charts is NOT undefined, then proceed from HTML
 		if (typeof google !== 'undefined' && typeof google.charts !== 'undefined') {
 			const monthNames = ["January", "February", "March", "April", "May", "June",
 				"July", "August", "September", "October", "November", "December"
 			];
 
-			// Pull out data from result
+			//2. Pull out data from result
 			let {data} = result;
 
-			// Sort the data by timestamp
+			//3.Sort the data by timestamp
 			data.sort((a, b) => {
 				return (new Date(a.timestamp).getTime() > new Date(b.timestamp).getTime());
 			});
 
+			//3.  Get only the three variable for now. timestamp, weight and tirewidth form my story…
 			let chartData = [['Time', 'Rider Weight', 'Tire Width']];
 
 			data.forEach((point) => {
