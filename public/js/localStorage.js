@@ -407,7 +407,7 @@ fetch('/users/get_user_chart', {
 					parseInt(point['tire-width'], 10)
 				];
 
-				// ES6 way of doing chartData.push, use spread operator
+				// ES6 way of doing chartData.push, use spread operator -> safe array expansionit 
 				chartData = [
 					...chartData,
 					newPoint
