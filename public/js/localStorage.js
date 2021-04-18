@@ -436,8 +436,3 @@ fetch('/users/get_user_chart', {
 			}
 		}
 	});
-
-
-	//**
-	// Get the string value of the -ID
-	//select -> userID , then string 
