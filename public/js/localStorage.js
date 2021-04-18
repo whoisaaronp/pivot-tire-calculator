@@ -26,19 +26,20 @@ function saveRadio() {
 // if the range input is checked that the data and store the 'key' and 'value' as a valueing
 function saveRanges() {
 	// console.log(form.elements.mass.value);
-	const selectedRanges = form.querySelector('input[type="range"]');
+	const selectedRanges = form.querySelectorAll('input[type="range"]');
 	//when an slider knob is moved store the key and values -> then stringify
-	
-	
-	selectedRanges.forEach((selectedRange) => {
-		if (selectedRange) {
-			alert('Data saved!');
-			const value = selectedRange.value;
-			const propertyName = selectedRange.getAttribute('name');
-			// let str = JSON.stringify(value);
-			localStorage.setItem(propertyName, value);
-		}
-	});
+
+	if (selectedRanges) {
+		selectedRanges.forEach((selectedRange) => {
+			if (selectedRange) {
+				alert('Data saved!');
+				const value = selectedRange.value;
+				const propertyName = selectedRange.getAttribute('name');
+				// let str = JSON.stringify(value);
+				localStorage.setItem(propertyName, value);
+			}
+		});
+	}
 
 }
 
@@ -98,9 +99,9 @@ ranges.forEach((range) => {
 			const min = parseInt(slider.getAttribute('min'), 10);
 			const max = parseInt(slider.getAttribute('max'), 10);
 			const val = parseInt(slider.value, 10);
-	
+
 			const scalar = (((val - min) / (max - min)) * 100);
-	
+
 			indicator.style.left = `${scalar}%`;
 			indicator.innerHTML = `${Math.floor(val)}`;
 		});
@@ -140,9 +141,9 @@ if (submitButton) {
 function saveUser() {
 	const username = document.getElementById("userName").value;
 	localStorage.setItem('user', username);
-	alert('Saved User!');
+	alert('Go to Dashboard - Saved User!');
 
-	window.location.href = "/welcome";
+	window.location.href = "/pressure-suggestion";
 
 }
 
@@ -203,7 +204,7 @@ linkBtns.forEach((btn) => {
 			// console.log(pressureUnit);
 
 			// after calculation 
-			let theUser = localStorage.getItem('user');
+			let theUser = localStorage.getItem('userID');
 			let pressureUnit2 = localStorage.getItem('pressure-unit');
 			let massUnit = localStorage.getItem('weight-unit');
 			let riderStyle = localStorage.getItem('bike');
@@ -219,7 +220,7 @@ linkBtns.forEach((btn) => {
 			// after the calculation sends the to the compass all the data we be saved in from local storage then displayed 
 			// Saves it as a json format
 			const data = JSON.stringify({
-				'user': theUser,
+				'userID': theUser,
 				'pressure-unit': pressureUnit2,
 				'weight-unit': massUnit,
 				'bike': riderStyle,
@@ -229,7 +230,8 @@ linkBtns.forEach((btn) => {
 				'road-surface': roadSurface,
 				'wheel-diameter': wheelDiameter,
 				'front-pressure': frontPressure,
-				'rear-pressure': rearPressure
+				'rear-pressure': rearPressure,
+				'timestamp': new Date()
 			});
 
 			fetch('/users/add_input', {
@@ -268,7 +270,6 @@ if (yourName) {
 	yourName.innerHTML = localStorage.getItem('user');
 }
 
-
 // 11. let's leverage the current weight, tire width and road surface data for the user to view
 const currentweightDOM = document.getElementById('currentWeight');
 
@@ -293,3 +294,150 @@ if (currentsurfaceDOM) {
 }
 
 // don't over stringify
+
+
+//13. Register user form
+const reg_form = document.getElementById('register_form');
+
+if (reg_form) {
+	const username = document.getElementById('userName');
+	const password = document.getElementById('password');
+
+	reg_form.addEventListener('submit', (e) => {
+		e.preventDefault();
+
+		fetch('/users/register_user', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				name: username.value,
+				password: password.value
+			})
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.status === 'user_created') {
+					// User was created successfully
+					localStorage.setItem('user', data.user.name);
+					alert('Register success!');
+					window.location.href = "/welcome";
+				}
+				else {
+					alert('User name already taken!');
+				}
+			});
+	});
+}
+
+//14. login_form
+const login_form = document.getElementById('login_form');
+
+if (login_form) {
+	const username = document.getElementById('userName');
+	const password = document.getElementById('password');
+
+	login_form.addEventListener('submit', (e) => {
+		e.preventDefault();
+
+		fetch('/users/login_user', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				name: username.value,
+				password: password.value
+			})
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.status === 'success') {
+					// Do success
+					alert('Go to DashboardLogin success!');
+					localStorage.setItem('user', data.user.name);
+					localStorage.setItem('userID', data.user._id);
+					window.location.href = '/pressure-suggestion';
+				}
+				else {
+					// Do fail
+					alert('Incorrect user name or password! Please try again.');
+				}
+			});
+	});
+}
+
+// to collect user id data
+fetch('/users/get_user_chart', {
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/json'
+	},
+	body: JSON.stringify({
+		userID: localStorage.getItem('userID')
+	})
+})
+	.then((res) => res.json())
+	.then((result) => {
+
+		console.log(localStorage.getItem('userID'))
+
+		// Check if Google charts is NOT undefined, then proceed
+		if (typeof google !== 'undefined' && typeof google.charts !== 'undefined') {
+			const monthNames = ["January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December"
+			];
+
+			// Pull out data from result
+			let {data} = result;
+
+			// Sort the data by timestamp
+			data.sort((a, b) => {
+				return (new Date(a.timestamp).getTime() > new Date(b.timestamp).getTime());
+			});
+
+			let chartData = [['Time', 'Rider Weight', 'Tire Width']];
+
+			data.forEach((point) => {
+				const newPoint = [
+					monthNames[new Date(point['timestamp']).getMonth()],
+					parseInt(point['rider-weight'], 10),
+					parseInt(point['tire-width'], 10)
+				];
+
+				// ES6 way of doing chartData.push, use spread operator
+				chartData = [
+					...chartData,
+					newPoint
+				];
+			});
+
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+			// The Line Charts with Dynamic JSON 
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable(chartData);
+		
+				var options = {
+				// title: 'Company Performance',
+				curveType: 'function',
+				legend: { position: 'bottom' },
+				series: {
+					0: { color: '#f28e25' },
+					1: { color: '#3b3c43' }
+					}
+
+				};
+		
+				var chart = new google.visualization.LineChart(document.getElementById('visualization'));
+		
+				chart.draw(data, options);
+			}
+		}
+	});
+
+
+	//**
+	// Get the string value of the -ID
+	//select -> userID , then string 

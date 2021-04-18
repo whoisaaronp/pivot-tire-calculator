@@ -27,11 +27,11 @@ function find(name, query, cb) {
 // 1. Route to connect only to 'rider weight' and 'tire width'
 // 2. Create route file then use the user id ad 'user' then specific what to show in the chart.
 
-router.get('/user/:id', function(req, res, next) {
-  User.findById(req.params.id, function (err, user) {
-     if (err) return next(err);
-    res.json(user);
-   });
- });
+// router.get('/user/:id', function(req, res, next) {
+//   User.findById(req.params.id, function (err, user) {
+//      if (err) return next(err);
+//     res.json(user);
+//    });
+//  });
 
  // user has to make a unique name from the start else error!

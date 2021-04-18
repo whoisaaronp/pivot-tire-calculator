@@ -31,7 +31,7 @@
 				</section>
 				<div class="form-background">
 					<h2>Welcome!</h2>
-					<form action="/submit" method="post">
+					<form id="register_form" method="post">
 						<!-- username -->
 						<div class="input-background">
 							<span>User name</span>
@@ -40,14 +40,16 @@
 						<!-- password -->
 						<div class="input-background">
 							<span>Password</span>
-							<input type="password" name="Password" placeholder="1234">
+							<input type="password" 
+							id="password" name="Password" placeholder="1234">
 						</div>
 						<div class="remember">
 							<label><input class="check-box" type="checkbox" name="Remember">Remember me</label>
 						</div>
 						<!-- password field -->
 						<div class="orange-lava-button">
-								<button type="submit" id="submit">Sign up</button>
+								<button type="submit">Sign up</button>
+								<!-- <a href="/welcome"> Sign up</a> -->
 						</div>
 					</form>
 					<div class="social-container">
