@@ -368,6 +368,7 @@ if (login_form) {
 	});
 }
 
+// Google Chart viz
 // to collect user id data from DBMonogo
 fetch('/users/get_user_chart', {
 	method: 'POST',
