@@ -391,7 +391,7 @@ fetch('/users/get_user_chart', {
 			];
 
 			//2. Pull out data from result
-			let {data} = result;
+			let { data } = result;
 
 			//3.Sort the data by timestamp
 			data.sort((a, b) => {
@@ -415,25 +415,25 @@ fetch('/users/get_user_chart', {
 				];
 			});
 
-			google.charts.load('current', {'packages':['corechart']});
+			google.charts.load('current', { 'packages': ['corechart'] });
 			google.charts.setOnLoadCallback(drawChart);
 			// The Line Charts with Dynamic JSON 
 			function drawChart() {
 				var data = google.visualization.arrayToDataTable(chartData);
-		
+
 				var options = {
-				// title: 'Company Performance',
-				curveType: 'function',
-				legend: { position: 'bottom' },
-				series: {
-					0: { color: '#f28e25' },
-					1: { color: '#3b3c43' }
+					// title: 'Company Performance',
+					curveType: 'function',
+					legend: { position: 'bottom' },
+					series: {
+						0: { color: '#f28e25' },
+						1: { color: '#3b3c43' }
 					}
 
 				};
-		
+
 				var chart = new google.visualization.LineChart(document.getElementById('visualization'));
-		
+
 				chart.draw(data, options);
 			}
 		}
