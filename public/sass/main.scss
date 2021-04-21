@@ -563,6 +563,13 @@ p {
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
 }
 
+.continue-button
+{
+  display: flex;
+  justify-content: center;
+}
+
+
 .continue-button input {
   cursor: pointer;
   width: 311px;

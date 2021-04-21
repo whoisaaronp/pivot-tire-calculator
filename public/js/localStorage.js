@@ -91,6 +91,7 @@ function saveRim() {
 const ranges = document.querySelectorAll('input[type="range"]');
 
 // forloop 
+// adding the LBS and KG to the rider weight 
 ranges.forEach((range) => {
 	const indicator = range.parentNode.querySelector('.indicator');
 	if (range) {
@@ -99,11 +100,17 @@ ranges.forEach((range) => {
 			const min = parseInt(slider.getAttribute('min'), 10);
 			const max = parseInt(slider.getAttribute('max'), 10);
 			const val = parseInt(slider.value, 10);
+			const weightUnit = localStorage.getItem('weight-unit');
 
 			const scalar = (((val - min) / (max - min)) * 100);
 
 			indicator.style.left = `${scalar}%`;
-			indicator.innerHTML = `${Math.floor(val)}`;
+
+			if (weightUnit === 'LBS') {
+				val *= 2.206;
+			}
+
+			indicator.innerHTML = `${Math.floor(val)} ${weightUnit}`;
 		});
 	}
 });
