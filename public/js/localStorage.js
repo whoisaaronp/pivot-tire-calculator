@@ -92,6 +92,7 @@ const ranges = document.querySelectorAll('input[type="range"]');
 
 // forloop 
 // adding the LBS and KG to the rider weight 
+// adding the LBS and KG to the rider weight 
 ranges.forEach((range) => {
 	const indicator = range.parentNode.querySelector('.indicator');
 	if (range) {
@@ -99,18 +100,23 @@ ranges.forEach((range) => {
 			const slider = e.target;
 			const min = parseInt(slider.getAttribute('min'), 10);
 			const max = parseInt(slider.getAttribute('max'), 10);
-			const val = parseInt(slider.value, 10);
+			let val = parseInt(slider.value, 10);
 			const weightUnit = localStorage.getItem('weight-unit');
-
 			const scalar = (((val - min) / (max - min)) * 100);
 
 			indicator.style.left = `${scalar}%`;
 
-			if (weightUnit === 'LBS') {
-				val *= 2.206;
+			if (slider.getAttribute('name') === 'rider-weight') {
+
+				if (weightUnit === 'LBS') {
+					val *= 2.206;
+				}
+				indicator.innerHTML = `${Math.floor(val)} ${weightUnit}`;
+			} else {
+				indicator.innerHTML = `${Math.floor(val)}`;
+
 			}
 
-			indicator.innerHTML = `${Math.floor(val)} ${weightUnit}`;
 		});
 	}
 });
@@ -168,7 +174,7 @@ linkBtns.forEach((btn) => {
 
 		// Make final calculations
 		// just before you go to the pressure suggestion page, do this…
-		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
+		// ** pass the stringify data back through as a JSON.parse to get rid ofb the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
 			const wetGround = localStorage.getItem('road-surface') === 'WET';

@@ -673,7 +673,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-family: "Saira Extra Condensed", sans-serif; }
 
 .range-value {
-  width: 50px;
+  width: 70px;
   height: 30px;
   line-height: 31px;
   text-align: center;
