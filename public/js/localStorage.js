@@ -91,6 +91,8 @@ function saveRim() {
 const ranges = document.querySelectorAll('input[type="range"]');
 
 // forloop 
+// adding the LBS and KG to the rider weight 
+// adding the LBS and KG to the rider weight 
 ranges.forEach((range) => {
 	const indicator = range.parentNode.querySelector('.indicator');
 	if (range) {
@@ -98,12 +100,23 @@ ranges.forEach((range) => {
 			const slider = e.target;
 			const min = parseInt(slider.getAttribute('min'), 10);
 			const max = parseInt(slider.getAttribute('max'), 10);
-			const val = parseInt(slider.value, 10);
-
+			let val = parseInt(slider.value, 10);
+			const weightUnit = localStorage.getItem('weight-unit');
 			const scalar = (((val - min) / (max - min)) * 100);
 
 			indicator.style.left = `${scalar}%`;
-			indicator.innerHTML = `${Math.floor(val)}`;
+
+			if (slider.getAttribute('name') === 'rider-weight') {
+
+				if (weightUnit === 'LBS') {
+					val *= 2.206;
+				}
+				indicator.innerHTML = `${Math.floor(val)} ${weightUnit}`;
+			} else {
+				indicator.innerHTML = `${Math.floor(val)}`;
+
+			}
+
 		});
 	}
 });
@@ -161,7 +174,7 @@ linkBtns.forEach((btn) => {
 
 		// Make final calculations
 		// just before you go to the pressure suggestion page, do this…
-		// ** pass the stringify data back through as a JSON.parse to get rid of the strings
+		// ** pass the stringify data back through as a JSON.parse to get rid ofb the strings
 		// calculate
 		if (href === '/pressure-suggestion') {
 			const wetGround = localStorage.getItem('road-surface') === 'WET';
@@ -368,6 +381,7 @@ if (login_form) {
 	});
 }
 
+// Google Chart viz
 // to collect user id data from DBMonogo
 fetch('/users/get_user_chart', {
 	method: 'POST',
@@ -390,7 +404,7 @@ fetch('/users/get_user_chart', {
 			];
 
 			//2. Pull out data from result
-			let {data} = result;
+			let { data } = result;
 
 			//3.Sort the data by timestamp
 			data.sort((a, b) => {
@@ -407,32 +421,32 @@ fetch('/users/get_user_chart', {
 					parseInt(point['tire-width'], 10)
 				];
 
-				// ES6 way of doing chartData.push, use spread operator
+				// ES6 way of doing chartData.push, use spread operator -> safe array expansionit 
 				chartData = [
 					...chartData,
 					newPoint
 				];
 			});
 
-			google.charts.load('current', {'packages':['corechart']});
+			google.charts.load('current', { 'packages': ['corechart'] });
 			google.charts.setOnLoadCallback(drawChart);
 			// The Line Charts with Dynamic JSON 
 			function drawChart() {
 				var data = google.visualization.arrayToDataTable(chartData);
-		
+
 				var options = {
-				// title: 'Company Performance',
-				curveType: 'function',
-				legend: { position: 'bottom' },
-				series: {
-					0: { color: '#f28e25' },
-					1: { color: '#3b3c43' }
+					// title: 'Company Performance',
+					curveType: 'function',
+					legend: { position: 'bottom' },
+					series: {
+						0: { color: '#f28e25' },
+						1: { color: '#3b3c43' }
 					}
 
 				};
-		
+
 				var chart = new google.visualization.LineChart(document.getElementById('visualization'));
-		
+
 				chart.draw(data, options);
 			}
 		}

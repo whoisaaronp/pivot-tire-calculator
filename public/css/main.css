@@ -423,6 +423,10 @@ input:focus {
   -moz-box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 53px 27px -43px rgba(0, 0, 0, 0.75); }
 
+.continue-button {
+  display: flex;
+  justify-content: center; }
+
 .continue-button input {
   cursor: pointer;
   width: 311px;
@@ -669,7 +673,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   font-family: "Saira Extra Condensed", sans-serif; }
 
 .range-value {
-  width: 50px;
+  width: 70px;
   height: 30px;
   line-height: 31px;
   text-align: center;
