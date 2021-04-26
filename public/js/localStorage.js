@@ -84,7 +84,6 @@ function saveRim() {
 	localStorage.setItem('rim-type', selectedRim);
 }
 
-
 // 5. ranger slider indicator
 // checking the range to see if it exist and add an event listener to it, it not then skip it.
 // add an event listener when you have a range
@@ -140,7 +139,6 @@ function saveWheel() {
 	localStorage.setItem('wheel-diameter', selectedWheel);
 }
 
-
 // js function housiting 
 // 6. saving username * it's bad to store personal data in localstorage :(
 const submitButton = document.getElementById('submit');
@@ -159,7 +157,6 @@ function saveUser() {
 	window.location.href = "/pressure-suggestion";
 
 }
-
 
 // 8. calculation with localstorage
 // On click event function
