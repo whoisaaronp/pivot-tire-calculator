@@ -7,7 +7,7 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
 
 // intailizing mongo at the start …
-mongoose.connect('mongodb+srv://apaterson:Fq3FIdFYIuICGyj7@capstone.5wnns.mongodb.net/tirecalculatorDB?retryWrites=true&w=majority', function (err) {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_ADDRESS}`, function (err) {
   if (err) {
     console.log('error connecting', err);
   } else {
